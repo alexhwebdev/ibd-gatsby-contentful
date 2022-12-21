@@ -1,0 +1,104 @@
+
+@import './_variables.scss';
+
+
+// ==================== ibd-nav.js ====================
+.ibdd-nav-flash-sale {
+  background: #323232;
+  box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 30%);
+  display: flex;
+  position: relative;
+
+  .ibd-logo {
+    .ibd-logo-img {
+      // border: 2px solid red;
+      width: 225px;
+      height: 60px;
+      background: url(https://shop.investors.com/images/promotional/shop/assets/ibd/logo/logo-ibd-white.svg) no-repeat;
+      background-position: center;
+      margin: 0 25px;
+    }
+  }
+
+  h3 {
+    color: #ffffff;
+    display: flex;
+    font-weight: 400;
+    position: absolute;
+    right: 250px;
+    top: 15px;
+
+    #nav-timer {
+      padding-left: 10px;
+    }
+  }
+
+  button.go-to-store,
+  button.get-started {
+    width: 200px;
+    height: 100%;
+    background: #FECC1A;
+    border: none;
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    right: 0;
+
+    &:hover {
+      background: #fed74d;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+
+// Hamburger btn bug fix
+@media only screen and (max-width: 480px) {
+  .ibdd-nav-flash-sale {
+    .ibd-logo {
+      .ibd-logo-img {
+        // border: 2px solid red;
+        width: 200px;
+        height: 60px;
+      }
+    }
+    button.go-to-store {
+      width: 150px;
+    }
+  }
+}
+
+
+// iPhone 12 Max Pro - 428 x 926
+@media screen and (max-width: 428px) {
+
+}
+
+@media screen and (max-width: 375px) {
+  .ibdd-nav-flash-sale button.go-to-store {
+    width: 125px;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .ibdd-nav-flash-sale button.go-to-store {
+    width: 80px;
+  }
+}
+
+
+
+
+
+

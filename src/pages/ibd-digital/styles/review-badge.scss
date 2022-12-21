@@ -1,0 +1,106 @@
+// https://www.gatsbyjs.com/docs/how-to/styling/sass/
+
+@import './_variables.scss';
+
+
+
+// ==================== ibd / components / review-badge.js ====================
+#review-badge {
+	background: #f4f4f4;
+	padding: 75px 25px 75px;
+
+	.section-inner-container {
+		margin: 0 auto;
+		max-width: 1400px;
+
+		ul {
+			display: flex;
+			list-style: none;
+			margin: 0;
+
+			li {
+				width: 25vw;
+				padding: 0 25px;
+
+				.subscriber-stars-container {
+			    display: flex;
+			    justify-content: space-between;
+			    padding-bottom: 15px;
+
+					p.subscriber {
+						font-weight: bold;
+					}
+
+					.stars-container {
+						// .faStar {
+						// 	color: $ibd_blue_light;
+						// }
+
+	          // Star
+	          span::after {
+	            color: $ibd_blue_light;
+	            content: "\f005";
+	            font-family: "Font Awesome 5 Free"; 
+	            font-weight: 900;
+	            padding-left: 5px;
+	          }
+					}
+				}
+				> p {
+					font-style: italic;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	#review-badge {
+		padding: 50px 25px 50px;
+
+		.section-inner-container {
+			ul {
+				flex-wrap: wrap;
+    		margin: 0;
+
+				li {
+			    width: 50%;
+			    padding: 0 25px 25px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 568px) {
+	#review-badge {
+    padding: 50px 0 50px;
+	}
+}
+
+
+// iPhone 12 Max Pro - 428 x 926
+@media screen and (max-width: 428px) {
+	#review-badge {
+		.section-inner-container {
+			ul {
+				li {
+					width: 100%;
+
+					&:last-of-type {
+						padding: 0 25px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

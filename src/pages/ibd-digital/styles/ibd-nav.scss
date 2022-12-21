@@ -1,0 +1,377 @@
+
+@import './_variables.scss';
+
+
+// ==================== ibd-nav.js ====================
+#ibd-nav-wrapper {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 2px 2px 10px #333333;
+  display: flex;
+  position: fixed;
+  transition: 0.3s;
+  z-index: 9999;
+
+  top: 0;
+
+
+
+  &.big {
+    height: 60px;
+    background: #ffffff;
+
+    .logo-hamburger-container {
+      .ibd-logo {
+        .ibd-logo-blue-img {
+          .ibd-logo-img {
+            width: 275px;
+            // background: url('https://shop.investors.com/images/promotional/shop/assets/ibd/logo/logo-ibd-blue.svg') no-repeat;
+            // background: url('https://cdn.sanity.io/images/js5elst2/production/21dfcb394f77595765f1ccdd82653e445a22215a-892x124.svg?w=892&h=124&auto=format') no-repeat;
+            
+          }
+        }
+        .ibd-logo-white-img {
+          display: none;
+        }        
+      }
+
+    }
+  }
+  &.small {
+    height: 50px;
+    background: #0438BD;
+
+
+    .logo-hamburger-container {
+      .ibd-logo {
+        .ibd-logo-blue-img {
+          // margin: 15px 10px 0px 15px;
+          display: none;
+
+          .ibd-logo-img {
+            width: 225px;
+            height: 50px;
+            // background: url('https://shop.investors.com/images/promotional/shop/assets/ibd/logo/logo-ibd-white.svg') no-repeat;
+            // background: url('https://cdn.sanity.io/images/js5elst2/production/51dc8d9b24a995f301f7270e0e59bb155cad22f2-892x124.svg?w=2000&h=2000&fit=max') no-repeat;
+          }
+        }
+        .ibd-logo-white-img {
+          width: 225px;
+          height: 30px;
+          display: block;
+          margin: 10px 30px 10px 25px;
+        }
+      }
+
+      #hamburger {
+        top: 14px;
+
+        > div {
+          background: white;
+        }
+      }
+    }
+
+    .nav-links {
+      ul {
+        li {
+          margin: 10px 0px 0px;
+
+          a {
+            color: #ffffff !important;
+            padding: 0 10px 5px;
+
+            &.active {
+              border-bottom: 2px solid #ffffff;
+              // color: #0438BD !important;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    .sign-in-start-trial {
+      a.sign-in {
+        color: #ffffff;
+      }
+      button.start-trial {
+        background: #ffffff;
+        color: #0438BD;
+      }
+    }
+  }
+
+
+  .logo-hamburger-container {
+    .ibd-logo {
+      .ibd-logo-white-img {
+        display: none;
+      }
+    }
+    #hamburger {
+      width: 1.5rem;
+      height: 1.2rem;
+      background: transparent;
+      border: none;
+      // border: button;
+      cursor: pointer;
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 0;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 5;
+
+      div {
+        width: 22px;
+        height: 2px;
+        background: black;
+        border-radius: 5px;
+        transform-origin: 1px;
+        position: relative;
+        transition: opacity 300ms, transform 300ms;
+      }
+    }// #hamburger
+
+    .ibd-logo-blue-img {
+      border: none !important;
+      width: 275px;
+      display: flex;
+      margin: 10px 10px 0px 15px;
+      padding-left: 0;
+
+      img {
+        margin-bottom: 0;
+      }
+      .ibd-logo-img {
+        width: 275px;
+        height: 25px;
+        // background: url('https://shop.investors.com/images/promotional/shop/assets/ibd/logo/logo-ibd-blue.svg') no-repeat;
+      }
+    }
+  }
+
+
+
+
+
+
+  .nav-links {
+    display: flex;
+    z-index: 1;
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 15px 0px 0px;
+        padding: 0px;
+
+        a {
+          color: #505050;
+          font-family: 'Manrope',sans-serif;
+          font-size: 0.77rem;
+          font-weight: 500;
+          letter-spacing: 0.16em;
+          padding: 0 10px 10px;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: color 300ms;
+
+          &:hover {
+            color: #0438BD !important;
+          }
+        }
+      }
+    }
+  }
+
+  // ==========  SIGN IN  |  START TRIAL  ==========
+  .sign-in-start-trial {
+    width: 400px;
+    height: 100%;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+
+
+    a.sign-in {
+      align-items: center;
+      display: flex;
+      color: #505050;
+      font-family: 'Manrope',sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      padding: 0 15px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    // button.start-trial {
+    //   height: 45px;
+    //   align-self: center;
+    //   background: #0438BD;
+    //   border-radius: 20em;
+    //   color: #ffffff;
+    //   font-family: 'Manrope',sans-serif;
+    //   font-size: 0.78rem;
+    //   font-weight: 700;
+    //   line-height: 150%;
+    //   margin-right: 20px;
+    //   padding: 0.8em 1.3em 0.75em;
+    //   text-align: center;
+    //   text-decoration: none;
+    //   text-transform: uppercase;
+    // }
+
+    button.start-trial {
+      // width: 100%;
+      height: 45px;
+      align-self: center;
+      background: $ibd_blue;
+      border: 0;
+      border-radius: 20em;
+      color: $white;
+      font-family: 'Manrope',sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 150%;
+
+      margin-right: 20px;
+      padding: 0.8em 1.3em 0.75em;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.3s;
+
+      &:hover {
+        background: #0547ef;
+        cursor: pointer;
+      }
+
+      a {
+        b {
+          color: #ffffff;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
+
+
+
+// ==========  M E D I A - Q U E R I E S  ==========
+// ==========  M E D I A - Q U E R I E S  ==========
+// ==========  M E D I A - Q U E R I E S  ==========
+// ==========  M E D I A - Q U E R I E S  ==========
+// ==========  M E D I A - Q U E R I E S  ==========
+@media screen and (max-width: 991px) {
+  #ibd-nav-wrapper {
+    display: block;
+    overflow: hidden;
+    transition: 0.3s;
+
+    .logo-hamburger-container {
+      border-bottom: 1px solid silver;
+      padding: 0px 0 15px;
+
+      #hamburger {
+        display: flex;
+      }
+    }
+
+    .nav-links {
+      display: block;
+      margin-top: 12px;
+
+      ul {
+        display: block;
+        flex-direction: column;
+        margin-left: 25px;
+
+        li {
+          margin: 25px 0px 0px;
+
+          a {
+            padding: 0 15px 10px 0px;
+          }
+        }
+      }
+    }
+
+    .sign-in-start-trial {
+      width: 100%;
+      height: unset;
+      background: #fff;
+      flex-direction: column;
+      margin: 25px 0 0;
+      padding: 0 25px;
+
+      // left: 10px;
+      right: unset;
+      justify-content: unset;
+
+      a.sign-in {
+        padding: 0;
+        position: relative;
+        // left: 10px;
+      }
+
+      button.start-trial {
+        width: 100%;
+        align-self: baseline;
+        margin: 45px 0 15px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .sign-in-start-trial {
+    button.start-trial {
+      // border: 2px solid red;
+      width: 93vw;
+    }
+  }
+}
+
+
+// Hamburger btn bug fix
+@media only screen and (max-width: 480px) {
+  html { font-size: large; }
+
+  div:nth-child(3) {
+    top: 1px;
+  }
+}
+
+
+// iPhone 12 Max Pro - 428 x 926
+@media screen and (max-width: 428px) {
+  #ibd-nav-wrapper {
+    .logo-hamburger-container {
+      .ibd-logo-blue-img {
+        width: 235px;
+        margin: 22px 10px 2px 25px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

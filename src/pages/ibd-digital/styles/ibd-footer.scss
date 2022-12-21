@@ -1,0 +1,157 @@
+// https://www.gatsbyjs.com/docs/how-to/styling/sass/
+
+@import './_variables.scss';
+
+// ==================== ibd-footer.js ==============
+#ibd-footer {
+  section.section-footer {
+    background: #0438BD;
+    color: #ffffff;
+    font-family: 'Manrope',sans-serif;
+    margin: 0 auto;
+    max-width: 1450px;
+    padding: 75px 50px;
+
+    nav {
+      display: flex;
+      margin-bottom: 1.5rem;
+
+      ul {
+        flex: 0 0 16.666667%;
+        margin: 0px;
+        // max-width: 16.666667%;
+        padding: 0px;
+
+        li {
+          list-style: none;
+          margin: 0px;
+          padding: 0px;
+
+          a {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 150%;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    > p {
+      color: #ffffff;
+      font-size: 0.75rem !important;
+      line-height: 150%;
+      margin-bottom: 1.5rem;
+      // max-width: 991px;
+
+      a {
+        color:#ffffff;
+        margin: 0 5px;
+        text-decoration: none;
+      }
+    }
+    p:nth-of-type(2){
+      margin:0;
+    }
+
+
+    .ibd-logo {
+      // width: 205px !important;
+      // margin-bottom: 1rem;
+
+      .logo-ibd-white {
+        width: 275px !important;
+        margin-bottom: 10px;
+        position: relative;
+        left: -5px;
+      }
+    }
+  }  
+}
+
+
+
+
+
+@media screen and (max-width: 1400px) {
+  section.section-footer {
+    nav {
+      ul {
+        
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+	section.section-footer {
+	  nav {
+	    ul {
+	      flex: 0 0 25% !important;
+	    }
+	  }
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	section.section-footer {
+    padding: 50px 25px !important;
+
+	  nav {
+	    ul {
+	      flex: 0 0 40% !important;
+	    }
+	  }
+	}
+}
+
+
+@media screen and (max-width: 568px) {
+	section.section-footer {
+	  nav {
+	    ul {
+	      flex: 0 0 50% !important;
+
+	      li {
+	        a {
+						font-size: 1.3rem !important;
+	        }
+	      }
+	    }
+	  }
+
+	  .ibd-logo {
+	    img {
+				width: 275px !important;
+	    }
+	  }
+	}
+}
+
+
+// iPhone 12 Max Pro - 428 x 926
+@media screen and (max-width: 428px) {
+	section.section-footer {
+		// padding: 50px 25px!important;
+
+	  .ibd-logo {
+	    img {
+	      width: 200px !important;
+	    }
+	  }
+	}
+  section.section-footer .ibd-logo img {
+    width: 200px !important;
+  }
+}
+
+
+
+
+
+
+
+
+

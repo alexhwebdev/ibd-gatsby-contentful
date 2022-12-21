@@ -1,0 +1,564 @@
+// https://www.gatsbyjs.com/docs/how-to/styling/sass/
+
+@import './_variables.scss';
+
+
+// ==================== FAQS.JS ====================
+#faqs {
+
+	h1, h2, h3, h4, h5 {
+		font-family: 'Manrope',sans-serif;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 700;
+	}
+	h2 {
+		font-size: 2.3rem;
+		font-weight: 700;
+	}
+	h4 {
+		font-size: 1.5rem;
+		font-weight: 400;
+	}
+	h5 {
+		font-size: 1.2rem;
+		font-weight: 400;
+	}
+	p {
+		font-family: 'Poppins',sans-serif;
+		font-size: 1em;
+		font-weight: 300;
+	}
+
+
+	section.section-1 {
+    // border: 2px solid red;
+    position: relative;
+    overflow: hidden;
+
+		.section-inner-container {
+			.graphic-ibd-digital-devices-2020 {
+				width: 100vw;
+				height: 100%;
+				position: absolute;
+			}
+			.copy-wrapper {
+	    	margin: 0 auto;
+	    	max-width: 1400px;
+	    	padding: 75px 25px;
+
+				.copy-container {
+					width: 35vw;
+			    display: flex;
+			    flex-direction: column;
+			    position: relative;
+
+					h1 {
+						color: $dk_grey;
+    				line-height: 100%;
+    				padding-bottom: 15px;
+					}
+					p {
+						color: $dk_grey;
+						padding-bottom: 15px;
+					}
+				}	
+			}
+		
+		}
+	}// section-1
+
+
+
+	section.section-2 {
+		background: #f4f4f4;
+
+		.section-inner-container {
+			margin: 0 auto;
+			max-width: 1400px;
+			padding: 75px 25px;
+
+			// ========= Accordian.js =========
+			.accordion {
+			  .accordion-item {
+			    border-bottom: 1px solid silver;
+			    padding: 25px 25px 0px;
+
+					.icon-question-container {
+					  display: flex;
+					  flex-direction: row;
+					  cursor: pointer;
+
+					  &:hover, &:active {
+							.plus-minus-container {
+								background: $ibd_blue;
+							}
+							h4.question {
+								color: $ibd_blue;
+							}
+						}
+
+						.plus-minus-container {
+					    height: 25px;
+					    align-items: center;
+							background: #417de6;
+							border-radius: 100%;
+					    display: flex;
+					    justify-content: center;
+					    padding: 0 0 1px;
+
+					    span {
+					    	transition: 1s;
+					    }
+
+							// Plus
+							span.faPlus::after {
+								content: "\f067";
+								font-family: "Font Awesome 5 Free"; 
+								font-weight: 900;
+								padding-left: 5px;
+								transition: 1s;
+							}
+							// Minus
+							span.faMinus::after {
+								content: "\f068";
+								font-family: "Font Awesome 5 Free"; 
+								font-weight: 900;
+								padding-left: 5px;
+								transition: 1s;
+							}
+
+
+							.faMinus,
+							.faPlus {
+								width: 25px;
+								color: $white;
+							}
+						}
+
+						h4.question {
+							color: #417de6;
+							font-weight: 400;
+							line-height: 100%;
+							padding: 0 0 25px 15px;
+
+					    &:hover {
+					    	button {
+						    	background: #417de6;
+						    	cursor: pointer;
+					    	}
+					    	h4.question {
+						    	color: #417de6;
+						    	cursor: pointer;
+					    	}
+					    }
+						}
+					}
+					.answer-container {
+						display: flex;
+					  transition: 0.3s;
+					  overflow: hidden;
+
+						p {
+							font-weight: 400;
+							line-height: 130%;
+							padding-left: 40px;
+						}
+
+						&.show-answer {
+							max-height: 500px;
+							padding-bottom: 25px;
+							transition: 0.3s;
+						}
+						&.hide-answer {
+							max-height: 0px;
+							overflow: hidden;
+							padding-bottom: 0px;
+							transition: 0.3s;
+						}
+					}
+			  }
+			}// accordion
+		}// section-inner-container
+	}// section-2
+
+
+
+	section.section-3 {
+		.section-inner-container {
+			// display: flex;
+			margin: 0 auto;
+			max-width: 1400px;
+			padding: 75px 25px;
+			text-align: center;
+
+			.copy-img-container {
+				display: flex;
+				padding-bottom: 45px;
+
+				.copy-container {
+					width: 45%;
+			    display: flex;
+			    flex-direction: column;
+			    justify-content: center;
+			    margin: 0 20px;
+
+					h2 {
+						padding-bottom: 25px;
+					}
+					p {}
+				}
+				.graphic-ibd-digital-devices-2020 {
+					width: 55%;
+					height: 100%;
+					margin: 0 20px;
+				}
+			}
+
+			.button-container {
+				// button {
+			 //    // width: 375px;
+			 //    background: #0438BD;
+			 //    border: none;
+			 //    border-radius: 45px;
+			 //    margin: 0 auto;
+			 //    padding: 0.75em 1.75em;
+
+				// 	a.button_cta {
+				// 		p {
+
+				// 		}
+				// 	}
+				// }
+				button {
+					width: 375px;
+					background: $ibd_blue;
+					border: none;
+			    border-radius: 45px;
+			    margin: 0 auto;
+			    padding: 0.75em 1.75em;
+
+          &:hover {
+            // background: #0547ef;
+            cursor: pointer;
+          }
+
+					p {
+				    color: #ffffff;
+				    font-size: 1.3em;
+				    font-weight: 600;
+				    letter-spacing: 1px;
+				    padding: 0;
+				    text-decoration: none;
+					}
+				}
+			}
+
+			.button-container {
+		    display: flex;
+		    flex-direction: column;
+		    margin: 0 auto 15px;
+
+				button {
+					background: $ibd_blue;
+					border: none;
+			    border-radius: 45px;
+			    padding: 0.75em 1.75em;
+
+          &:hover {
+            // background: #0547ef;
+            cursor: pointer;
+          }
+
+					p {
+				    color: #ffffff;
+				    font-size: 1.3em;
+				    font-weight: 600;
+				    letter-spacing: 1px;
+				    padding: 0;
+				    text-decoration: none;
+					}
+				}
+			}
+			.no-obligation {
+				font-size: 0.75rem;
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+// ==========  M E D I A - Q U E R I E S  ==========
+// ==========  M E D I A - Q U E R I E S  ==========
+// ==========  M E D I A - Q U E R I E S  ==========
+// ==========  M E D I A - Q U E R I E S  ==========
+// ==========  M E D I A - Q U E R I E S  ==========
+@media screen and (max-width: 1400px) {
+
+
+}
+@media screen and (max-width: 1024px) {
+	#faqs {
+		h1 {
+		  font-size: 2.5rem;
+		}
+		h4.question {
+			font-size: 1.2rem;
+		}
+
+		section.section-1 {
+			.section-inner-container {
+				.copy-wrapper {
+					.copy-container {
+						width: 50vw;
+					}	
+				}
+			}
+		}// section-1
+	}
+}
+@media screen and (max-width: 992px) {
+	#faqs {
+		h1 {
+		  font-size: 2.5rem;
+		}
+		h2 {
+			font-size: 1.8rem;
+		}
+		h4.question {
+			font-size: 1.3rem;
+		}
+
+		section.section-1 {
+			.section-inner-container {
+				.copy-wrapper {
+					padding: 75px 50px;
+
+					.copy-container {
+						
+					}	
+				}
+			}
+		}// section-1
+		section.section-3 {
+			.section-inner-container {
+				.copy-img-container {
+				  flex-direction: column;
+				  padding: 0;
+
+					.copy-container {
+						width: 80%;
+					  margin: 0 auto 25px;
+					}
+					.graphic-ibd-digital-devices-2020 {
+						margin: 0 auto 25px;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	#faqs {
+		h1 { font-size: 1.8rem !important; }
+		h2 { font-size: 1.5rem !important; }
+		h4 { font-size: 1.2rem !important; }
+
+		section.section-1 {
+			.section-inner-container {
+				.graphic-ibd-digital-devices-2020 {
+					opacity: 0.6;
+				}
+				.copy-wrapper {
+		    	padding: 5vh 25px;
+
+					.copy-container {
+						h1 {
+							
+						}
+					}	
+				}
+			
+			}
+		}// section-1
+
+
+		section.section-2 {
+			.section-inner-container {
+				padding: 50px 25px;
+
+				// ========= Accordian.js =========
+				.accordion {
+				  .accordion-item {
+						.icon-question-container {
+							.plus-minus-container {
+					    	height: 20px;
+
+
+								// Plus, Minus
+								span {
+									line-height: 11px;
+								}
+								span.faPlus::after,
+								span.faMinus::after {
+									font-size: 0.7rem;
+									padding-left: 4.5px;
+								}
+
+
+								.faMinus,
+								.faPlus {
+									width: 20px;
+									height: 0.7em;
+								}
+							}
+						}
+						.answer-container {
+							p {
+								padding-left: 35px;
+							}
+						}
+				  }
+				}// accordion
+			}// section-inner-container
+		}// section-2
+
+
+		section.section-3 {
+			.section-inner-container {
+				.copy-img-container {
+					.graphic-ibd-digital-devices-2020 {
+						width: 75vw;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 568px) {
+	#faqs {
+		h1 { font-size: 1.8rem !important; }
+		h2 { font-size: 1.6rem !important; }
+
+
+		section.section-1 {
+			.section-inner-container {
+				.copy-wrapper {
+					.copy-container {
+						width: auto;
+					}	
+				}
+			}
+		}// section-1
+
+		section.section-2 {
+			.section-inner-container {
+
+
+				// ========= Accordian.js =========
+				.accordion {
+				  .accordion-item {
+						.icon-question-container {
+							h4.question {
+						    line-height: 130%;
+						    position: relative;
+						    top: -5px;
+							}
+						}
+						.answer-container {
+							p {
+
+							}
+						}
+				  }
+				}// accordion
+			}// section-inner-container
+		}// section-2
+
+		section.section-3 {
+			.section-inner-container {
+				.copy-img-container {
+					.copy-container {
+						width: 100%;
+					}
+					.graphic-ibd-digital-devices-2020 {
+						width: 85vw;
+					}
+				}
+
+				.button-container {
+					button {
+						padding: 0.5em 1em !important;
+
+						a.button_cta {
+							p {
+								font-size: 1.1em;
+							}
+						}
+					}
+				}
+				.no-obligation {
+					font-size: 0.7rem;
+				}
+			}
+		}
+	}
+
+}
+@media screen and (max-width: 428px) {
+	#faqs {
+		// h1 { font-size: 1.8rem; }
+		// h2 { font-size: 1.3rem; }
+		
+		h1 { font-size: 2rem !important; }
+		h2 { font-size: 1.5rem !important; }
+		h4 { font-size: 1.1rem !important; }
+
+		section.section-2 {
+			.section-inner-container {
+				// ========= Accordian.js =========
+				.accordion {
+				  .accordion-item {
+				    padding: 25px 10px 0px;
+
+				    .icon-question-container {
+				    	.plus-minus-container {
+				    		span.faPlus {
+				    			line-height: 10px;
+				    		}
+				    	}
+				    }
+
+						.answer-container {
+							p {
+	    					padding-left: 0;
+							}
+						}
+				  }
+				}// accordion
+			}// section-inner-container
+		}// section-2
+
+
+
+		section.section-3 {
+			.section-inner-container {
+				.button-container {
+					button {
+						a.button_cta {
+							p {
+								font-size: 1rem !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
