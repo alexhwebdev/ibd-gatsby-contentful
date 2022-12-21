@@ -33,6 +33,7 @@ const IBD_Overview = (props) => {
     </div>
   )
 };
+
 export const data = graphql`
   {
     allSite {
