@@ -10,16 +10,11 @@ import { Link } from 'gatsby';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 
-
-
-
-
-
-
-
-
 const IBD_Overview = (props) => {
   console.log('IBD_Overview props', props)
+
+  const transformedData = documentToReactComponents(JSON.parse(props.data.allContentfulIbddContentType.edges[0].node.pageContent.raw))
+  console.log('IBD_Overview transformedData', transformedData)
 
   return (
     <div className="ibd-index">
@@ -27,12 +22,13 @@ const IBD_Overview = (props) => {
       <h1 style={{marginTop:'200px'}}>IBD_Overview</h1>
 
       {
-        documentToReactComponents(JSON.parse(props.data.allContentfulPageContentType.edges[0].node.pageContent.raw))
+        documentToReactComponents(JSON.parse(props.data.allContentfulIbddContentType.edges[0].node.pageContent.raw))
       }
 
     </div>
   )
 };
+
 
 export const data = graphql`
   {
@@ -46,14 +42,17 @@ export const data = graphql`
       }
     },
 
-    allContentfulPageContentType(filter: {isHomepage: {eq: "Yes"}}) {
+    allContentfulIbddContentType(filter: {isHomepage: {eq: "Yes"}}) {
       edges {
         node {
           pageTitle
-          isHomepage
+          description
           slug
           pageContent {
             raw
+          }
+          pageImages {
+            gatsbyImageData
           }
         }
       }
@@ -62,17 +61,3 @@ export const data = graphql`
   }
 `
 export default IBD_Overview;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
