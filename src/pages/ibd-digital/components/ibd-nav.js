@@ -92,14 +92,14 @@ const onScrollFunc = () => {
 
 
 const IbdNav = (props, context) => {
-    // allSanityImageAsset {
-    //   edges {
-    //     node {
-    //       originalFilename
-    //       gatsbyImageData
-    //     }
-    //   }
-    // }  
+  //   // allSanityImageAsset {
+  //   //   edges {
+  //   //     node {
+  //   //       originalFilename
+  //   //       gatsbyImageData
+  //   //     }
+  //   //   }
+  //   // }  
   // const data = useStaticQuery(graphql`
   //   {
   //     allStrapiIbdDigital {
@@ -116,7 +116,7 @@ const IbdNav = (props, context) => {
   //     }
   //   }
   // `);
-  // console.log('ibd-nav.js data ', data)
+  // // console.log('ibd-nav.js data ', data)
 
   // let ibdLogoBlue = '';
   // let ibdLogoWhite = '';
@@ -172,10 +172,10 @@ const IbdNav = (props, context) => {
             placeholder="ibd-logo-blue-img"
             alt="Logo - IBD"
           />*/}
-{/*          <img 
-            src={ibdLogoBlue} alt=""
+          <img 
+            src={Logo_IBD_Blue} alt=""
             className="ibd-logo-blue-img"
-          />*/}
+          />
 
           {/*<GatsbyImage 
             className="ibd-logo-white-img"
@@ -183,10 +183,10 @@ const IbdNav = (props, context) => {
             placeholder="ibd-logo-white-img"
             alt="Logo - IBD"
           />*/}
-{/*          <img 
-            src={ibdLogoWhite} alt=""
+          <img 
+            src={Logo_IBD_White} alt=""
             className="ibd-logo-white-img"
-          />*/}
+          />
 
         </AnchorTag>
 
