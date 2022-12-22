@@ -59,23 +59,9 @@ const IBDVideo = "https://cdn.jwplayer.com/players/uZNcmMG4-z32DQ8pX.html";
 const IBD_Overview = (props) => {
   console.log('IBD_Overview props', props)
 
-  // const transformedData = documentToReactComponents(JSON.parse(props.data.allContentfulIbddContentType.edges[0].node.pageContent.raw))
-  // console.log('IBD_Overview transformedData', transformedData)
-
-
-  // const pageContent = parsePageContent(props.data);
-  // ---------- PAGE : COPY ----------
-  // Getting data from 'pageResources' breaks on 'gatsby build'
-  // const allPageDatas = props.pageResources.json.data.allSanityIbdDigital.nodes;
-  const pageContent = parsePageContent( props.data.allContentfulIbddContentType.edges[0].node.pageTitle, documentToReactComponents(JSON.parse(props.data.allContentfulIbddContentType.edges[0].node.pageContent.raw)));
-  // console.log('IBD_Overview pageContent', pageContent)
-
-
-
   // const metaData = parseSiteMetadata(props.data);
   // ---------- PAGE : META DATA ----------
   const metaData = props.data.allSite.nodes[0].siteMetadata;
-
 
 
   // // https://www.youtube.com/watch?v=BIQGBKXc6AI
@@ -98,14 +84,8 @@ const IBD_Overview = (props) => {
   }
 
 
-  // // const pageContent = parsePageContent(props.data);
-  // // ---------- PAGE : COPY ----------
-  // // Getting data from 'pageResources' breaks on 'gatsby build'
-  // // const allPageDatas = props.pageResources.json.data.allSanityIbdDigital.nodes;
-  // const pageContent = parsePageContent('Overview', props.data.allSanityIbdDigital.nodes);
-  // console.log('IBD_Overview pageContent', pageContent)
-
-
+  const contentfulEdgesNode = props.data.allContentfulIbddContentType.edges[0].node;
+  const pageContent = parsePageContent( contentfulEdgesNode.pageTitle, contentfulEdgesNode.pageContent.raw);
 
 
   const orderOfImgs = [ 
@@ -113,7 +93,9 @@ const IBD_Overview = (props) => {
     "graphic-ibd-stock-rating.webp",
     "graphic-woman-laptop.webp",
   ];
-  const gatsbyImgArray = sortedGatsbyImgData(props.data.allContentfulIbddContentType.edges[0].node.pageImages, orderOfImgs);
+
+
+  const gatsbyImgArray = sortedGatsbyImgData(contentfulEdgesNode.pageImages, orderOfImgs);
   console.log('IBD_Overview gatsbyImgArray', gatsbyImgArray)
 
 

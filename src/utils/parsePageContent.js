@@ -1,64 +1,23 @@
-export function parsePageContent( pageTitle, ibdDigitalSiteData) {
-  // console.log('parsePageContent - pageTitle', pageTitle)
-  // console.log('parsePageContent - ibdDigitalSiteData', ibdDigitalSiteData)
 
+
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+
+
+export function parsePageContent( pageTitle, rawPageData) {
+  // console.log('parsePageContent - pageTitle', pageTitle)
+  // console.log('parsePageContent - rawPageData', rawPageData)
+
+
+  const richTextFormatData = documentToReactComponents(JSON.parse(rawPageData))
+  // console.log('IBD_Overview richTextFormatData', richTextFormatData)
 
 
   // Remove empty strings in the 'pageBodyCopy' array
   let pageBodyCopyArray = [];
-  ibdDigitalSiteData.map( eachObject => {
+  richTextFormatData.map( eachObject => {
     // console.log('parsePageContent - eachObject', eachObject)
-
-    
     pageBodyCopyArray.push(eachObject.props.children[0])
-
-    // if (eachObject !== '') {
-    //   pageBodyCopyArray.push(eachObject)
-    // }
   })
-  // console.log('parsePageContent - pageBodyCopyArray', pageBodyCopyArray)
-
-
-  // const eachPageCopy = ibdDigitalSiteData.map( eachPageData => {
-  //   console.log('parsePageContent - eachPageData', eachPageData)
-
-  //   return eachPageData.props.children[0];
-
-  //   // if (eachPageData.node.Page_Title === pageTitle) {
-  //   //   return eachPageData.node.Page_Copy.data.Page_Copy;
-  //   // } 
-  // })
-  // console.log('parsePageContent - eachPageCopy', eachPageCopy)
-
-
-  // // Filter out 'undefined' array object
-  // let filteredPageCopyArray = eachPageCopy.filter(function(x) {
-  //   return x !== undefined;
-  // })
-  // // console.log('parsePageContent - filteredPageCopyArray', filteredPageCopyArray)
-
-
-  // // Create array of strings, split all instances of '\n' next line.
-  // // EXAMPLE : https://bobbyhadz.com/blog/javascript-split-string-by-newline
-  // // const str = 'first\nsecond\r\nthird';
-  // // console.log('str ', str);   // ['first', 'second', 'third']
-
-  // const pageBodyCopy = filteredPageCopyArray[0].split(/\r?\n/);
-  // // console.log('parsePageContent - pageBodyCopy', pageBodyCopy)
-
-
-
-  // // Remove empty strings in the 'pageBodyCopy' array
-  // let pageBodyCopyArray = [];
-  // pageBodyCopy.map( eachValue => {
-  //   // console.log('parsePageContent - eachValue', eachValue)
-
-  //   if (eachValue !== '') {
-  //     pageBodyCopyArray.push(eachValue)
-  //   }
-  // })
-  // // console.log('parsePageContent - pageBodyCopyArray', pageBodyCopyArray)
-
   return pageBodyCopyArray;
 };
 
