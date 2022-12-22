@@ -7,8 +7,6 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { Link } from 'gatsby';
 // import styled from 'styled-components';
 // import { globalHistory } from '@reach/router'
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-
 
 
 /* ==========  COMPONENTS  ========== */
