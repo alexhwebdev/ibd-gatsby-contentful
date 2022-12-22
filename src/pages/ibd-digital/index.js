@@ -280,11 +280,11 @@ const IBD_Overview = (props) => {
               data-sal-delay="200" // adds delay to the animation (from 5 to 1000 ms)
               data-sal-easing="ease" // sets easing for the animation (see easings.net for reference)
             >
-{/*              <GatsbyImage className="graphic-ibd-stock-rating"
+              <GatsbyImage className="graphic-ibd-stock-rating"
                 image={gatsbyImgArray[1][1]}
                 placeholder="graphic-ibd-stock-rating"
                 alt="Image - IBD Stock Rating"
-              />*/}
+              />
             </div>
             <div className="copy-container">
               <div className="copy"
@@ -399,11 +399,11 @@ const IBD_Overview = (props) => {
               </div>
             </div>
             <div className="img-quote-container">
-{/*              <GatsbyImage 
+              <GatsbyImage 
                 className="graphic-woman-laptop"
                 image={gatsbyImgArray[2][1]}
                 alt=""
-              />*/}
+              />
 
               <div className="copy">
                 {/*<h3>{pageContent[22]}</h3>*/}
@@ -520,7 +520,7 @@ export const data = graphql`
       }
     },
 
-    allContentfulIbddContentType(filter: {isHomepage: {eq: "Yes"}}) {
+    allContentfulIbddContentType(filter: {pageTitle: {eq: "Overview"}}) {
       edges {
         node {
           pageTitle
