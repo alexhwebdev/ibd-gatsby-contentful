@@ -9,7 +9,7 @@ export function parsePageContent( pageTitle, rawPageData) {
 
 
   const richTextFormatData = documentToReactComponents(JSON.parse(rawPageData))
-  console.log('IBD_Overview richTextFormatData', richTextFormatData)
+  // console.log('IBD_Overview richTextFormatData', richTextFormatData)
 
 
 

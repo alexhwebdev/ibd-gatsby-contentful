@@ -84,7 +84,7 @@ const IBD_Overview = (props) => {
   // ---------- PAGE : COPY ----------
   const contentfulEdgesNode = props.data.allContentfulIbddContentType.edges[0].node;
   const pageContent = parsePageContent( contentfulEdgesNode.pageTitle, contentfulEdgesNode.pageContent.raw);
-  console.log('IBD_Overview pageContent', pageContent)
+  // console.log('IBD_Overview pageContent', pageContent)
 
 
   const orderOfImgs = [ 
@@ -95,7 +95,7 @@ const IBD_Overview = (props) => {
 
 
   const gatsbyImgArray = sortedGatsbyImgData(contentfulEdgesNode.pageImages, orderOfImgs);
-  console.log('IBD_Overview gatsbyImgArray', gatsbyImgArray)
+  // console.log('IBD_Overview gatsbyImgArray', gatsbyImgArray)
 
 
   return (
@@ -132,11 +132,11 @@ const IBD_Overview = (props) => {
 
 
 
-              <h1 dangerouslySetInnerHTML={{__html: pageContent[0]}}></h1>
+              <span>pageContent[0]</span>
 
 
               {/* With IBD® Digital ... Same as below */}
-              <p>{pageContent[1]}</p>
+              <span>{pageContent[1]}</span>
 
               {/* 2 Months for $20 */}
               <button
@@ -147,7 +147,7 @@ const IBD_Overview = (props) => {
                 {pageContent[2]}
               </button>
 
-              <p className="disclaimer">{pageContent[3]}</p>
+              <span className="disclaimer">{pageContent[3]}</span>
             </div>
             {/* Video for Large Screen */}
             {/*
@@ -201,10 +201,10 @@ const IBD_Overview = (props) => {
             <div className="copy-container">
               {/* Get an edge in the stock market. */}
               {/*<h1 dangerouslySetInnerHTML={{__html: pageContent[0]}}></h1>*/}
-              <h1>{pageContent[0]}</h1>
+              <span>{pageContent[0]}</span>
 
               {/* With IBD® Digital ... Same as below */}
-              <p>{pageContent[1]}</p>
+              <span>{pageContent[1]}</span>
 
               {/* 2 Months for $20 */}
               <button
@@ -214,7 +214,7 @@ const IBD_Overview = (props) => {
               >
                 {pageContent[2]}
               </button>
-              <p className="disclaimer">{pageContent[3]}</p>
+              <span className="disclaimer">{pageContent[3]}</span>
             </div>
             {/* Video for Large Screen */}
             <div className="video-container">
@@ -249,8 +249,8 @@ const IBD_Overview = (props) => {
         {/* ==========  SECTION 2 : We help you ...  ========== */}
         <section className="section-2">
           <div className="intro-container">
-            <h2>{pageContent[4]}</h2>
-            <p>{pageContent[5]}</p>
+            <span>{pageContent[4]}</span>
+            <span>{pageContent[5]}</span>
           </div>
 
           <div 
@@ -275,8 +275,8 @@ const IBD_Overview = (props) => {
                 data-sal-delay="300" // adds delay to the animation (from 5 to 1000 ms)
                 data-sal-easing="ease" // sets easing for the animation (see easings.net for reference)
               >
-                <h3>{pageContent[6]}</h3>
-                <p>{pageContent[7]}</p>
+                <span>{pageContent[6]}</span>
+                <span>{pageContent[7]}</span>
               </div>
 
               <div className="copy"
@@ -285,8 +285,8 @@ const IBD_Overview = (props) => {
                 data-sal-delay="400" // adds delay to the animation (from 5 to 1000 ms)
                 data-sal-easing="ease" // sets easing for the animation (see easings.net for reference)
               >
-                <h3>{pageContent[8]}</h3>
-                <p>{pageContent[9]}</p>
+                <span>{pageContent[8]}</span>
+                <span>{pageContent[9]}</span>
               </div>
 
               <div className="copy"
@@ -295,8 +295,8 @@ const IBD_Overview = (props) => {
                 data-sal-delay="500" // adds delay to the animation (from 5 to 1000 ms)
                 data-sal-easing="ease" // sets easing for the animation (see easings.net for reference)
               >
-                <h3>{pageContent[10]}</h3>
-                <p>{pageContent[11]}</p>
+                <span>{pageContent[10]}</span>
+                <span>{pageContent[11]}</span>
               </div>
 
               <div className="copy"
@@ -305,8 +305,8 @@ const IBD_Overview = (props) => {
                 data-sal-delay="600" // adds delay to the animation (from 5 to 1000 ms)
                 data-sal-easing="ease" // sets easing for the animation (see easings.net for reference)
               >
-                <h3>{pageContent[12]}</h3>
-                <p>{pageContent[13]}</p>
+                <span>{pageContent[12]}</span>
+                <span>{pageContent[13]}</span>
               </div>
 
               {/* See More Features */}
@@ -323,7 +323,7 @@ const IBD_Overview = (props) => {
                     // activeClassName="active" 
                     title="See More Features"
                   >
-                    <p>{pageContent[14]}</p>
+                    <span>{pageContent[14]}</span>
                   </Link>
                 </button>
               </div>
@@ -336,7 +336,7 @@ const IBD_Overview = (props) => {
         {/* ==========  SECTION 3 : This is why ...  ========== */}
         <section className="section-3">
           <div className="intro-container">
-            <h2>{pageContent[15]}</h2>
+            <span>{pageContent[15]}</span>
           </div>
 
           <div className="copy-img-container">
@@ -349,8 +349,8 @@ const IBD_Overview = (props) => {
               >
                 <span></span>
                 <div className="copy">
-                  <h3>{pageContent[16]}</h3>
-                  <p>{pageContent[17]}</p>                  
+                  <span>{pageContent[16]}</span>
+                  <span>{pageContent[17]}</span>                  
                 </div>
               </div>
 
@@ -362,8 +362,8 @@ const IBD_Overview = (props) => {
               >
                 <span></span>
                 <div className="copy">
-                  <h3>{pageContent[18]}</h3>
-                  <p>{pageContent[19]}</p>
+                  <span>{pageContent[18]}</span>
+                  <span>{pageContent[19]}</span>
                 </div>
               </div>
 
@@ -375,8 +375,8 @@ const IBD_Overview = (props) => {
               >
                 <span></span>
                 <div className="copy">
-                  <h3>{pageContent[20]}</h3>
-                  <p>{pageContent[21]}</p>
+                  <span>{pageContent[20]}</span>
+                  <span>{pageContent[21]}</span>
                 </div>
               </div>
             </div>
@@ -388,9 +388,9 @@ const IBD_Overview = (props) => {
               />
 
               <div className="copy">
-                {/*<h3>{pageContent[22]}</h3>*/}
-                <p><i>{pageContent[22]}</i></p>
-                <p>{pageContent[23]}</p>
+                {/*<span>{pageContent[22]}</span>*/}
+                <span><i>{pageContent[22]}</i></span>
+                <span>{pageContent[23]}</span>
               </div>
             </div>
           </div>
@@ -403,7 +403,7 @@ const IBD_Overview = (props) => {
                 target="_blank"
                 title="See Why We're Better"
               >
-                <p>{pageContent[24]}</p>
+                <span>{pageContent[24]}</span>
               </Link>
             </button>
           </div>
@@ -414,17 +414,17 @@ const IBD_Overview = (props) => {
         {/* ========== SECTION 4 : SUBSCRIBE Choose your IBD ... ========== */}
         <section id="pricing" className="section-4">
           <div className="intro-container">
-            <p>{pageContent[25]}</p>
-            <h2>{pageContent[26]}</h2>
+            <span>{pageContent[25]}</span>
+            <span>{pageContent[26]}</span>
           </div>
 
           <div className="card-wrapper">
             {/* Trial */}
             <div className="card-container">
-              <h3>{pageContent[27]}</h3>
-              <p>{pageContent[28]}</p>
-              <h3>{pageContent[29]}</h3>
-              <p>{pageContent[30]}</p>
+              <span>{pageContent[27]}</span>
+              <span>{pageContent[28]}</span>
+              <span>{pageContent[29]}</span>
+              <span>{pageContent[30]}</span>
               
               {/* SELECT */}
               <button
@@ -435,16 +435,16 @@ const IBD_Overview = (props) => {
                 {pageContent[31]}
               </button>
 
-              <p>{pageContent[32]}</p>
+              <span>{pageContent[32]}</span>
             </div>
 
             {/* Monthly */}
             <div className="card-container">
-              <h3>{pageContent[33]}</h3>
-              <p>{pageContent[34]}</p>
+              <span>{pageContent[33]}</span>
+              <span>{pageContent[34]}</span>
 
               <div className="price-container">
-                <h3>{pageContent[35]}</h3>
+                <span>{pageContent[35]}</span>
                 <span>{pageContent[36]}</span>
               </div>
               {/* SELECT */}
@@ -459,15 +459,15 @@ const IBD_Overview = (props) => {
 
             {/* Annual */}
             <div className="card-container">
-              <h3>{pageContent[38]}</h3>
-              <p>{pageContent[39]}</p>
+              <span>{pageContent[38]}</span>
+              <span>{pageContent[39]}</span>
 
               <div className="price-container">
-              <h3>{pageContent[40]}</h3>
+              <span>{pageContent[40]}</span>
               <span>{pageContent[41]}</span>
               </div>
 
-              <p>{pageContent[42]}</p>
+              <span>{pageContent[42]}</span>
               
               {/* SELECT */}
               <button

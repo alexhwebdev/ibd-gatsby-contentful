@@ -114,10 +114,10 @@ const Features = (props) => {
         <section className="section-1">
           <div className="section-inner-container">
             <div className="copy-container">
-              <h1>{pageContent[0]}</h1>
+              <span>{pageContent[0]}</span>
               
               <div className="paragraph-fontawesome">
-                <p>{pageContent[1]}</p>
+                <span>{pageContent[1]}</span>
 
                 {/* GET STARTED NOW : 2 Months for $20 */}
                 <button
@@ -126,7 +126,7 @@ const Features = (props) => {
                   data-title="IBD Digital 2 weeks for $20" 
                   aria-label="Get Started Now"
                 >
-                  <p>{pageContent[2]}</p>
+                  <span>{pageContent[2]}</span>
                 </button>
               </div>
             </div>
@@ -146,8 +146,8 @@ const Features = (props) => {
         {/* ==== SECTION 2 : All our premium... ==== */}
         <section className="section-2">
           <div className="section-inner-container">
-            {/*<h2 dangerouslySetInnerHTML={{__html: pageContent[3]}}></h2>*/}
-            <h2>{pageContent[3]}</h2>
+            {/*<span dangerouslySetInnerHTML={{__html: pageContent[3]}}></span>*/}
+            <span>{pageContent[3]}</span>
             <GatsbyImage 
               className="graphic-ibd-digital-devices-2020"
               image={gatsbyImgArray[1][1]}
@@ -158,30 +158,30 @@ const Features = (props) => {
               <ul className="list">
                 <li className="list-item">
                   <span></span>
-                  <p>{pageContent[4]}</p>
+                  <span>{pageContent[4]}</span>
 
                 </li>
                 <li className="list-item">
                   <span></span>
-                  <p>{pageContent[5]}</p>
+                  <span>{pageContent[5]}</span>
                 </li>
                 <li className="list-item">
                   <span></span>
-                  <p>{pageContent[6]}</p>
+                  <span>{pageContent[6]}</span>
                 </li>
               </ul>
               <ul className="list">
                 <li className="list-item">
                   <span></span>
-                  <p>{pageContent[7]}</p>
+                  <span>{pageContent[7]}</span>
                 </li>
                 <li className="list-item">
                   <span></span>
-                  <p>{pageContent[8]}</p>
+                  <span>{pageContent[8]}</span>
                 </li>
                 <li className="list-item">
                   <span></span>
-                  <p>{pageContent[9]}</p>
+                  <span>{pageContent[9]}</span>
                 </li>
               </ul>
             </div>
@@ -194,11 +194,11 @@ const Features = (props) => {
                 data-title="IBD Digital 2 weeks for $20" 
                 aria-label="Get Instant Access"
               >
-                <p>{pageContent[10]}</p>
+                <span>{pageContent[10]}</span>
                 {/*<FontAwesomeIcon icon={faChevronRight} className="faChevronRight" />*/}
               </button>
             </div>
-            <p className="no-obligation">{pageContent[11]}</p>
+            <span className="no-obligation">{pageContent[11]}</span>
           </div>
         </section>
 
@@ -207,10 +207,10 @@ const Features = (props) => {
         <section className="section-3">
           <div className="section-inner-container">
             <div className="copy-container">
-              <h2>{pageContent[12]}</h2>
+              <span>{pageContent[12]}</span>
 
               <div className="paragraph-fontawesome">
-                <p>{pageContent[13]}</p>
+                <span>{pageContent[13]}</span>
 
 
                 {/*Gatsby Smooth Scroll Anchor Links - https://www.gatsbyjs.com/plugins/gatsby-plugin-anchor-links/*/}
@@ -219,7 +219,7 @@ const Features = (props) => {
                   className="anchortag" 
                   title="Investors Business Daily - Pricing"
                 >
-                  <p>{pageContent[14]}</p>
+                  <span>{pageContent[14]}</span>
                 </AnchorLink>
               </div>
             </div>
@@ -239,8 +239,8 @@ const Features = (props) => {
                     alt="Image - IBD Digital Device"
                   />
                   <div className="copy-container">
-                    <h3>IBD 50</h3>
-                    <p>Our flagship stock list of the top 50 growth stocks with top-notch fundamental strength</p>
+                    <span>IBD 50</span>
+                    <span>Our flagship stock list of the top 50 growth stocks with top-notch fundamental strength</span>
                   </div>
                 </div>
 
@@ -252,8 +252,8 @@ const Features = (props) => {
                     alt="Image - Microscope"
                   />
                   <div className="copy-container">
-                    <h3>IPO Sector Leaders</h3>
-                    <p>Only the strongest stocks from the best-performing sectors</p>
+                    <span>IPO Sector Leaders</span>
+                    <span>Only the strongest stocks from the best-performing sectors</span>
                   </div>
                 </div>
 
@@ -265,8 +265,8 @@ const Features = (props) => {
                     alt="Image - Uptrend arrows"
                   />
                   <div className="copy-container">
-                    <h3>IPO Leaders</h3>
-                    <p>The strongest new IPOs poised for big gains</p>
+                    <span>IPO Leaders</span>
+                    <span>The strongest new IPOs poised for big gains</span>
                   </div>
                 </div>
 
@@ -278,8 +278,8 @@ const Features = (props) => {
                     alt="Image - Office buildings"
                   />
                   <div className="copy-container">
-                    <h3>Long-Term Leaders</h3>
-                    <p>Load up your portfolio with these stable perennial market leaders</p>
+                    <span>Long-Term Leaders</span>
+                    <span>Load up your portfolio with these stable perennial market leaders</span>
                   </div>
                 </div>
 
@@ -291,8 +291,8 @@ const Features = (props) => {
                     alt="Image - Computer chips"
                   />
                   <div className="copy-container">
-                    <h3>Big Cap 20</h3>
-                    <p>The top large cap stocks with superior fundamentals</p>
+                    <span>Big Cap 20</span>
+                    <span>The top large cap stocks with superior fundamentals</span>
                   </div>
                 </div>
 
@@ -304,8 +304,8 @@ const Features = (props) => {
                     alt="Image - Keyboard Buy button"
                   />
                   <div className="copy-container">
-                    <h3>Stocks Near A Buy Zone</h3>
-                    <p>Highlights a handful or our top stock picks nearing a buy point</p>
+                    <span>Stocks Near A Buy Zone</span>
+                    <span>Highlights a handful or our top stock picks nearing a buy point</span>
                   </div>
                 </div>
 
@@ -329,9 +329,9 @@ const Features = (props) => {
               />
             </div>
             <div className="copy-container">
-              <h2>{pageContent[27]}</h2>
-              <p>{pageContent[28]}</p>
-              <p>{pageContent[29]}</p>
+              <span>{pageContent[27]}</span>
+              <span>{pageContent[28]}</span>
+              <span>{pageContent[29]}</span>
             </div>
           </div>
         </section>
@@ -340,7 +340,7 @@ const Features = (props) => {
         {/* ==== SECTION 5 : Here’s how to ... ==== */}
         <section className="section-5">
           <div className="section-inner-container">
-            <h2>{pageContent[30]}</h2>
+            <span>{pageContent[30]}</span>
 
             <div className="img-copy-container">
               <div className="left-container">
@@ -354,8 +354,8 @@ const Features = (props) => {
                 </div>
 
                 <div className="copy-container">
-                  <h3>{pageContent[31]}</h3>
-                  <p>{pageContent[32]}</p>
+                  <span>{pageContent[31]}</span>
+                  <span>{pageContent[32]}</span>
                 </div>
               </div>
               <div className="right-container">
@@ -368,8 +368,8 @@ const Features = (props) => {
                   />
                 </div>
                 <div className="copy-container">
-                  <h3>{pageContent[33]}</h3>
-                  <p>{pageContent[34]}</p>
+                  <span>{pageContent[33]}</span>
+                  <span>{pageContent[34]}</span>
                 </div>
               </div>
             </div>            
@@ -380,7 +380,7 @@ const Features = (props) => {
         {/* ==== SECTION 6 : Market trend analysis... ==== */}
         <section className="section-6">
           <div className="section-inner-container">
-            <h2>{pageContent[35]}</h2>
+            <span>{pageContent[35]}</span>
 
 
             <div className="img-copy-container">
@@ -393,20 +393,20 @@ const Features = (props) => {
                 />
               </div>
               <div className="copy-container">
-                <p>{pageContent[36]}</p>
-                <p>{pageContent[37]}</p>
+                <span>{pageContent[36]}</span>
+                <span>{pageContent[37]}</span>
                 <ul>
                   <li className="list-item">
-                    <p>{pageContent[38]}</p>
+                    <span>{pageContent[38]}</span>
                   </li>
                   <li className="list-item">
-                    <p>{pageContent[39]}</p>
+                    <span>{pageContent[39]}</span>
                   </li>
                   <li className="list-item">
-                    <p>{pageContent[40]}</p>
+                    <span>{pageContent[40]}</span>
                   </li>
                 </ul>
-                <p>{pageContent[41]}</p>
+                <span>{pageContent[41]}</span>
 
 
                 <div className="button-container">
@@ -417,7 +417,7 @@ const Features = (props) => {
                     data-title="IBD Digital 2 weeks for $20" 
                     aria-label="Get Instant Access"
                   >
-                    <p>{pageContent[42]}</p>
+                    <span>{pageContent[42]}</span>
                   </button>
                 </div>
 
@@ -433,9 +433,9 @@ const Features = (props) => {
           <div className="section-inner-container">
             <div className="img-copy-container">
               <div className="copy-container">
-                <h2>{pageContent[43]}</h2>
-                <p>{pageContent[44]}</p>
-                <p>{pageContent[45]}</p>
+                <span>{pageContent[43]}</span>
+                <span>{pageContent[44]}</span>
+                <span>{pageContent[45]}</span>
               </div>
               <div className="img-container">
                 <GatsbyImage 
@@ -454,7 +454,7 @@ const Features = (props) => {
         <section className="section-8">
           <div className="section-inner-container">
             <div className="copy-container">
-              <h2>{pageContent[46]}</h2>
+              <span>{pageContent[46]}</span>
 
               <div className="button-container">
                 {/* 2 MONTHS FOR $20 : 2 Months for $20 */}
@@ -464,11 +464,11 @@ const Features = (props) => {
                   data-title="IBD Digital 2 weeks for $20" 
                   aria-label="2 Months for $20"
                 >
-                  <p>{pageContent[47]}</p>
+                  <span>{pageContent[47]}</span>
                   {/*<FontAwesomeIcon icon={faChevronRight} className="faChevronRight" />*/}
                 </button>
               </div>
-              <p className="no-obligation">{ pageContent[48] }</p>
+              <span className="no-obligation">{ pageContent[48] }</span>
             </div>
           </div>
         </section>

@@ -14,7 +14,7 @@ export function sortedGatsbyImgData(propsData, imgOrder) {
 
     unorderedImgArray.push(eachImgData);
   }
-  console.log('unorderedImgArray ', unorderedImgArray)
+  // console.log('unorderedImgArray ', unorderedImgArray)
 
   // For each order of 'imgKey', 'filter' and return new array (gatsbyImageArray) of 'values' that match condition. If no match, return 'undefined'.
   imgOrder.forEach(function(imgKey) {
@@ -29,7 +29,7 @@ export function sortedGatsbyImgData(propsData, imgOrder) {
       }
     })
   })
-  console.log('gatsbyImageArray ',  gatsbyImageArray)
+  // console.log('gatsbyImageArray ',  gatsbyImageArray)
   // console.log('gatsbyImageArray[0][0] ',  gatsbyImageArray[0][0])
 
   return gatsbyImageArray;
