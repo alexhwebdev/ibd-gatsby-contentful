@@ -99,6 +99,9 @@ const IBD_Overview = (props) => {
   // console.log('IBD_Overview gatsbyImgArray', gatsbyImgArray)
 
 
+  console.log('process.env ', process.env.CONTENTFUL_SPACE_ID)
+
+
   return (
     <div className="ibd-index">
       <Seo 

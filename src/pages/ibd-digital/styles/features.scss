@@ -99,7 +99,7 @@
 
 				}
 				.paragraph-fontawesome {
-					> p {
+					> span p {
 						padding-bottom: 15px;
 					}
 					p {
@@ -220,6 +220,10 @@
 			    border-radius: 45px;
 			    padding: 0.75em 1.75em;
 
+			    h4 {
+			    	color: #ffffff;
+			    }
+
           &:hover {
             cursor: pointer;
           }
@@ -323,13 +327,18 @@
 								    right: 0;
 								    left: 0;
 
-	    							h3 {
+	    							h3,
+	    							span:nth-of-type(1) {
 											color: #ffffff;
+											font-family: 'Poppins',sans-serif;
 											font-size: 2rem;
+											font-weight: bold;
 											text-shadow: 1px 1px 1px #666;
 	    							}
-	    							p {
+	    							p,
+	    							span:nth-of-type(2) {
 									    color: #ffffff;
+									    font-family: 'Poppins',sans-serif;
 									    font-size: 1rem;
 									    text-shadow: 1px 1px 1px #666;
 	    							}
@@ -477,7 +486,7 @@
 			    justify-content: center;
 			    padding: 0 25px;
 
-					> p:first-of-type {
+					> span:first-of-type p {
 						color: $ibd_blue;
 						font-weight: 600;
 					}
@@ -546,7 +555,7 @@
 			    justify-content: center;
 			    padding: 0 25px;
 
-					> p:first-of-type {
+					> span:nth-of-type(2) p {
 						color: $ibd_blue;
 						font-weight: 600;
 					}
