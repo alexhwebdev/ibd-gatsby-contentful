@@ -16,6 +16,7 @@
 	}
 	h2 {
 		font-size: 2rem;
+    margin-bottom: 15px;
 	}
 	h3 {
 		font-size: 1.4rem;
@@ -60,7 +61,7 @@
         z-index: 1;
 
         h1 {
-          padding-bottom: 15px;
+          margin-bottom: 15px;
 
           a { color: #ffffff; }
         }
@@ -184,13 +185,17 @@
         padding: 11.2vh 50px;
         z-index: 1;
 
-        h1 p {
-          font-size: 2.2rem;
-          font-weight: 400;
-          padding-bottom: 15px;
-
-          a { color: #ffffff; }
+        h1 {
+          margin-bottom: 15px;
         }
+
+        // h1 p {
+        //   font-size: 2.2rem;
+        //   font-weight: 400;
+        //   padding-bottom: 15px;
+
+        //   a { color: #ffffff; }
+        // }
         p {
           color: #ffffff;
           font-weight: 400;
@@ -218,6 +223,10 @@
             color: #000;
             font-weight: 800;
             text-decoration: none;
+          }
+
+          p {
+            color: #000000;
           }
         }
         .disclaimer { font-size: 0.70rem; }
@@ -517,13 +526,13 @@
             padding-right: 5px;
           }
           // Chevron Right
-          p::after {
-            color: $white;
-            content: "\f054";
-            font-family: "Font Awesome 5 Free"; 
-            font-weight: 900;
-            padding-left: 5px;
-          }
+          // p::after {
+          //   color: $white;
+          //   content: "\f054";
+          //   font-family: "Font Awesome 5 Free"; 
+          //   font-weight: 900;
+          //   padding-left: 5px;
+          // }
           svg {
           	color: #ffffff;
           	font-size: 1.3em;

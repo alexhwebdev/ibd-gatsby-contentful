@@ -41,8 +41,6 @@ import './styles/ibd-footer.scss';
 // const Main = styled.div``
 
 
-
-
 // https://www.gatsbyjs.com/docs/how-to/images-and-media/working-with-video/
 import DogVideo from "../../images/test-video.mp4"
 
@@ -56,6 +54,7 @@ const IBDVideo = "https://cdn.jwplayer.com/players/uZNcmMG4-z32DQ8pX.html";
 
 const IBD_Overview = (props) => {
   console.log('IBD_Overview props', props)
+
 
   // const metaData = parseSiteMetadata(props.data);
   // ---------- PAGE : META DATA ----------
@@ -82,8 +81,10 @@ const IBD_Overview = (props) => {
   }
 
 
+  // ---------- PAGE : COPY ----------
   const contentfulEdgesNode = props.data.allContentfulIbddContentType.edges[0].node;
   const pageContent = parsePageContent( contentfulEdgesNode.pageTitle, contentfulEdgesNode.pageContent.raw);
+  console.log('IBD_Overview pageContent', pageContent)
 
 
   const orderOfImgs = [ 
@@ -199,7 +200,8 @@ const IBD_Overview = (props) => {
 
             <div className="copy-container">
               {/* Get an edge in the stock market. */}
-              <h1 dangerouslySetInnerHTML={{__html: pageContent[0]}}></h1>
+              {/*<h1 dangerouslySetInnerHTML={{__html: pageContent[0]}}></h1>*/}
+              <h1>{pageContent[0]}</h1>
 
               {/* With IBD® Digital ... Same as below */}
               <p>{pageContent[1]}</p>
@@ -387,7 +389,7 @@ const IBD_Overview = (props) => {
 
               <div className="copy">
                 {/*<h3>{pageContent[22]}</h3>*/}
-                <p><i>"{pageContent[22]}"</i></p>
+                <p><i>{pageContent[22]}</i></p>
                 <p>{pageContent[23]}</p>
               </div>
             </div>

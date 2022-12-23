@@ -56,6 +56,7 @@ const Features = (props) => {
   // ---------- PAGE : COPY ----------
   const contentfulEdgesNode = props.data.allContentfulIbddContentType.edges[0].node;
   const pageContent = parsePageContent( contentfulEdgesNode.pageTitle, contentfulEdgesNode.pageContent.raw);
+  console.log('FEATURES pageContent', pageContent)
 
 
 
@@ -80,7 +81,7 @@ const Features = (props) => {
     "graphic-ibd-mobile-stock-screener-800px.webp"
   ];
   const gatsbyImgArray = sortedGatsbyImgData(contentfulEdgesNode.pageImages, orderOfImgs);
-  console.log('IBD_Features gatsbyImgArray', gatsbyImgArray)
+  // console.log('IBD_Features gatsbyImgArray', gatsbyImgArray)
 
 
 
@@ -145,7 +146,8 @@ const Features = (props) => {
         {/* ==== SECTION 2 : All our premium... ==== */}
         <section className="section-2">
           <div className="section-inner-container">
-            <h2 dangerouslySetInnerHTML={{__html: pageContent[3]}}></h2>
+            {/*<h2 dangerouslySetInnerHTML={{__html: pageContent[3]}}></h2>*/}
+            <h2>{pageContent[3]}</h2>
             <GatsbyImage 
               className="graphic-ibd-digital-devices-2020"
               image={gatsbyImgArray[1][1]}
@@ -156,31 +158,30 @@ const Features = (props) => {
               <ul className="list">
                 <li className="list-item">
                   <span></span>
-                  <p dangerouslySetInnerHTML={{__html: pageContent[4]}}></p>
-                  {/*<p>{pageContent[4]}</p>*/}
+                  <p>{pageContent[4]}</p>
 
                 </li>
                 <li className="list-item">
                   <span></span>
-                  <p dangerouslySetInnerHTML={{__html: pageContent[5]}}></p>
+                  <p>{pageContent[5]}</p>
                 </li>
                 <li className="list-item">
                   <span></span>
-                  <p dangerouslySetInnerHTML={{__html: pageContent[6]}}></p>
+                  <p>{pageContent[6]}</p>
                 </li>
               </ul>
               <ul className="list">
                 <li className="list-item">
                   <span></span>
-                  <p dangerouslySetInnerHTML={{__html: pageContent[7]}}></p>
+                  <p>{pageContent[7]}</p>
                 </li>
                 <li className="list-item">
                   <span></span>
-                  <p dangerouslySetInnerHTML={{__html: pageContent[8]}}></p>
+                  <p>{pageContent[8]}</p>
                 </li>
                 <li className="list-item">
                   <span></span>
-                  <p dangerouslySetInnerHTML={{__html: pageContent[9]}}></p>
+                  <p>{pageContent[9]}</p>
                 </li>
               </ul>
             </div>
@@ -463,7 +464,7 @@ const Features = (props) => {
                   data-title="IBD Digital 2 weeks for $20" 
                   aria-label="2 Months for $20"
                 >
-                  <p dangerouslySetInnerHTML={{__html: pageContent[47]}}></p>
+                  <p>{pageContent[47]}</p>
                   {/*<FontAwesomeIcon icon={faChevronRight} className="faChevronRight" />*/}
                 </button>
               </div>

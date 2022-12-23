@@ -9,19 +9,39 @@ export function parsePageContent( pageTitle, rawPageData) {
 
 
   const richTextFormatData = documentToReactComponents(JSON.parse(rawPageData))
-  // console.log('IBD_Overview richTextFormatData', richTextFormatData)
+  console.log('IBD_Overview richTextFormatData', richTextFormatData)
 
 
-  // Remove empty strings in the 'pageBodyCopy' array
-  let pageBodyCopyArray = [];
-  richTextFormatData.map( eachObject => {
-    // console.log('parsePageContent - eachObject', eachObject)
-    pageBodyCopyArray.push(eachObject.props.children[0])
-  })
-  return pageBodyCopyArray;
+
+  return richTextFormatData;
 };
 
 
 
 
-// /\n\s*\n/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
