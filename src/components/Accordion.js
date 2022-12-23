@@ -27,8 +27,8 @@ import '../pages/ibd-digital/styles/faqs.scss';
 // `
 
 const Accordion = ({ question, answer }) => {
-  console.log('question ', question)
-  console.log('answer ', answer)
+  // console.log('question ', question)
+  // console.log('answer ', answer)
 
   const [isActive, setIsActive] = useState(false);
 

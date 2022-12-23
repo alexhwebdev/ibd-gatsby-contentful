@@ -1,5 +1,5 @@
 export function sortedGatsbyImgData(propsData, imgOrder) {
-  console.log('propsData ', propsData)
+  // console.log('sortedGatsbyImgData ', propsData)
 
   let unorderedImgArray = [];
   const gatsbyImageArray = [];

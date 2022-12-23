@@ -9,9 +9,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `IBD Gatsby Sanity`,
-    siteUrl: `https://ibdgatsbystrapi.gatsbyjs.io/`,
-    description: `IBD Gatsby Sanity`,
+    title: `IBD Gatsby Contentful`,
+    siteUrl: `https://ibdgatsbysanity.gatsbyjs.io/`,
+    description: `IBD Gatsby Contentful`,
     author: `Alex Hong`,
     keywords: `Investor's, Business, Daily`,
   },
@@ -38,8 +38,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
-        host: 'https://ibdgatsbystrapi.gatsbyjs.io/',
-        sitemap: 'https://ibdgatsbystrapi.gatsbyjs.io//sitemap.xml',
+        host: 'https://ibdgatsbysanity.gatsbyjs.io/',
+        sitemap: 'https://ibdgatsbysanity.gatsbyjs.io/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/', disallow: '/search' }]
       },
     },
