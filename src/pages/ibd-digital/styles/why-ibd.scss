@@ -285,7 +285,7 @@
 					}
 				}
 				
-				p.disclaimer {
+				.disclaimer p {
 					font-size: 0.7rem;
 					padding: 0px 25px;
 					text-align: center;
@@ -393,7 +393,8 @@
 				color: $white;
 				padding-bottom: 45px;
 			}
-			> p {
+			> span p {
+				color: $white;
 		    margin: 0 auto;
 		    max-width: 90%;
 			}
@@ -401,6 +402,7 @@
 			.modules-wrapper {
 				display: flex;
 				flex-wrap: wrap;
+				padding-top: 50px;
 
 				.modules-container {
 					width: 50%;
@@ -419,7 +421,7 @@
 						font-weight: 600;
 						margin-bottom: 15px;
 					}
-					> p {
+					> span p {
 						color: $white;
 						margin: 0 auto;
 						max-width: 75%;
