@@ -14,7 +14,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-react-helmet`,
+    // `gatsby-plugin-react-helmet`,
+    
     // This allows styled-components to work in 'pages/ibd-digital'
     // `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
