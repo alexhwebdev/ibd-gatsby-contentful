@@ -52,8 +52,6 @@ const IBDVideo = "https://cdn.jwplayer.com/players/uZNcmMG4-z32DQ8pX.html";
 
 
 
-
-
 const IBD_Overview = (props) => {
   console.log('IBD_Overview props', props)
 
