@@ -205,7 +205,6 @@ const IBD_Overview = (props) => {
               {/* Get an edge in the stock market. */}
               {/*<h1 dangerouslySetInnerHTML={{__html: pageContent[0]}}></h1>*/}
               <span>{pageContent[0]}</span>
-<span>adfdsfasdf</span>
 
               {/* With IBD® Digital ... Same as below */}
               <span>{pageContent[1]}</span>
