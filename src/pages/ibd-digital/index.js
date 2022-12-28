@@ -9,7 +9,6 @@ import { Link } from 'gatsby';
 // import { globalHistory } from '@reach/router'
 
 
-
 /* ==========  COMPONENTS  ========== */
 import Seo from '../../components/seo';
 import ReviewBadge from './components/review-badge';
@@ -29,7 +28,6 @@ import Video from '../../utils/Video';
 // import "@fontsource/manrope/500.css";
 // import "@fontsource/manrope/800.css";
 
-
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import '../../utils/font-awesome';
 // import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
@@ -42,11 +40,14 @@ import './styles/ibd-footer.scss';
 // const Main = styled.div``
 
 
+
+
+
+// ========== VIDEO - From /images folder ==========
 // https://www.gatsbyjs.com/docs/how-to/images-and-media/working-with-video/
-import DogVideo from "../../images/test-video.mp4"
+import TestVideoFromImageFolder from "../../images/test-video.mp4"
 
-
-// ========== 3rd Party - VIDEO ==========
+// ========== VIDEO - From 3rd Party ==========
 const IBDVideo = "https://cdn.jwplayer.com/players/uZNcmMG4-z32DQ8pX.html";
 
 
@@ -92,13 +93,18 @@ const IBD_Overview = (props) => {
     "graphic-ibd-stock-rating.webp",
     "graphic-woman-laptop.webp",
   ];
-
-
   const gatsbyImgArray = sortedGatsbyImgData(contentfulEdgesNode.pageImages, orderOfImgs);
   // console.log('IBD_Overview gatsbyImgArray', gatsbyImgArray)
 
 
-  console.log('process.env ', process.env.CONTENTFUL_SPACE_ID)
+  // ---------- PAGE : VIDEO ----------
+  const GatsbyVideoTest = contentfulEdgesNode.pageImages[3].url;
+  // console.log('IBD_Overview GatsbyVideoTest', contentfulEdgesNode.pageImages[3].filename);
+
+
+
+
+  // console.log('process.env ', process.env.CONTENTFUL_SPACE_ID)
 
 
   return (
@@ -153,10 +159,10 @@ const IBD_Overview = (props) => {
               <span className="disclaimer">{pageContent[3]}</span>
             </div>
             {/* Video for Large Screen */}
-            {/*
+            
             <iframe
               className="iframe-module"
-              src={IBDVideo}
+              src={GatsbyVideoTest}
               // title={'IBD Video'}
               // src="https://cdn.jwplayer.com/players/uZNcmMG4-z32DQ8pX.html"
               // title="IBD Video"
@@ -167,10 +173,10 @@ const IBD_Overview = (props) => {
               allowFullScreen
               height="700"
             />
-            */}
-            <video controls style={{width: '100%'}}>
-              <source src={DogVideo} type="video/mp4" />
-            </video>
+            
+{/*            <video controls style={{width: '100%'}}>
+              <source src={GatsbyVideoTest} type="video/mp4" />
+            </video>*/}
 
             {/*
             <div className="video-container">
@@ -227,8 +233,23 @@ const IBD_Overview = (props) => {
                 videoTitle={'IBD Video'}
               />
               */}
+
+{/*              <iframe
+                className="iframe-module"
+                src={GatsbyVideoTest}
+                // title={'IBD Video'}
+                // src="https://cdn.jwplayer.com/players/uZNcmMG4-z32DQ8pX.html"
+                // title="IBD Video"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                frameBorder="0"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+                allowFullScreen
+                width="700"
+                height="700"
+              />*/}
               <video controls style={{width: '100%'}}>
-                <source src={DogVideo} type="video/mp4" />
+                <source src={GatsbyVideoTest} type="video/mp4" />
               </video>
             </div>
           </div>
@@ -244,7 +265,7 @@ const IBD_Overview = (props) => {
           />
           */}
           <video controls style={{width: '100%'}}>
-            <source src={DogVideo} type="video/mp4" />
+            <source src={GatsbyVideoTest} type="video/mp4" />
           </video>
         </div>
 
@@ -486,6 +507,7 @@ const IBD_Overview = (props) => {
 
 
         <ReviewBadge></ReviewBadge>
+
         <IBDFooter></IBDFooter>
       </div>
     </div>
@@ -504,7 +526,6 @@ export const data = graphql`
         }
       }
     },
-
     allContentfulIbddContentType(filter: {pageTitle: {eq: "Overview"}}) {
       edges {
         node {
@@ -517,11 +538,13 @@ export const data = graphql`
           pageImages {
             filename
             gatsbyImageData
+            url
           }
         }
       }
     }
-
   }
 `
 export default IBD_Overview;
+
+
