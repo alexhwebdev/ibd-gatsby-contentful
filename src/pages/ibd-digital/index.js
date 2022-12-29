@@ -88,12 +88,12 @@ const IBD_Overview = (props) => {
   // console.log('IBD_Overview pageContent', pageContent)
 
 
-  const orderOfImgs = [ 
-    "bg-graphic-art.webp",
-    "graphic-ibd-stock-rating.webp",
-    "graphic-woman-laptop.webp",
-  ];
-  const gatsbyImgArray = sortedGatsbyImgData(contentfulEdgesNode.pageImages, orderOfImgs);
+  // const orderOfImgs = [ 
+  //   "bg-graphic-art.webp",
+  //   "graphic-ibd-stock-rating.webp",
+  //   "graphic-woman-laptop.webp",
+  // ];
+  // const gatsbyImgArray = sortedGatsbyImgData(contentfulEdgesNode.pageImages, orderOfImgs);
   // console.log('IBD_Overview gatsbyImgArray', gatsbyImgArray)
 
 
@@ -200,7 +200,8 @@ const IBD_Overview = (props) => {
         <section className="section-1">
           <GatsbyImage 
             className="bg-graphic-art"
-            image={gatsbyImgArray[0][1]}
+            // image={gatsbyImgArray[0][1]}
+            image={contentfulEdgesNode.pageImages[1].gatsbyImageData}
             // src={gatsbyImgArray} 
             alt=""
           />
@@ -287,7 +288,8 @@ const IBD_Overview = (props) => {
               data-sal-easing="ease" // sets easing for the animation (see easings.net for reference)
             >
               <GatsbyImage className="graphic-ibd-stock-rating"
-                image={gatsbyImgArray[1][1]}
+                // image={gatsbyImgArray[1][1]}
+                image={contentfulEdgesNode.pageImages[2].gatsbyImageData}
                 placeholder="graphic-ibd-stock-rating"
                 alt="Image - IBD Stock Rating"
               />
@@ -407,7 +409,8 @@ const IBD_Overview = (props) => {
             <div className="img-quote-container">
               <GatsbyImage 
                 className="graphic-woman-laptop"
-                image={gatsbyImgArray[2][1]}
+                // image={gatsbyImgArray[2][1]}
+                image={contentfulEdgesNode.pageImages[3].gatsbyImageData}
                 alt=""
               />
 
