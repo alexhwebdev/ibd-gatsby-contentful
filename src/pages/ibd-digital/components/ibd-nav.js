@@ -157,6 +157,7 @@ const IbdNav = (props, context) => {
           className="ibd-logo"
           activeClassName="active" 
           title="Investors Business Daily"
+          alt="Investors Business Daily"
         >
           {/*
           <img 
@@ -173,7 +174,8 @@ const IbdNav = (props, context) => {
             alt="Logo - IBD"
           />*/}
           <img 
-            src={Logo_IBD_Blue} alt=""
+            src={Logo_IBD_Blue} 
+            alt="IBD Logo blue"
             className="ibd-logo-blue-img"
           />
 
@@ -184,7 +186,8 @@ const IbdNav = (props, context) => {
             alt="Logo - IBD"
           />*/}
           <img 
-            src={Logo_IBD_White} alt=""
+            src={Logo_IBD_White} 
+            alt="IBD Lovo white"
             className="ibd-logo-white-img"
           />
 
@@ -213,6 +216,7 @@ const IbdNav = (props, context) => {
               className="anchortag Overview" 
               activeClassName="active" 
               title="Investors Business Daily - Overview"
+              alt="Investors Business Daily - Overview"
 
               // reset routing from Pricing
               onClick={
@@ -230,6 +234,7 @@ const IbdNav = (props, context) => {
               className="anchortag Features" 
               activeClassName="active" 
               title="Investors Business Daily - Features"
+              alt="Investors Business Daily - Features"
 
               // reset routing from Pricing
               onClick={
@@ -246,6 +251,7 @@ const IbdNav = (props, context) => {
               className="anchortag Why-IBD" 
               activeClassName="active" 
               title="Investors Business Daily - Why IBD"
+              alt="Investors Business Daily - Why IBD"
 
               // reset routing from Pricing
               onClick={
@@ -262,6 +268,7 @@ const IbdNav = (props, context) => {
               className="anchortag FAQS" 
               activeClassName="active" 
               title="Investors Business Daily - FAQs"
+              alt="Investors Business Daily - FAQs"
 
               // reset routing from Pricing
               onClick={
@@ -281,6 +288,7 @@ const IbdNav = (props, context) => {
 
               className="anchortag" 
               title="Investors Business Daily - Pricing"
+              alt="Investors Business Daily - Pricing"
 
               // reset routing from Overview
               // hamState={hamState} 
@@ -302,8 +310,11 @@ const IbdNav = (props, context) => {
         hamState={hamState}
       >
         {/*  SIGN IN  */}
-        <a className="sign-in" title="IBD - Sign In"
+        <a 
+          className="sign-in" 
+          title="IBD - Sign In"
           href="https://myibd.investors.com/secure/signin.aspx?eurl=https%3A%2F%2Finvestors.com" 
+          alt="IBD - Sign in"
           // class="whiteLink  not-gated mr-3 head-signin d-inline-block"
         >Sign In</a>
 
