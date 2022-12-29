@@ -59,6 +59,7 @@ const IBD_Footer = () => {
           className="ibd-logo"
           href="https://www.investors.com/"
           target="_blank"
+          alt="IBD Logo"
         >
 {/*          <GatsbyImage 
             className="logo-ibd-white"
@@ -76,6 +77,7 @@ const IBD_Footer = () => {
             href="https://get.investors.com/about-ibd/" 
             target="_blank" 
             rel="noreferrer noopener"
+            alt="About Us"
           >
             About Us
           </a> |
@@ -83,6 +85,7 @@ const IBD_Footer = () => {
             href="https://www.investors.com/home/investors-business-daily-inc-terms-of-use/" 
             target="_blank" 
             rel="noreferrer noopener"
+            alt="Terms of Use"
           >
             Terms of Use
           </a> |
@@ -90,6 +93,7 @@ const IBD_Footer = () => {
             href="https://www.investors.com/investors-business-daily-privacy-policy/" 
             target="_blank" 
             rel="noreferrer noopener"
+            alt="Privacy Policy"
           >
             Privacy Policy
           </a> |
@@ -97,6 +101,7 @@ const IBD_Footer = () => {
             href="https://askinvestorhelp.force.com/s/" 
             target="_blank" 
             rel="noreferrer noopener"
+            alt="Contact Us"
           >
             Contact Us
           </a> |
@@ -104,6 +109,7 @@ const IBD_Footer = () => {
             href="https://compliance.investors.com/#/optout" 
             target="_blank" 
             rel="noreferrer noopener"
+            alt="Do Not Sell My Personal Information"
           >
             Do Not Sell My Personal Information
           </a>
