@@ -7,7 +7,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `IBD Gatsby Contentful`,
-    siteUrl: `https://ibdgatsbycontentfulmain.gatsbyjs.io//`,
+    siteUrl: `https://ibdgatsbycontentfulmain.gatsbyjs.io`,
     description: `IBD Gatsby Contentful`,
     author: `Alex Hong`,
     keywords: `Investor's, Business, Daily`,
