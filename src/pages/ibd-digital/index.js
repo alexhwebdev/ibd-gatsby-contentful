@@ -98,7 +98,7 @@ const IBD_Overview = (props) => {
 
 
   // ---------- PAGE : VIDEO ----------
-  const GatsbyVideoTest = contentfulEdgesNode.pageImages[3].url;
+  const GatsbyVideoTest = contentfulEdgesNode.pageImages[0].url;
   // console.log('IBD_Overview GatsbyVideoTest', contentfulEdgesNode.pageImages[3].filename);
 
 
