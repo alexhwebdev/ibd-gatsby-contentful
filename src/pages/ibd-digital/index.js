@@ -45,10 +45,10 @@ import './styles/ibd-footer.scss';
 
 // ========== VIDEO - From /images folder ==========
 // https://www.gatsbyjs.com/docs/how-to/images-and-media/working-with-video/
-import TestVideoFromImageFolder from "../../images/test-video.mp4"
+// import TestVideoFromImageFolder from "../../images/test-video.mp4"
 
 // ========== VIDEO - From 3rd Party ==========
-const IBDVideo = "https://cdn.jwplayer.com/players/uZNcmMG4-z32DQ8pX.html";
+// const IBDVideo = "https://cdn.jwplayer.com/players/uZNcmMG4-z32DQ8pX.html";
 
 
 
