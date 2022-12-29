@@ -59,7 +59,7 @@ const IBD_Footer = () => {
           className="ibd-logo"
           href="https://www.investors.com/"
           target="_blank"
-          alt="IBD Logo"
+          alt="Link to investors.com"
         >
 {/*          <GatsbyImage 
             className="logo-ibd-white"
