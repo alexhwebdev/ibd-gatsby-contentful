@@ -16,6 +16,7 @@ export function sortedGatsbyImgData(propsData, imgOrder) {
   }
   // console.log('unorderedImgArray ', unorderedImgArray)
 
+
   // For each order of 'imgKey', 'filter' and return new array (gatsbyImageArray) of 'values' that match condition. If no match, return 'undefined'.
   imgOrder.forEach(function(imgKey) {
     var found = false;
