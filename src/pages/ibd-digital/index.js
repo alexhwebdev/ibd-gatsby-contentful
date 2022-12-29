@@ -126,7 +126,7 @@ const IBD_Overview = (props) => {
         {/* ==========  SECTION 0 : TESTING  ========== */}
         <section className="section-0">
           {/*
-           <GatsbyImage 
+          <GatsbyImage 
             className="bg-graphic-art"
             image={gatsbyImgArray[0][1]} 
             alt=""
@@ -159,7 +159,7 @@ const IBD_Overview = (props) => {
               <span className="disclaimer">{pageContent[3]}</span>
             </div>
             {/* Video for Large Screen */}
-            
+            {/*
             <iframe
               className="iframe-module"
               src={GatsbyVideoTest}
@@ -173,10 +173,13 @@ const IBD_Overview = (props) => {
               allowFullScreen
               height="700"
             />
-            
-{/*            <video controls style={{width: '100%'}}>
+            */}
+
+            {/*
+            <video controls style={{width: '100%'}}>
               <source src={GatsbyVideoTest} type="video/mp4" />
-            </video>*/}
+            </video>
+            */}
 
             {/*
             <div className="video-container">
