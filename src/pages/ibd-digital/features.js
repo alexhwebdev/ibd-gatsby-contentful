@@ -103,7 +103,8 @@ const Features = (props) => {
     <div>
       <SEO 
         title={metaData.title}
-        description={metaData.description}
+        // description={metaData.description}
+        description={'Features page'}
         schemaMarkup={schema}
       />
 

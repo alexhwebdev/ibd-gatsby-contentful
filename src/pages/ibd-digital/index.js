@@ -27,7 +27,6 @@ import Video from '../../utils/Video';
 /* ==========  FONT | FONT-AWESOME | STYLES  ========== */
 // import "@fontsource/manrope/500.css";
 // import "@fontsource/manrope/800.css";
-
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import '../../utils/font-awesome';
 // import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
@@ -41,11 +40,10 @@ import './styles/ibd-footer.scss';
 
 
 
-
-
 // ========== VIDEO - From /images folder ==========
 // https://www.gatsbyjs.com/docs/how-to/images-and-media/working-with-video/
 // import TestVideoFromImageFolder from "../../images/test-video.mp4"
+
 
 // ========== VIDEO - From 3rd Party ==========
 // const IBDVideo = "https://cdn.jwplayer.com/players/uZNcmMG4-z32DQ8pX.html";
@@ -62,16 +60,9 @@ const IBD_Overview = (props) => {
   const metaData = props.data.allSite.nodes[0].siteMetadata;
 
 
-  // // https://www.youtube.com/watch?v=BIQGBKXc6AI
-  // const schema = {
-  //   "@context": "https://schema.org",
-  //   "@type": "Organization",
-  //   "name": "Gatsby Wordpress IBD",
-  //   "description": metaData[0].description,
-  //   "url": metaData[0].siteUrl,
-  //   "logo": ""
-  // }
   // ---------- PAGE : SEO SCHEMA ----------
+  // GatsbyJS: How to Implement Schema Markup on Your Gatsby Site
+  // https://www.youtube.com/watch?v=BIQGBKXc6AI
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -88,23 +79,21 @@ const IBD_Overview = (props) => {
   // console.log('IBD_Overview pageContent', pageContent)
 
 
+  // ---------- PAGE : IMAGES ----------
   // const orderOfImgs = [ 
   //   "bg-graphic-art.webp",
   //   "graphic-ibd-stock-rating.webp",
   //   "graphic-woman-laptop.webp",
   // ];
   // const gatsbyImgArray = sortedGatsbyImgData(contentfulEdgesNode.pageImages, orderOfImgs);
-  // console.log('IBD_Overview gatsbyImgArray', gatsbyImgArray)
 
 
   // ---------- PAGE : VIDEO ----------
   const GatsbyVideoTest = contentfulEdgesNode.pageImages[0].url;
-  // console.log('IBD_Overview GatsbyVideoTest', contentfulEdgesNode.pageImages[3].filename);
-
-
 
 
   // console.log('process.env ', process.env.CONTENTFUL_SPACE_ID)
+
 
 
   return (
@@ -123,82 +112,6 @@ const IBD_Overview = (props) => {
       <div style={{height:'60px'}}></div>
 
       <div id="overview">
-        {/* ==========  SECTION 0 : TESTING  ========== */}
-        <section className="section-0">
-          {/*
-          <GatsbyImage 
-            className="bg-graphic-art"
-            image={gatsbyImgArray[0][1]} 
-            alt=""
-          />
-          */}
-          <div className="section-inner-container">
-
-            <div className="copy-container">
-              {/* Get an edge in the stock market. */}
-              {/*<h1 dangerouslySetInnerHTML={{__html: pageContent[0]}}></h1>*/}
-              <h1>TESTING TESTING TESTING ibd-gatsby-sanity</h1>
-
-
-
-              <span>pageContent[0]</span>
-
-
-              {/* With IBD® Digital ... Same as below */}
-              <span>{pageContent[1]}</span>
-
-              {/* 2 Months for $20 */}
-              <button
-                onClick={() => { campaignShopPage('ica_n_20intro') }}
-                // data-product="302102" 
-                data-title="IBD Digital 2 weeks for $20" 
-              >
-                {pageContent[2]}
-              </button>
-
-              <span className="disclaimer">{pageContent[3]}</span>
-            </div>
-            {/* Video for Large Screen */}
-            {/*
-            <iframe
-              className="iframe-module"
-              src={GatsbyVideoTest}
-              // title={'IBD Video'}
-              // src="https://cdn.jwplayer.com/players/uZNcmMG4-z32DQ8pX.html"
-              // title="IBD Video"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              frameBorder="0"
-              webkitallowfullscreen="true"
-              mozallowfullscreen="true"
-              allowFullScreen
-              height="700"
-            />
-            */}
-
-            {/*
-            <video controls style={{width: '100%'}}>
-              <source src={GatsbyVideoTest} type="video/mp4" />
-            </video>
-            */}
-
-            {/*
-            <div className="video-container">
-              <Video 
-                videoSrcURL={IBDVideo}
-                videoTitle={'IBD Video'}
-              />
-            </div>
-            */}
-          </div>
-        </section>
-
-
-        {/*<div onClick={() => { handleClick() }}>
-          Trigger
-        </div>*/}
-
-
-
         {/* ==========  SECTION 1 : Get an edge ...  ========== */}
         <section className="section-1">
           <GatsbyImage 
@@ -210,7 +123,6 @@ const IBD_Overview = (props) => {
           />
 
           <div className="section-inner-container">
-
             <div className="copy-container">
               {/* Get an edge in the stock market. */}
               {/*<h1 dangerouslySetInnerHTML={{__html: pageContent[0]}}></h1>*/}
@@ -238,7 +150,8 @@ const IBD_Overview = (props) => {
               />
               */}
 
-{/*              <iframe
+              {/*
+              <iframe
                 className="iframe-module"
                 src={GatsbyVideoTest}
                 // title={'IBD Video'}
@@ -281,9 +194,7 @@ const IBD_Overview = (props) => {
             <span>{pageContent[5]}</span>
           </div>
 
-          <div 
-            className="img-copy-container"
-          >
+          <div className="img-copy-container">
             <div className="img-container"
               data-sal="slide-right"
               data-sal-duration="1500" // changes duration of the animation (from 200 to 2000 ms)
