@@ -17,8 +17,6 @@ import { campaignShopPage } from '../../../utils/campaignShopPage';
 /* ==========  FONT | FONT-AWESOME | STYLES  ========== */
 // import "@fontsource/manrope/500.css";
 // import "@fontsource/manrope/700.css";
-
-
 // import './ibd-global.scss';
 // import { Hamburger } from '../../utils/Hamburger';
 import '../styles/ibd-nav.scss';

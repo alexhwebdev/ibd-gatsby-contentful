@@ -1,8 +1,8 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "IBD Gatsby Strapi",
-  "version": "0.1.0",
+  "description": "IBD Gatsby Contentful",
+  "version": "1.0.0",
   "author": "Alex Hong",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.16.2",
@@ -60,7 +60,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexhwebdev/ibd-gatsby-sanity"
+    "url": "https://github.com/alexhwebdev/ibd-gatsby-contentful"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

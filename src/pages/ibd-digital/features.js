@@ -56,10 +56,6 @@ const Features = (props) => {
   // ---------- PAGE : COPY ----------
   const contentfulEdgesNode = props.data.allContentfulIbddContentType.edges[0].node;
   const pageContent = parsePageContent( contentfulEdgesNode.pageTitle, contentfulEdgesNode.pageContent.raw);
-  console.log('FEATURES pageContent', pageContent)
-
-
-
 
 
   // ---------- PAGE : IMAGES ----------
@@ -81,10 +77,6 @@ const Features = (props) => {
     "graphic-ibd-mobile-stock-screener-800px.webp"
   ];
   const gatsbyImgArray = sortedGatsbyImgData(contentfulEdgesNode.pageImages, orderOfImgs);
-  // console.log('IBD_Features gatsbyImgArray', gatsbyImgArray)
-
-
-
 
 
   // ---------- PAGE : COMPONENTS ----------
@@ -97,6 +89,7 @@ const Features = (props) => {
     autoplay: true,
     autoplaySpeed: 3000
   };
+
 
 
   return (
@@ -318,6 +311,7 @@ const Features = (props) => {
         </section>
 
 
+
         {/* ==== SECTION 4 : We built a better... ==== */}
         <section className="section-4">
           <div className="section-inner-container">
@@ -336,6 +330,7 @@ const Features = (props) => {
             </div>
           </div>
         </section>
+
 
 
         {/* ==== SECTION 5 : Here’s how to ... ==== */}
@@ -376,6 +371,7 @@ const Features = (props) => {
             </div>            
           </div>
         </section>
+
 
 
         {/* ==== SECTION 6 : Market trend analysis... ==== */}
@@ -429,6 +425,7 @@ const Features = (props) => {
         </section>
 
 
+
         {/* ==== SECTION 7 : IBD Stock Screener... ==== */}
         <section className="section-7">
           <div className="section-inner-container">
@@ -449,6 +446,7 @@ const Features = (props) => {
             </div>
             </div>
         </section>
+
 
 
         {/* ==== SECTION 8 : Take a trial... ==== */}

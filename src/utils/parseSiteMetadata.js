@@ -1,4 +1,3 @@
-
 export function parseSiteMetadata(propsData) {
 // console.log('propsData ', propsData);
 

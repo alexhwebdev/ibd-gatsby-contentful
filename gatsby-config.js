@@ -29,7 +29,6 @@ module.exports = {
       },
     },
 
-
     // This allows styled-components to work in 'pages/ibd-digital'
     // `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,

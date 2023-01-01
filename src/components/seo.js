@@ -2,6 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql, useStaticQuery } from 'gatsby';
 
+
+
 const query = graphql`
   {
     site {
@@ -21,13 +23,10 @@ const SEO = ({
   // keywords,
   schemaMarkup
 }) => {
-  // console.log('seo.js - title', title)
-  // console.log('seo.js - schemaMarkup', schemaMarkup)
-
   const { site } = useStaticQuery(query);
   const metaDescription = description || site.siteMetadata.description;
-
   // console.log('seo.js - metaDescription', metaDescription)
+
 
   return (
     <Helmet 
@@ -106,6 +105,8 @@ const SEO = ({
     </Helmet>
   )
 };
+export default SEO;
+
 
 
 // const SEO = ({ title, description }) => {
@@ -137,7 +138,6 @@ const SEO = ({
 //     </Helmet>
 //   );
 // };
-
-export default SEO;
+// export default SEO;
 
 

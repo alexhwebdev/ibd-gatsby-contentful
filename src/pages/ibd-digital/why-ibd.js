@@ -63,20 +63,12 @@ const Main = styled.div`
 
 
 const IBD_Why_IBD = (props) => {
-  console.log('IBD_Why_IBD props', props)
+  // console.log('IBD_Why_IBD props', props)
 
   // ---------- PAGE : META DATA ----------
   const metaData = props.data.allSite.nodes[0].siteMetadata;
 
 
-  // const schema = {
-  //   "@context": "https://schema.org",
-  //   "@type": "Organization",
-  //   "name": "Gatsby Wordpress IBD",
-  //   "description": metaData[0].description,
-  //   "url": metaData[0].siteUrl,
-  //   "logo": ""
-  // }
   // ---------- PAGE : SEO SCHEMA ----------
   const schema = {
     "@context": "https://schema.org",
@@ -92,7 +84,6 @@ const IBD_Why_IBD = (props) => {
   const contentfulEdgesNode = props.data.allContentfulIbddContentType.edges[0].node;
   const pageContent = parsePageContent( contentfulEdgesNode.pageTitle, contentfulEdgesNode.pageContent.raw);
   // console.log('IBD_Overview pageContent', pageContent)
-
 
 
   const orderOfImgs = [ 

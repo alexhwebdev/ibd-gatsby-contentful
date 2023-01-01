@@ -2,15 +2,9 @@
 import React from "react"
 // import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
-
-// import Header from "./header"
-// import NavBarMS from "./NavBar_MS"
-// import Footer from "./Footer"
 import styled, {createGlobalStyle} from 'styled-components';
 import './layout.css'
 import 'normalize.css'
-// import {ExampleButton} from '../utils/button'
-
 
 
 /* ==========  COMPONENTS  ========== */
@@ -20,22 +14,8 @@ import Footer from './Footer';
 
 
 
-// const GlobalStyles = createGlobalStyle`
-//   body, html {
-//     background: lightgray;
-//     margin: 0 !important;
-//     padding: 0 !important;
-//   }
-// `
-// const LayoutWrapper = styled.div`
-//   // border: 5px solid blue;
-//   // max-width: 960px;
-//   margin: 0 auto;
-// `
-
-
 const Layout = (props) => {
-  console.log('main-layout.js props ', props)
+  // console.log('main-layout.js props ', props)
 
   // EX : https://stackoverflow.com/questions/8519734/javascript-get-characters-between-slashes
   // const brand = props.location.pathname;
@@ -95,6 +75,8 @@ export default Layout
 
 
 
+
+
 // import React from 'react';
 // import Header from './Header';
 // import GlobalStyles from '../styles/GlobalStyles';
@@ -102,6 +84,21 @@ export default Layout
 // import Footer from './Footer';
 // import Search from './search/SearchModal';
 // import { SearchModalContextProvider } from '../contexts/searchModalContext';
+
+
+// const GlobalStyles = createGlobalStyle`
+//   body, html {
+//     background: lightgray;
+//     margin: 0 !important;
+//     padding: 0 !important;
+//   }
+// `
+// const LayoutWrapper = styled.div`
+//   // border: 5px solid blue;
+//   // max-width: 960px;
+//   margin: 0 auto;
+// `
+
 
 // function Layout({ children }) {
 //   return (

@@ -1,16 +1,7 @@
-
-
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-
 export function parsePageContent( pageTitle, rawPageData) {
-  // console.log('parsePageContent - pageTitle', pageTitle)
-  // console.log('parsePageContent - rawPageData', rawPageData)
-
-
   const richTextFormatData = documentToReactComponents(JSON.parse(rawPageData))
-  console.log('IBD_Overview richTextFormatData', richTextFormatData)
-
 
   // Remove empty strings in the 'pageBodyCopy' array
   let pageBodyCopyArray = [];
@@ -20,15 +11,13 @@ export function parsePageContent( pageTitle, rawPageData) {
 
   // Find all Rich Text Types
   richTextFormatData.map( eachObject => {
-    // console.log('parsePageContent - eachObject', eachObject)
-    // console.log('parsePageContent - eachObject', eachObject.type)
-
     for (let i = 0; i < eachObject.props.children.length; i++) {
       if ( eachObject.props.children[i].type !== undefined ) {
         richTextTypes.push(eachObject.props.children[i].type)
       }
     }
   })
+
 
   // Array with no duplicates
   // https://www.javascripttutorial.net/array/javascript-remove-duplicates-from-array/
@@ -41,15 +30,13 @@ export function parsePageContent( pageTitle, rawPageData) {
     // console.log('objectData ', objectData)
 
     if (objectData.props.children.length > 1) {
-
       let combinedStringArray = [];
-
       objectData.props.children.forEach( value => {
-        // console.log('value ', value)
 
         // For all value props.children, concat into 1 string
         if ( typeof value === 'object' ) {
           combinedStringArray.push(value.props.children)
+
         } else if ( typeof value === 'string' ) {
           combinedStringArray.push(value)
         }
@@ -60,16 +47,11 @@ export function parsePageContent( pageTitle, rawPageData) {
         // combinedStringArray.join('');
         // [With IBD® Digital]
       })
-
-      pageBodyCopyArray.push(combinedStringArray.join(''))
-
+      pageBodyCopyArray.push(combinedStringArray.join(''));
     } else {
       pageBodyCopyArray.push(objectData.props.children[0])
     }
-
   });
-
-
 
   return pageBodyCopyArray;
 };

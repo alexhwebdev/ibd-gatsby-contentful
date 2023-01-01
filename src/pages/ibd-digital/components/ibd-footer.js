@@ -8,11 +8,6 @@ import InvestorsBusinessDaily_SVG from '../../../images/logo-investors-white.svg
 import '../styles/ibd-footer.scss';
 
 
-// ==========  STYLES  ==========
-// const Main = styled.div`
-//   // border: 5px solid gray;
-//   background: #0438BD;
-// `
 
 const IBD_Footer = () => {
   // const data = useStaticQuery(graphql`
@@ -62,13 +57,14 @@ const IBD_Footer = () => {
           alt="IBD Logo"
           aria-label="IBD Logo"
         >
-{/*          <GatsbyImage 
+          {/*
+          <GatsbyImage 
             className="logo-ibd-white"
             image={ibdLogoWhite[0]} 
             placeholder="Logo - Investor's Business Daily"
             alt="Logo - Investor's Business Daily"
           />*/}
-        </a>          
+        </a>
         <p>
           © {new Date().getFullYear()}
           <span> Investor's Business Daily LLC. All rights reserved.</span> | 

@@ -35,9 +35,9 @@ import './styles/review-badge.scss';
 import './styles/ibd-footer.scss';
 
 
-
 // ==========  STYLES  ==========
 // const Main = styled.div``
+
 
 
 const IBD_Faqs = (props) => {
@@ -45,14 +45,6 @@ const IBD_Faqs = (props) => {
   const metaData = props.data.allSite.nodes[0].siteMetadata;
 
 
-  // const schema = {
-  //   "@context": "https://schema.org",
-  //   "@type": "Organization",
-  //   "name": "Gatsby Wordpress IBD",
-  //   "description": metaData[0].description,
-  //   "url": metaData[0].siteUrl,
-  //   "logo": ""
-  // }
   // ---------- PAGE : SEO SCHEMA ----------
   const schema = {
     "@context": "https://schema.org",
@@ -64,12 +56,9 @@ const IBD_Faqs = (props) => {
   }
 
 
-
   // ---------- PAGE : COPY ----------
   const contentfulEdgesNode = props.data.allContentfulIbddContentType.edges[0].node;
   const pageContent = parsePageContent( contentfulEdgesNode.pageTitle, contentfulEdgesNode.pageContent.raw);
-  console.log('IBD_Faqs pageContent', pageContent)
-
 
 
   // ---------- PAGE : IMAGES ----------
@@ -79,7 +68,6 @@ const IBD_Faqs = (props) => {
     "graphic-ibdd-product-shot-faqs.webp"
   ];
   const gatsbyImgArray = sortedGatsbyImgData(contentfulEdgesNode.pageImages, orderOfImgs);
-  console.log('IBD_Faqs gatsbyImgArray', gatsbyImgArray)
 
 
   // ---------- PAGE : COMPONENTS ----------
@@ -133,7 +121,6 @@ const IBD_Faqs = (props) => {
 
 
 
-
         {/* ==== SECTION 2 : What makes IBD Digital unique?... ==== */}
         <section className="section-2">
           <div className="section-inner-container">
@@ -146,6 +133,7 @@ const IBD_Faqs = (props) => {
             </div>
           </div>
         </section>
+
 
 
         {/* ==== SECTION 3 : Start your 2-month trial... ==== */}
