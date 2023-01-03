@@ -14,7 +14,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sitemap`,
-    // `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet`,
     {
       // https://sjmitchblog.gatsbyjs.io/blog/gatsby-plugin-robots-txt/
       resolve: `gatsby-plugin-robots-txt`,

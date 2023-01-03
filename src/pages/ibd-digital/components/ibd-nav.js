@@ -147,7 +147,6 @@ const IbdNav = (props, context) => {
 
   return (
     <NavWrapper id="ibd-nav-wrapper" hamState={hamState}>
-
       {/* ==========  HAMBURGER  ========== */}
       <div className="logo-hamburger-container">
         <AnchorTag 
@@ -188,7 +187,6 @@ const IbdNav = (props, context) => {
             alt="IBD Lovo white"
             className="ibd-logo-white-img"
           />
-
         </AnchorTag>
 
         <Hamburger 
