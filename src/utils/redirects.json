@@ -1,0 +1,39 @@
+[
+  { 
+	  "fromPath": "/blog/recipes/mouthwatering-lasagna",
+	  "toPath": "/recipes/mouthwatering-lasagna"
+  },
+  {
+    "fromPath": "/blog/recipes/*",
+    "toPath": "/recipes/"
+  },
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------- NOTES
+
+Working with Redirects and Rewrites :
+https://support.gatsbyjs.com/hc/en-us/articles/1500003051241-Working-with-Redirects-and-Rewrites
+
+*/

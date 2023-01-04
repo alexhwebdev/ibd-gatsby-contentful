@@ -1,3 +1,6 @@
+const redirects = require("./utils/redirects.json");
+
+
 exports.createPages = async ({ graphql, actions }) => {
   const postsPerPage = parseInt(process.env.GATSBY_POST_PER_PAGE) || 10;
 
@@ -8,8 +11,15 @@ exports.createPages = async ({ graphql, actions }) => {
     
   createRedirect({
     fromPath: `https://ibdgatsbycontentfulmain.gatsbyjs.io/ibd-digital/`,
-    toPath: `https://ibdgatsbycontentfulmain.gatsbyjs.io/`,
+    toPath: `https://www.yahoo.com/`,
   });
+
+  // redirects.forEach( redirect =>
+  //   createRedirect({
+  //     fromPath: redirect.fromPath,
+  //     toPath: redirect.toPath
+  //   });
+  // );
 
 
 {/*
