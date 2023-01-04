@@ -14,6 +14,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sitemap`,
+
+    // https://blog.nimbleways.com/step-by-step-seo-gatsby/
     `gatsby-plugin-react-helmet`,
     {
       // https://sjmitchblog.gatsbyjs.io/blog/gatsby-plugin-robots-txt/

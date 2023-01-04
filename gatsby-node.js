@@ -2,6 +2,16 @@ exports.createPages = async ({ graphql, actions }) => {
   const postsPerPage = parseInt(process.env.GATSBY_POST_PER_PAGE) || 10;
 
 
+  // GATSBY REDIRECT
+  // https://support.gatsbyjs.com/hc/en-us/articles/1500003051241-Working-with-Redirects-and-Rewrites
+  const { createRedirect } = actions;
+    
+  createRedirect({
+    fromPath: `https://ibdgatsbycontentfulmain.gatsbyjs.io/ibd-digital/`,
+    toPath: `https://ibdgatsbycontentfulmain.gatsbyjs.io/`,
+  });
+
+
 {/*
   // templates path
   const singleBlogTemplate = require.resolve('./src/templates/single-blog.js');
