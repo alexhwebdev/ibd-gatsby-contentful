@@ -154,7 +154,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   createRedirect({
     fromPath: `/ibd-digital/`,
-    toPath: `/ibd-digital/features/`,
-    isPermanent: true
+    toPath: `https://www.yahoo.com/`,
+    statusCode: 200,
   });
 }
