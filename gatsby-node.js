@@ -1,147 +1,18 @@
-// const redirects = require("./utils/redirects.json");
+// const redirects = require("./src/utils/redirects.json");
+
+exports.createPages = ({ graphql, actions }) => {
+  const {createRedirect} = actions //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
+  // createRedirect({ fromPath: '/old-url', toPath: '/new-url', isPermanent: true });
 
 
-exports.createPages = async ({ graphql, actions }) => {
-  const postsPerPage = parseInt(process.env.GATSBY_POST_PER_PAGE) || 10;
-
-
-  // GATSBY REDIRECT
-  // https://support.gatsbyjs.com/hc/en-us/articles/1500003051241-Working-with-Redirects-and-Rewrites
-  const { createRedirect } = actions;
-    
   createRedirect({
     fromPath: `https://ibdgatsbycontentfulmain.gatsbyjs.io/ibd-digital/`,
-    toPath: `https://www.yahoo.com/`,
+    toPath: `https://ibdgatsbycontentfulmain.gatsbyjs.io/`,
   });
-
-  // redirects.forEach( redirect =>
-  //   createRedirect({
-  //     fromPath: redirect.fromPath,
-  //     toPath: redirect.toPath
-  //   });
-  // );
+}
 
 
-{/*
-  // templates path
-  const singleBlogTemplate = require.resolve('./src/templates/single-blog.js');
-  const singleCategoryTemplate = require.resolve('./src/templates/single-category.js');
-  const blogListTemplate = require.resolve('./src/templates/blog-list.js');
-  const categoryListTemplate = require.resolve('./src/templates/category-list.js');
-  // const singleAuthorTemplate = require.resolve('./src/templates/single-author.js');
-  // const authorListTemplate = require.resolve('./src/templates/author-list.js');
 
-  const { createPage } = actions;
-
-  const result = await graphql(`
-    {
-      allSanityBlog {
-        nodes {
-          id
-          slug {
-            current
-          }
-        }
-      }
-      allSanityCategory {
-        nodes {
-          id
-          slug {
-            current
-          }
-        }
-      }
-      allSanityAuthor {
-        nodes {
-          id
-          slug {
-            current
-          }
-        }
-      }
-    }
-  `);
-
-  if (result.errors) throw result.errors;
-  const blogs = result.data.allSanityBlog.nodes;
-  const categories = result.data.allSanityCategory.nodes;
-  const authors = result.data.allSanityAuthor.nodes;
-
-  // single blogs pages
-  blogs.forEach((blog) => {
-    createPage({
-      path: `/blogs/${blog.slug.current}`,
-      component: singleBlogTemplate,
-      context: { id: blog.id },
-    });
-  });
-
-  // single category pages
-  categories.forEach((category) => {
-    createPage({
-      path: `/categories/${category.slug.current}`,
-      component: singleCategoryTemplate,
-      context: { id: category.id },
-    });
-  });
-
-  // single Author pages
-  // authors.forEach((author) => {
-  //   createPage({
-  //     path: `/authors/${author.slug.current}`,
-  //     component: singleAuthorTemplate,
-  //     context: { id: author.id },
-  //   });
-  // });
-
-  // blogs paginated pages
-  const totalBlogListPages = Math.ceil(blogs.length / postsPerPage);
-  Array.from({ length: totalBlogListPages }).forEach((_, index) => {
-    createPage({
-      path: index === 0 ? `/blogs` : `/blogs/${index + 1}`,
-      component: blogListTemplate,
-      context: {
-        limit: postsPerPage,
-        offset: index * postsPerPage,
-        numberOfPages: totalBlogListPages,
-        currentPage: index + 1,
-      },
-    });
-  });
-
-  // category paginated pages
-  const totalCategoryListPages = Math.ceil(categories.length / postsPerPage);
-  Array.from({ length: totalCategoryListPages }).forEach((_, index) => {
-    createPage({
-      path: index === 0 ? `/categories` : `/categories/${index + 1}`,
-      component: categoryListTemplate,
-      context: {
-        limit: postsPerPage,
-        offset: index * postsPerPage,
-        numberOfPages: totalCategoryListPages,
-        currentPage: index + 1,
-      },
-    });
-  });
-
-  // Author paginated pages
-  // const totalAuthorListPages = Math.ceil(authors.length / postsPerPage);
-  // Array.from({ length: totalAuthorListPages }).forEach((_, index) => {
-  //   createPage({
-  //     path: index === 0 ? `/authors` : `/authors/${index + 1}`,
-  //     component: authorListTemplate,
-  //     context: {
-  //       limit: postsPerPage,
-  //       offset: index * postsPerPage,
-  //       numberOfPages: totalAuthorListPages,
-  //       currentPage: index + 1,
-  //     },
-  //   });
-  // });
-*/}
-
-
-};
 
 
 

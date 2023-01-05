@@ -93,6 +93,8 @@ module.exports = {
         inlineFonts: true,
       },
     },
+    `gatsby-plugin-client-side-redirect`, // keep it in last in list
+
   ],
   flags: {
    DEV_SSR: false
