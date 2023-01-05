@@ -139,7 +139,7 @@ const IBD_Overview = (props) => {
                 {pageContent[2]}
               </button>
 
-<a href="https://ibdgatsbycontentfulmain.gatsbyjs.io/ibd-digital/">REDIRECT</a>
+<a href="http://localhost:8000/ibd-digital/">REDIRECT</a>
 
               <span className="disclaimer">{pageContent[3]}</span>
             </div>
