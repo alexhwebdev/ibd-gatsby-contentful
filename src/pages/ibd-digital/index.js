@@ -24,7 +24,6 @@ import { campaignShopPage } from '../../utils/campaignShopPage';
 import Video from '../../utils/Video';
 
 
-
 /* ==========  FONT | FONT-AWESOME | STYLES  ========== */
 // import "@fontsource/manrope/500.css";
 // import "@fontsource/manrope/800.css";
@@ -75,7 +74,7 @@ const IBD_Overview = (props) => {
   // ---------- PAGE : COPY ----------
   const contentfulEdgesNode = props.data.allContentfulIbddContentType.edges[0].node;
   const pageContent = parsePageContent( contentfulEdgesNode.pageTitle, contentfulEdgesNode.pageContent.raw);
-  // console.log('IBD_Overview pageContent', pageContent)
+  console.log('IBD_Overview pageContent', pageContent)
 
 
   // ---------- PAGE : IMAGES ----------

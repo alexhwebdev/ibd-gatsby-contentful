@@ -13,6 +13,7 @@ module.exports = {
     keywords: `Investor's, Business, Daily`,
   },
   plugins: [
+    `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-sitemap`,
 
     // https://blog.nimbleways.com/step-by-step-seo-gatsby/
@@ -93,7 +94,6 @@ module.exports = {
         inlineFonts: true,
       },
     },
-    `gatsby-plugin-gatsby-cloud`,
   ],
   flags: {
    DEV_SSR: false
