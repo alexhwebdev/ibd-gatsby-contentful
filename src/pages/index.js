@@ -17,12 +17,18 @@ import Layout from "../components/Layout";
 
 const IndexPage = () => (
   <Layout>
-{/*    <Seo 
+    {/*    
+    <Seo 
       title="index.js Home"
       // description="Why IBD - custom desc"
-    ></Seo>*/}
+    ></Seo>
+    */}
 
     <Link to="/page-2">Go to page 2</Link>
+
+    <div style={{marginTop:'100px'}}>
+      IBD Digital home page
+    </div>
   </Layout>
 )
 

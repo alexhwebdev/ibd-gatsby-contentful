@@ -150,7 +150,7 @@ exports.createPages = ({ graphql, actions }) => {
   const {createRedirect} = actions //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
   // createRedirect({ fromPath: '/old-url', toPath: '/new-url', isPermanent: true });
 
-  console.log('actions ---------------------------- ', actions)
+  console.log('gatsby-node.js actions ---------------------------- ', actions)
 
   createRedirect({
     fromPath: `/ibd-digital/`,
