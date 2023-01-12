@@ -5,7 +5,6 @@ function NotFoundPage() {
   return (
     <div style={{marginTop:'100px'}}>
       404 PAGE
-        
     </div>
   );
 }
