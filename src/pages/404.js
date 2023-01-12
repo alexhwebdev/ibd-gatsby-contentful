@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 function NotFoundPage() {
   return (
-    <div>
+    <div style={{marginTop:'100px'}}>
       404 PAGE
         
     </div>
