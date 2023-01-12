@@ -100,7 +100,7 @@ module.exports = {
    DEV_SSR: false
   },
 
-  pathPrefix: `/ibdd`,
+  pathPrefix: `/brands`,
 };
 
 
