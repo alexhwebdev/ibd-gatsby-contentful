@@ -17,21 +17,23 @@ const Airpods = () => {
   const canvasRef = useRef(null);
   // console.log('canvasRef ', canvasRef)
 
-  const frameCount = 148;
-  const currentFrame = index => (
-    `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
-
-    // `http://localhost:8000/static/${index.toString().padStart(4, '0')}.jpg`
-  )
-  console.log('currentFrame ', currentFrame)
-
 
 
   useEffect(() => {
+
+
+    const frameCount = 148;
+    const currentFrame = index => (
+      `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
+
+      // `http://localhost:8000/static/${index.toString().padStart(4, '0')}.jpg`
+    )
+    console.log('currentFrame ', currentFrame)
+
+
+
     const preloadImages = () => {
       for (let i = 1; i < frameCount; i++) {
-        console.log('document 1 ', document)
-
         const img = document.createElement("img");
         img.src = currentFrame(i);
         // console.log('currentFrame(i) ', currentFrame(i))
@@ -59,8 +61,6 @@ const Airpods = () => {
 
 
     window.addEventListener('scroll', () => {  
-      console.log('document 2 ', document)
-
       const scrollTop = document.documentElement.scrollTop;
       // console.log('scrollTop ', scrollTop)
 
