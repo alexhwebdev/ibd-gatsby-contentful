@@ -1,68 +1,135 @@
 import * as React from "react"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
+import { Link } from "gatsby"
+import styled from 'styled-components';
+
+
+// import TestImages from '../images/test-images/0001.jpg'
 import './styles/airpods.scss'
 
 
-const IndexPage = () => {
-  // const [count, setCount] = useState(1);
-  const [scrolled, setScrolled] = useState(0);
-  
-  // useEffect(() => {
-  //   if(count < 146) {
-  //     setTimeout(() => {
-  //       setCount(count + 1)
-  //     }, 50)
-  //   } else {
-  //     setCount(1)
-  //   }
-  // }, [count]);
+// console.log('TestImages ', TestImages)
 
-  useEffect(() => {
-    window.addEventListener("scroll", scrollProgress);
 
-    return () => window.addEventListener("scroll", scrollProgress);
-  });
+// 'https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0080.jpg'
 
-  const scrollProgress = () => {
-    const scrollpx = document.documentElement.scrollTop;
-    const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
-    const scollLen = Math.ceil(scrollpx / winHeightPx * 100 / 0.68); // 100/146
+let context;
 
-    setScrolled(scollLen);
+const SecondPage = () => {
+  const canvasRef = useRef(null);
+  // console.log('canvasRef ', canvasRef)
+
+  const frameCount = 148;
+  const currentFrame = index => (
+    `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
+
+    // `http://localhost:8000/static/${index.toString().padStart(4, '0')}.jpg`
+  )
+  console.log('currentFrame ', currentFrame)
+
+  const preloadImages = () => {
+    for (let i = 1; i < frameCount; i++) {
+      const img = new Image();
+      img.src = currentFrame(i);
+      // console.log('currentFrame(i) ', currentFrame(i))
+    }
   };
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img 
-          alt=""
-          src={`https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${scrolled.toString().padStart(4, '0')}.jpg`} 
-        />
-      </header>
+  const img = new Image()
+  console.log('img ', img)
 
-      {/*<Link to="/page-2">page-2</Link>*/}
+  img.src = currentFrame(1);
+
+  // The onload event occurs when an object has been loaded.
+  img.onload = () => {
+    // The drawImage() method draws an image, canvas, or video onto the canvas.
+    // The drawImage() method can also draw parts of an image, and/or increase/reduce the image size.
+    // SYNTAX : context.drawImage(img,x,y,width,height);
+    context.drawImage(img, 0, 0);
+  }
+
+  const updateImage = index => {
+    img.src = currentFrame(index);
+    context.drawImage(img, 0, 0);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {  
+      const scrollTop = document.documentElement.scrollTop;
+      // console.log('scrollTop ', scrollTop)
+
+      const maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
+      // console.log('maxScrollTop ', maxScrollTop)
+
+      const scrollFraction = scrollTop / maxScrollTop;
+
+      const frameIndex = Math.min(
+        frameCount - 1,
+        Math.ceil(scrollFraction * frameCount)
+      );
+      
+      requestAnimationFrame(() => updateImage(frameIndex + 1))
+    });
+  });
+
+
+  const asyncCanvas = async (canvas) => {
+    console.log('canvas ', canvas)
+
+    context = canvas.current.getContext('2d');
+    console.log('context ', context)
+
+    canvas.current.width = 1158;
+    canvas.current.height = 770;
+  }
+  useEffect(() => {
+    asyncCanvas(canvasRef);
+  }, []);
+
+
+  preloadImages()
+
+
+
+  return (
+    <div className="page-2"
+      
+    >
+
+
+      <canvas 
+        id="hero-lightpass" 
+        ref={canvasRef} 
+        // width={500}
+        // height={500}
+      />
     </div>
   )
-
 }
 
-export default IndexPage
+
+
+export default SecondPage
 
 
 
 /* -------------------- NOTES
-
-padStart() :
-
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
-
+Create Fancy Scrolling Animations Used on Apple Product Pages
+https://www.youtube.com/watch?v=4OcAAj8aqS8
+https://codepen.io/j-v-w/pen/ZEbGzyv
 
 
+StackOverflow :
+  This article somewhat help me understand the code above
+  - https://stackoverflow.com/questions/68396087/html-canvas-getcontext-of-null-error-in-react
 
 
 
+requestAnimationFrame() :
+https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
 
+  - The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint.
 
 
 
