@@ -24,9 +24,9 @@ const Airpods = () => {
 
     const frameCount = 148;
     const currentFrame = index => (
-      `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
+      // `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
 
-      // `http://localhost:8000/static/${index.toString().padStart(4, '0')}.jpg`
+      `https://ibdgatsbycontentfulmain.gatsbyjs.io//static/${index.toString().padStart(4, '0')}.jpg`
     )
     console.log('currentFrame ', currentFrame)
 
