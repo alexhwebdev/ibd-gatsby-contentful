@@ -1,12 +1,10 @@
 import React from "react"
 import { useState, useEffect, useRef } from "react"
+
+// import TestImages from '../images/test-images/0001.jpg'
 import './styles/airpods.scss'
-import TestImages from '../../images/0001.jpg'
 
-console.log('TestImages ', TestImages)
-
-
-
+// console.log('TestImages ', TestImages)
 // 'https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0080.jpg'
 
 
@@ -26,9 +24,9 @@ const Airpods = () => {
 
     const frameCount = 148;
     const currentFrame = index => (
-      // `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
+      `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
 
-      `https://ibdgatsbycontentfulmain.gatsbyjs.io/static/${index.toString().padStart(4, '0')}.jpg`
+      // `http://localhost:8000/static/${index.toString().padStart(4, '0')}.jpg`
     )
     console.log('currentFrame ', currentFrame)
 
