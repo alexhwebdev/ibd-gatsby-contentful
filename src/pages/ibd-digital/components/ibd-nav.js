@@ -297,6 +297,28 @@ const IbdNav = (props, context) => {
               }
             >PRICING</Link>
           </li>
+
+
+          <li>
+            <AnchorTag 
+              to="/ibd-digital/airpods/" 
+              className="anchortag FAQS" 
+              activeClassName="active" 
+              title="Investors Business Daily - FAQs"
+              alt="Investors Business Daily - FAQs"
+
+              // reset routing from Pricing
+              onClick={
+                function(event){ 
+                  showHamNav(!hamState);
+                  updateGoToPricing(false);
+                }
+              }
+            >Airpods</AnchorTag>
+          </li>
+
+
+
         </ul>        
       </div>
 

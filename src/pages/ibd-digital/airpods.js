@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import { useState, useEffect, useRef } from "react"
 
 // import TestImages from '../images/test-images/0001.jpg'
@@ -28,46 +28,38 @@ const Airpods = () => {
 
 
   useEffect(() => {
+    const preloadImages = () => {
+      for (let i = 1; i < frameCount; i++) {
+        console.log('document 1 ', document)
+
+        const img = document.createElement("img");
+        img.src = currentFrame(i);
+        // console.log('currentFrame(i) ', currentFrame(i))
+      }
+    };
+
+    // const img = new Image()
+    const img = document.createElement("img");
+    console.log('img ', img)
+
+    img.src = currentFrame(1);
+
+    // The onload event occurs when an object has been loaded.
+    img.onload = () => {
+      // The drawImage() method draws an image, canvas, or video onto the canvas.
+      // The drawImage() method can also draw parts of an image, and/or increase/reduce the image size.
+      // SYNTAX : context.drawImage(img,x,y,width,height);
+      context.drawImage(img, 0, 0);
+    }
+
+    const updateImage = index => {
+      img.src = currentFrame(index);
+      context.drawImage(img, 0, 0);
+    }
+
+
     window.addEventListener('scroll', () => {  
       console.log('document 2 ', document)
-
-
-
-  const preloadImages = () => {
-    for (let i = 1; i < frameCount; i++) {
-      console.log('document 1 ', document)
-
-      const img = document.createElement("img");
-      img.src = currentFrame(i);
-      // console.log('currentFrame(i) ', currentFrame(i))
-    }
-  };
-
-
-  // const img = new Image()
-  const img = document.createElement("img");
-  console.log('img ', img)
-
-
-
-
-  img.src = currentFrame(1);
-
-  // The onload event occurs when an object has been loaded.
-  img.onload = () => {
-    // The drawImage() method draws an image, canvas, or video onto the canvas.
-    // The drawImage() method can also draw parts of an image, and/or increase/reduce the image size.
-    // SYNTAX : context.drawImage(img,x,y,width,height);
-    context.drawImage(img, 0, 0);
-  }
-
-
-  const updateImage = index => {
-    img.src = currentFrame(index);
-    context.drawImage(img, 0, 0);
-  }
-
-
 
       const scrollTop = document.documentElement.scrollTop;
       // console.log('scrollTop ', scrollTop)
@@ -83,12 +75,9 @@ const Airpods = () => {
       );
       
       requestAnimationFrame(() => updateImage(frameIndex + 1))
-
-
-      preloadImages()
     });
 
-
+    preloadImages()
   });
 
 
