@@ -67,6 +67,7 @@ const Hamburger = styled.div`
 
 
 // ========== window bug ==========
+// https://www.gatsbyjs.com/docs/debugging-html-builds/#ssr-during-gatsby-develop
 // + 'window' is not available during SSR. 
 const isBrowser = typeof window !== "undefined"
 if (isBrowser) {

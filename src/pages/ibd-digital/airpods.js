@@ -1,22 +1,19 @@
 import * as React from "react"
 import { useState, useEffect, useRef } from "react"
-import { Link } from "gatsby"
-import styled from 'styled-components';
-
 
 // import TestImages from '../images/test-images/0001.jpg'
 import './styles/airpods.scss'
 
-
 // console.log('TestImages ', TestImages)
-
-
 // 'https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/0080.jpg'
+
+
+
 
 
 let context;
 
-const SecondPage = () => {
+const Airpods = () => {
   const canvasRef = useRef(null);
   // console.log('canvasRef ', canvasRef)
 
@@ -28,16 +25,31 @@ const SecondPage = () => {
   )
   console.log('currentFrame ', currentFrame)
 
+
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {  
+      console.log('document 2 ', document)
+
+
+
   const preloadImages = () => {
     for (let i = 1; i < frameCount; i++) {
-      const img = new Image();
+      console.log('document 1 ', document)
+
+      const img = document.createElement("img");
       img.src = currentFrame(i);
       // console.log('currentFrame(i) ', currentFrame(i))
     }
   };
 
-  const img = new Image()
+
+  // const img = new Image()
+  const img = document.createElement("img");
   console.log('img ', img)
+
+
+
 
   img.src = currentFrame(1);
 
@@ -49,13 +61,14 @@ const SecondPage = () => {
     context.drawImage(img, 0, 0);
   }
 
+
   const updateImage = index => {
     img.src = currentFrame(index);
     context.drawImage(img, 0, 0);
   }
 
-  useEffect(() => {
-    window.addEventListener('scroll', () => {  
+
+
       const scrollTop = document.documentElement.scrollTop;
       // console.log('scrollTop ', scrollTop)
 
@@ -70,7 +83,12 @@ const SecondPage = () => {
       );
       
       requestAnimationFrame(() => updateImage(frameIndex + 1))
+
+
+      preloadImages()
     });
+
+
   });
 
 
@@ -88,16 +106,9 @@ const SecondPage = () => {
   }, []);
 
 
-  preloadImages()
-
-
 
   return (
-    <div className="page-2"
-      
-    >
-
-
+    <div className="page-2" style={{ height: '200vh'}}>
       <canvas 
         id="hero-lightpass" 
         ref={canvasRef} 
@@ -110,7 +121,7 @@ const SecondPage = () => {
 
 
 
-export default SecondPage
+export default Airpods
 
 
 
