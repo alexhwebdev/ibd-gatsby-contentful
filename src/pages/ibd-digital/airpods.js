@@ -2,7 +2,7 @@ import React from "react"
 import { useState, useEffect, useRef } from "react"
 import { graphql } from 'gatsby';
 
-// import TestImages from '../images/test-images/0001.jpg'
+// import TestImages from '../../images/frames/0002.jpg'
 import './styles/airpods.scss'
 
 // console.log('TestImages ', TestImages)
@@ -10,41 +10,29 @@ import './styles/airpods.scss'
 
 
 
-
-
 let context;
 
 const Airpods = (props) => {
-  const canvasRef = useRef(null);
-  
   console.log('Airpods props ', props)
 
+  const canvasRef = useRef(null);
+  const pageImagesNode = props.data.allContentfulIbddContentType.edges[0].node.pageImages;
 
   const videoFrameImgsArray = [];
-  const getAllVideoFrameImgs = () => {
-    props.data.allContentfulIbddContentType.edges[0].node.pageImages.map( eachPageImage => {
-      // console.log('eachPageImage ', eachPageImage)
+  pageImagesNode.map( eachPageImage => {
+    if (eachPageImage.filename.slice(0, 2) === '00' ) {
+      videoFrameImgsArray.push(eachPageImage);
+    }
+  });
 
-      if (eachPageImage.filename.slice(0, 2) === '00' ) {
-        // console.log('FOUND 00 ')
-        videoFrameImgsArray.push(eachPageImage)
-      }
-    })
-  } 
-  getAllVideoFrameImgs()
-
-  // const organizedImgArray = 
-  console.log('Airpods videoFrameImgsArray ', videoFrameImgsArray)
-
+  // Sort items in array by filename
   videoFrameImgsArray.sort( (a, b) => {
     return a.filename.slice(0, 4) - b.filename.slice(0, 4);
   });
 
 
-
-
   useEffect(() => {
-    /* 💎💎💎 DATA COMING IN FROM CDN URL :
+    /* 💎💎💎 DATA COMING IN THRU CDN URL METHOD :
      *
      *
      */
@@ -55,36 +43,45 @@ const Airpods = (props) => {
       // `http://localhost:8000/static/${index.toString().padStart(4, '0')}.jpg`
 
       // `https://images.ctfassets.net/e28u0mhz7hn5/4ov0paUhxnunP5jgXTNJuv/30f232ee3dc0aec3f64c0532b400a73b/0001.jpg`
-    )
+    );
+    
+    
+    
     
 
     /* 💎💎💎 DATA COMING IN FROM CONTENTFUL METHOD : 
      *
      *
-    const frameCount = 29;
+     
+     
+    const frameCount = 40;
+
     const currentFrame = index => (
-      videoFrameImgsArray[index - 1].url.slice(0, -8).toString() + `${index.toString().padStart(4, '0')}.jpg`
+      videoFrameImgsArray[index - 1].url
+        .slice(0, -8)
+        .toString() + `${index.toString()
+        .padStart(4, '0')}.jpg`
     );
     */
 
 
+    
+    
 
     const preloadImages = () => {
       for (let i = 1; i < frameCount; i++) {
+        // const img = new Image()
         const img = document.createElement("img");
-        // console.log('img ', img)
-
-        img.src = currentFrame(i);
-        // img.src = videoFrameImgsArray[3].url;
-
+        console.log('img ', img)
+        
         // currentFrame(i) is each individual image URL
-        console.log('img.src ', img.src)
+        img.src = currentFrame(i);
       }
     };
 
+
     // const img = new Image()
     const img = document.createElement("img");
-    console.log('img ', img)
 
     img.src = currentFrame(1);
 
@@ -104,13 +101,8 @@ const Airpods = (props) => {
 
     window.addEventListener('scroll', () => {  
       const scrollTop = document.documentElement.scrollTop;
-      // console.log('scrollTop ', scrollTop)
-
       const maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
-      // console.log('maxScrollTop ', maxScrollTop)
-
       const scrollFraction = scrollTop / maxScrollTop;
-
       const frameIndex = Math.min(
         frameCount - 1,
         Math.ceil(scrollFraction * frameCount)
@@ -124,12 +116,13 @@ const Airpods = (props) => {
 
 
   const asyncCanvas = async (canvas) => {
-    console.log('canvas ', canvas)
+    
 
     context = canvas.current.getContext('2d');
     console.log('context ', context)
 
-    canvas.current.width = 1158;
+    // canvas.current.width = 1158;
+    canvas.current.width = 1280;
     canvas.current.height = 770;
   }
   useEffect(() => {
@@ -139,7 +132,13 @@ const Airpods = (props) => {
 
 
   return (
-    <div className="airpods-page" style={{ height: '500vh'}}>
+    <div 
+      className="airpods-page" 
+      style={{ 
+        // width: '100vw', 
+        height: '500vh'
+      }}
+    >
       <canvas 
         id="hero-lightpass" 
         ref={canvasRef} 
@@ -173,7 +172,7 @@ export const data = graphql`
           }
           pageImages {
             filename
-            gatsbyImageData
+            gatsbyImageData(quality: 100)
             url
           }
         }
