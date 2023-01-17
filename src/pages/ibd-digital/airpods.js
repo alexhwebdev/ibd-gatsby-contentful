@@ -1,5 +1,6 @@
 import React from "react"
 import { useState, useEffect, useRef } from "react"
+import { graphql } from 'gatsby';
 
 // import TestImages from '../images/test-images/0001.jpg'
 import './styles/airpods.scss'
@@ -13,30 +14,64 @@ import './styles/airpods.scss'
 
 let context;
 
-const Airpods = () => {
+const Airpods = (props) => {
   const canvasRef = useRef(null);
-  // console.log('canvasRef ', canvasRef)
+  
+  console.log('Airpods props ', props)
+
+
+  const videoFrameImgsArray = [];
+  const getAllVideoFrameImgs = () => {
+    props.data.allContentfulIbddContentType.edges[0].node.pageImages.map( eachPageImage => {
+      // console.log('eachPageImage ', eachPageImage)
+
+      if (eachPageImage.filename.slice(0, 2) === '00' ) {
+        // console.log('FOUND 00 ')
+        videoFrameImgsArray.push(eachPageImage)
+      }
+    })
+  } 
+  getAllVideoFrameImgs()
+
+  // const organizedImgArray = 
+  console.log('Airpods videoFrameImgsArray ', videoFrameImgsArray)
+
+  videoFrameImgsArray.sort( (a, b) => {
+    return a.filename.slice(0, 4) - b.filename.slice(0, 4);
+  });
+
 
 
 
   useEffect(() => {
+    // const frameCount = 148;
+    // const currentFrame = index => (
+    //   `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
 
+    //   // `http://localhost:8000/static/${index.toString().padStart(4, '0')}.jpg`
 
-    const frameCount = 148;
+    //   // `https://images.ctfassets.net/e28u0mhz7hn5/4ov0paUhxnunP5jgXTNJuv/30f232ee3dc0aec3f64c0532b400a73b/0001.jpg`
+    // )
+    
+
+    /* 💎💎💎 DATA COMING IN FROM CONTENTFUL METHOD : */
+    const frameCount = 29;
     const currentFrame = index => (
-      `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
-
-      // `http://localhost:8000/static/${index.toString().padStart(4, '0')}.jpg`
-    )
-    console.log('currentFrame ', currentFrame)
+      videoFrameImgsArray[index - 1].url.slice(0, -8).toString() + `${index.toString().padStart(4, '0')}.jpg`
+    );
 
 
 
     const preloadImages = () => {
       for (let i = 1; i < frameCount; i++) {
         const img = document.createElement("img");
+        // console.log('img ', img)
+
         img.src = currentFrame(i);
-        // console.log('currentFrame(i) ', currentFrame(i))
+        // img.src = videoFrameImgsArray[3].url;
+
+        // currentFrame(i) is each individual image URL
+        console.log('img.src ', img.src)
       }
     };
 
@@ -108,6 +143,37 @@ const Airpods = () => {
   )
 }
 
+
+export const data = graphql`
+  {
+    allSite {
+      nodes {
+        siteMetadata {
+          description
+          siteUrl
+          title
+        }
+      }
+    },
+    allContentfulIbddContentType(filter: {pageTitle: {eq: "Airpods"}}) {
+      edges {
+        node {
+          pageTitle
+          description
+          slug
+          pageContent {
+            raw
+          }
+          pageImages {
+            filename
+            gatsbyImageData
+            url
+          }
+        }
+      }
+    }
+  }
+`
 
 
 export default Airpods
