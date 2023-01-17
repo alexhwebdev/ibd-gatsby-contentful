@@ -44,21 +44,28 @@ const Airpods = (props) => {
 
 
   useEffect(() => {
-    // const frameCount = 148;
-    // const currentFrame = index => (
-    //   `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
+    /* 💎💎💎 DATA COMING IN FROM CDN URL :
+     *
+     *
+     */
+    const frameCount = 148;
+    const currentFrame = index => (
+      `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
 
-    //   // `http://localhost:8000/static/${index.toString().padStart(4, '0')}.jpg`
+      // `http://localhost:8000/static/${index.toString().padStart(4, '0')}.jpg`
 
-    //   // `https://images.ctfassets.net/e28u0mhz7hn5/4ov0paUhxnunP5jgXTNJuv/30f232ee3dc0aec3f64c0532b400a73b/0001.jpg`
-    // )
+      // `https://images.ctfassets.net/e28u0mhz7hn5/4ov0paUhxnunP5jgXTNJuv/30f232ee3dc0aec3f64c0532b400a73b/0001.jpg`
+    )
     
 
-    /* 💎💎💎 DATA COMING IN FROM CONTENTFUL METHOD : */
+    /* 💎💎💎 DATA COMING IN FROM CONTENTFUL METHOD : 
+     *
+     *
     const frameCount = 29;
     const currentFrame = index => (
       videoFrameImgsArray[index - 1].url.slice(0, -8).toString() + `${index.toString().padStart(4, '0')}.jpg`
     );
+    */
 
 
 
@@ -132,7 +139,7 @@ const Airpods = (props) => {
 
 
   return (
-    <div className="page-2" style={{ height: '200vh'}}>
+    <div className="airpods-page" style={{ height: '500vh'}}>
       <canvas 
         id="hero-lightpass" 
         ref={canvasRef} 
