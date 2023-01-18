@@ -32,7 +32,7 @@ const Airpods = (props) => {
 
 
   useEffect(() => {
-    /* 💎💎💎 DATA COMING IN THRU CDN URL METHOD : */
+    /* 💎💎💎 DATA COMING IN THRU CDN URL METHOD : 
     const frameCount = 148;
     const currentFrame = index => (
       `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
@@ -41,9 +41,10 @@ const Airpods = (props) => {
 
       // `https://images.ctfassets.net/e28u0mhz7hn5/4ov0paUhxnunP5jgXTNJuv/30f232ee3dc0aec3f64c0532b400a73b/0001.jpg`
     );
+    */
 
 
-    /* 💎💎💎 DATA COMING IN FROM CONTENTFUL METHOD : 
+    /* 💎💎💎 DATA COMING IN FROM CONTENTFUL METHOD : */
     const frameCount = 40;
 
     const currentFrame = index => (
@@ -52,7 +53,7 @@ const Airpods = (props) => {
         .toString() + `${index.toString()
         .padStart(4, '0')}.jpg`
     );
-    */
+    
 
     const preloadImages = () => {
       for (let i = 1; i < frameCount; i++) {
@@ -74,12 +75,12 @@ const Airpods = (props) => {
       // The drawImage() method draws an image, canvas, or video onto the canvas.
       // The drawImage() method can also draw parts of an image, and/or increase/reduce the image size.
       // SYNTAX : context.drawImage(img,x,y,width,height);
-      context.drawImage(img, 0, 0);
+      context.drawImage(img, -75, 0);
     }
 
     const updateImage = index => {
       img.src = currentFrame(index);
-      context.drawImage(img, 0, 0);
+      context.drawImage(img, -75, 0);
     }
 
 
