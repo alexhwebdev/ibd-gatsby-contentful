@@ -85,57 +85,15 @@ module.exports = {
       //   },
       // },
     },
-    // `gatsby-plugin-preload-fonts`,
-    // {
-    //   resolve: `gatsby-plugin-subfont`,
-    //   options: {
-    //     silent: true,
-    //     fallbacks: false,
-    //     inlineFonts: true,
-    //   },
-    // },
-
+    `gatsby-plugin-preload-fonts`,
     {
-      resolve: `gatsby-plugin-webfonts`,
+      resolve: `gatsby-plugin-subfont`,
       options: {
-        fonts: {
-          google: [
-            {
-              family: "Raleway", // 'font-family' property
-              variants: ["300", "400", "500", "600", "700"],
-              //subsets: ['latin'],
-              //text: 'Hello',
-              //fontDisplay: 'swap' || 'auto' || 'block' || 'fallback' || 'optional',
-              //strategy: 'selfHosted' || 'base64' || 'cdn',
-              // Other properties as per https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face (except 'src' & 'font-family') can go here i.e.
-              //[cssProperty]: 'value',
-            },
-          ],
-          // selfHosted: [
-          //   {
-          //     family: "Open Sans",
-          //     urls: {
-          //       woff2: `/font/OpenSans400.woff2`,
-          //       woff: `/font/OpenSans400.woff`,
-          //       //[format]: '/[filepath]/[filename],
-          //     },
-          //     //[cssProperty]: 'value',
-          //   },
-          // ],
-        },
-        // formatAgents: {
-        //   eot: `Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)`,
-        //   ttf: `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.59.8 (KHTML, like Gecko) Version/5.1.9 Safari/534.59.8`,
-        //   woff: `Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; rv:11.0) like Gecko`,
-        //   woff2: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; ServiceUI 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393`,
-        // },
-        //formats: ['woff2', 'woff', 'otf', 'ttf'],
-        //useMinify: true,
-        //usePreload: true,
-        //usePreconnect: false,
+        silent: true,
+        fallbacks: false,
+        inlineFonts: true,
       },
     },
-
   ],
 
   flags: {
