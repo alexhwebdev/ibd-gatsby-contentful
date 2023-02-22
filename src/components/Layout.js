@@ -1,8 +1,13 @@
+// THIS FILE NOT USED
+
+
+
+
 /* ==========  REACT  |  GATSBY  |  PLUGINS  ========== */
 import React from "react"
 // import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
-import styled, {createGlobalStyle} from 'styled-components';
+// import styled, {createGlobalStyle} from 'styled-components';
 import './layout.css'
 import 'normalize.css'
 
@@ -10,7 +15,7 @@ import 'normalize.css'
 /* ==========  COMPONENTS  ========== */
 import IbdPageTransition from "../pages/ibd-digital/components/ibd-page-transition";
 // import LBTransition from "../pages/leaderboard/components/lb-page-transition";
-import Footer from './Footer';
+// import Footer from './Footer';
 
 
 

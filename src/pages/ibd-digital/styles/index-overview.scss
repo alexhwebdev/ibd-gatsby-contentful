@@ -3,12 +3,11 @@
 @import './_variables.scss';
 
 
-
 // ==================== INDEX.JS ====================
 #overview {
 
 	h1, h2, h3, h4, h5, h6, p, a {
-		font-family: 'Manrope',sans-serif;
+		font-family: 'Raleway',sans-serif;
 	}
 	h1 {
 		font-size: 2.2rem;
@@ -94,7 +93,7 @@
           margin: 0 0 25px;
           padding: 0.75em 1.75em;
 
-          font-family: 'Manrope',sans-serif;
+          font-family: 'Raleway',sans-serif;
           color: #000;
           font-weight: 800;
           text-decoration: none;
@@ -313,7 +312,7 @@
         // border: 2px solid yellow;
         width: 50%;
         color: #000000;
-        font-family: 'Manrope',sans-serif;
+        font-family: 'Raleway',sans-serif;
         padding: 0px 25px;
         z-index: 1;
 
@@ -520,7 +519,7 @@
             cursor: pointer;
           }
           p {
-            font-family: "Manrope", sans-serif;
+            font-family: "Raleway", sans-serif;
             color: #ffffff;
             font-size: 1.3vw;
             font-weight: 800;
