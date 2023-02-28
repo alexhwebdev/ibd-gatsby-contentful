@@ -54,7 +54,7 @@
   "scripts": {
     "dev": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "gatsby build --force",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "preload-fonts": "gatsby-preload-fonts"
