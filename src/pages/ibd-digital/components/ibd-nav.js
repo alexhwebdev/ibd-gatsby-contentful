@@ -32,7 +32,7 @@ const NavWrapper = styled.nav`
   height: 60px;
   
   @media screen and (max-width: 991px) {
-    height: ${({ hamState }) => (hamState ? "445px" : "60px")};
+    height: ${({ hamState }) => (hamState ? "490px" : "60px")};
   }
 `
 const SignInStartTrial = styled.div`
