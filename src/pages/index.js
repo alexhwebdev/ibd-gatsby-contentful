@@ -27,7 +27,7 @@ const IndexPage = () => (
     <Link to="/page-2">Go to page 2</Link>
 
     <div style={{marginTop:'100px'}}>
-      Subdirectory page
+      SSSSSubdirectory page
     </div>
   </Layout>
 )
