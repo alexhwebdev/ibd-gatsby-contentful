@@ -13,17 +13,33 @@ exports.createPages = async ({ actions }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const postsPerPage = parseInt(process.env.GATSBY_POST_PER_PAGE) || 10;
 
-  const { createRedirect } = actions //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
+  // const { createRedirect } = actions //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
 
-  createRedirect({
-    // fromPath: `/blog/recipes/mouthwatering-lasagna`,
-    // toPath: `/recipes/mouthwatering-lasagna`,
+  // createRedirect({
+  //   // fromPath: `/blog/recipes/mouthwatering-lasagna`,
+  //   // toPath: `/recipes/mouthwatering-lasagna`,
 
-    fromPath: `/`,
-    toPath: `/subdirectory/ibd-digital/why-ibd`,
-    isPermanent: true
+  //   fromPath: `/`,
+  //   toPath: `/subdirectory/ibd-digital/why-ibd`,
+  //   isPermanent: true
+  // }),
+
+  const { createPage } = actions
+
+  createPage({
+    path: "/path",
+    // component: resolve(__dirname, "../src/pages/ibd-digital/index.js"),
+    component: require.resolve("../src/pages/ibd-digital/index.js"),
+    context: {
+      redirectTo: "https://ibdgatsbycontentfulmain.gatsbyjs.io/subdirectory/ibd-digital/features/",
+    }
   })
+
 };
+
+
+
+
 
 
 

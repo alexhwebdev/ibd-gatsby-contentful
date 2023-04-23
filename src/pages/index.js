@@ -2,7 +2,7 @@
 // export default function(){return null};
 
 
-import React from "react";
+import React, { useEffect } from "react";
 import {
   // graphql, 
   // StaticQuery, 
@@ -15,24 +15,40 @@ import Layout from "../components/Layout";
 
 
 
-const IndexPage = () => (
-  <Layout>
-    {/*    
-    <Seo 
-      title="index.js Home"
-      // description="Why IBD - custom desc"
-    ></Seo>
-    */}
+function isClient() {
+  return typeof window === 'object';
+}
 
-    <Link to="/page-2">Go to page 2</Link>
 
-    <div style={{marginTop:'100px'}}>
-      SSSSSubdirectory page
-    </div>
-  </Layout>
-)
+export default function EmptyPage({ pageContext }) {
+  useEffect(() => {
+    if (isClient() && pageContext?.redirectTo) {
+      window.location.href = pageContext.redirectTo;
+    }
+  }, []);
 
-export default IndexPage
+  return <div>SSSSSubdirectory</div>;
+}
+
+
+// const IndexPage = () => (
+//   <Layout>
+//     {/*    
+//     <Seo 
+//       title="index.js Home"
+//       // description="Why IBD - custom desc"
+//     ></Seo>
+//     */}
+
+//     <Link to="/page-2">Go to page 2</Link>
+
+//     <div style={{marginTop:'100px'}}>
+//       SSSSSubdirectory page
+//     </div>
+//   </Layout>
+// )
+
+// export default IndexPage
 
 
 
