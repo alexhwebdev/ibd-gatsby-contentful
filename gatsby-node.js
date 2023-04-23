@@ -34,6 +34,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 
 
+
 // exports.createPages = ({ graphql, actions }) => {
 //   const {createRedirect} = actions //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
 //   // createRedirect({ fromPath: '/old-url', toPath: '/new-url', isPermanent: true });
