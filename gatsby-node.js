@@ -32,8 +32,8 @@ exports.createPages = async ({ graphql, actions }) => {
     // fromPath: `/blog/recipes/mouthwatering-lasagna`,
     // toPath: `/recipes/mouthwatering-lasagna`,
 
-    fromPath: `https://ibdgatsbycontentfulmain.gatsbyjs.io/subdirectory/`,
-    toPath: `https://ibdgatsbycontentfulmain.gatsbyjs.io/subdirectory/ibd-digital/features/`,
+    fromPath: `http://localhost:8000/`,
+    toPath: `http://localhost:8000/ibd-digital/features/`,
     isPermanent: true
   })
 

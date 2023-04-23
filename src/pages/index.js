@@ -43,7 +43,7 @@ const IndexPage = () => (
     <Link to="/page-2">Go to page 2</Link>
 
     <div style={{marginTop:'100px'}}>
-      SSSSSubdirectory page
+      Subdirectory home page
     </div>
   </Layout>
 )
