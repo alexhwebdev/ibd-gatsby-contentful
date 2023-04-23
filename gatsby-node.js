@@ -13,14 +13,14 @@ exports.createPages = async ({ actions }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const postsPerPage = parseInt(process.env.GATSBY_POST_PER_PAGE) || 10;
 
-  const { createRedirect } = actions
+  const { createRedirect } = actions //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
 
   createRedirect({
     // fromPath: `/blog/recipes/mouthwatering-lasagna`,
     // toPath: `/recipes/mouthwatering-lasagna`,
 
-    fromPath: `/subdirectory/ibd-digital/features/`,
-    toPath: `/subdirectory/ibd-digital/why-ibd/`,
+    fromPath: `/`,
+    toPath: `/subdirectory/ibd-digital/why-ibd`,
     isPermanent: true
   })
 };
