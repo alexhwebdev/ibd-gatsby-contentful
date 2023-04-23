@@ -26,34 +26,19 @@ exports.createPages = async ({ graphql, actions }) => {
 
 
 
-  // const { createRedirect } = actions //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
+  const { createRedirect } = actions //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
 
-  // createRedirect({
-  //   // fromPath: `/blog/recipes/mouthwatering-lasagna`,
-  //   // toPath: `/recipes/mouthwatering-lasagna`,
+  createRedirect({
+    // fromPath: `/blog/recipes/mouthwatering-lasagna`,
+    // toPath: `/recipes/mouthwatering-lasagna`,
 
-  //   fromPath: `/`,
-  //   toPath: `/subdirectory/ibd-digital/why-ibd`,
-  //   isPermanent: true
-  // }),
+    fromPath: `/`,
+    toPath: `/subdirectory/ibd-digital/why-ibd`,
+    isPermanent: true
+  }),
 
 
 
-  const {createRedirect} = actions
-
-  // fetch data from a collection which contains list of urls mapping for redirection
-  let response = await graphql(
-    `
-      query redirects {
-        collectionName {
-          /subdirectory
-          /subdirectory/ibd-digital/why-ibd,
-        }
-      }
-    `
-  )
-
-  let data = response.data.collectionName
 };
 
 
