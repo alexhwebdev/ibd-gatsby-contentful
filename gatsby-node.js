@@ -17,13 +17,20 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const { createRedirect } = actions
 
-  createRedirect({
-    // fromPath: `/blog/recipes/mouthwatering-lasagna`,
-    // toPath: `/recipes/mouthwatering-lasagna`,
+  var allEntries = [];
 
-    fromPath: `/subdirectory/ibd-digital/features/`,
-    toPath: `/subdirectory/ibd-digital/why-ibd/`,
-  })
+  await Promise.all(
+    allEntries.map((entry) => {
+
+      createRedirect({
+        // fromPath: `/blog/recipes/mouthwatering-lasagna`,
+        // toPath: `/recipes/mouthwatering-lasagna`,
+
+        fromPath: `/subdirectory/ibd-digital/features/`,
+        toPath: `/subdirectory/ibd-digital/why-ibd/`,
+      })
+    })
+  )
 };
 
 
