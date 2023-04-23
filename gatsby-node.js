@@ -14,28 +14,25 @@ exports.createPages = async ({ graphql, actions }) => {
   const postsPerPage = parseInt(process.env.GATSBY_POST_PER_PAGE) || 10;
 
 
-
-  const { createRedirect } = actions
-
-  var allEntries = [];
-
-  await Promise.all(
-    allEntries.map((entry) => {
-
-      createRedirect({
-        // fromPath: `/blog/recipes/mouthwatering-lasagna`,
-        // toPath: `/recipes/mouthwatering-lasagna`,
-
-        fromPath: `/subdirectory/ibd-digital/features/`,
-        toPath: `/subdirectory/ibd-digital/why-ibd/`,
-      })
-    })
-  )
 };
 
 
 
 
+// Implement the Gatsby API "onCreatePage". This is
+// called after every page is created.
+exports.onCreatePage = async ({ page, actions }) => {
+
+  const { createRedirect } = actions
+
+  createRedirect({
+    // fromPath: `/blog/recipes/mouthwatering-lasagna`,
+    // toPath: `/recipes/mouthwatering-lasagna`,
+
+    fromPath: `/subdirectory/ibd-digital/features/`,
+    toPath: `/subdirectory/ibd-digital/why-ibd/`,
+  })
+}
 
 
 
