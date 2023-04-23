@@ -13,6 +13,19 @@ exports.createPages = async ({ actions }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const postsPerPage = parseInt(process.env.GATSBY_POST_PER_PAGE) || 10;
 
+  // const { createPage } = actions
+
+  // createPage({
+  //   path: "/path",
+  //   // component: resolve(__dirname, "../src/pages/ibd-digital/index.js"),
+  //   component: require.resolve("../src/pages/ibd-digital/index.js"),
+  //   context: {
+  //     redirectTo: "https://ibdgatsbycontentfulmain.gatsbyjs.io/subdirectory/ibd-digital/features/",
+  //   }
+  // })
+
+
+
   // const { createRedirect } = actions //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
 
   // createRedirect({
@@ -24,17 +37,23 @@ exports.createPages = async ({ graphql, actions }) => {
   //   isPermanent: true
   // }),
 
-  const { createPage } = actions
 
-  createPage({
-    path: "/path",
-    // component: resolve(__dirname, "../src/pages/ibd-digital/index.js"),
-    component: require.resolve("../src/pages/ibd-digital/index.js"),
-    context: {
-      redirectTo: "https://ibdgatsbycontentfulmain.gatsbyjs.io/subdirectory/ibd-digital/features/",
-    }
-  })
 
+  const {createRedirect} = actions
+
+  // fetch data from a collection which contains list of urls mapping for redirection
+  let response = await graphql(
+    `
+      query redirects {
+        collectionName {
+          /subdirectory
+          /subdirectory/ibd-digital/why-ibd,
+        }
+      }
+    `
+  )
+
+  let data = response.data.collectionName
 };
 
 

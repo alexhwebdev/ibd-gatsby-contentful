@@ -15,40 +15,40 @@ import Layout from "../components/Layout";
 
 
 
-function isClient() {
-  return typeof window === 'object';
-}
+// function isClient() {
+//   return typeof window === 'object';
+// }
 
 
-export default function EmptyPage({ pageContext }) {
-  useEffect(() => {
-    if (isClient() && pageContext?.redirectTo) {
-      window.location.href = pageContext.redirectTo;
-    }
-  }, []);
+// export default function EmptyPage({ pageContext }) {
+//   useEffect(() => {
+//     if (isClient() && pageContext?.redirectTo) {
+//       window.location.href = pageContext.redirectTo;
+//     }
+//   }, []);
 
-  return <div>SSSSSubdirectory</div>;
-}
+//   return <div>SSSSSubdirectory</div>;
+// }
 
 
-// const IndexPage = () => (
-//   <Layout>
-//     {/*    
-//     <Seo 
-//       title="index.js Home"
-//       // description="Why IBD - custom desc"
-//     ></Seo>
-//     */}
+const IndexPage = () => (
+  <Layout>
+    {/*    
+    <Seo 
+      title="index.js Home"
+      // description="Why IBD - custom desc"
+    ></Seo>
+    */}
 
-//     <Link to="/page-2">Go to page 2</Link>
+    <Link to="/page-2">Go to page 2</Link>
 
-//     <div style={{marginTop:'100px'}}>
-//       SSSSSubdirectory page
-//     </div>
-//   </Layout>
-// )
+    <div style={{marginTop:'100px'}}>
+      SSSSSubdirectory page
+    </div>
+  </Layout>
+)
 
-// export default IndexPage
+export default IndexPage
 
 
 
