@@ -12,6 +12,18 @@ exports.createPages = async ({ actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const postsPerPage = parseInt(process.env.GATSBY_POST_PER_PAGE) || 10;
+
+
+
+  const { createRedirect } = actions
+
+  createRedirect({
+    // fromPath: `/blog/recipes/mouthwatering-lasagna`,
+    // toPath: `/recipes/mouthwatering-lasagna`,
+
+    fromPath: `/ibd-digital/features/`,
+    toPath: `/ibd-digital/why-ibd/`,
+  })
 };
 
 
