@@ -24,6 +24,7 @@ import { campaignShopPage } from '../../utils/campaignShopPage';
 import Video from '../../utils/Video';
 
 
+
 /* ==========  FONT | FONT-AWESOME | STYLES  ========== */
 // import "@fontsource/manrope/500.css";
 // import "@fontsource/manrope/800.css";
