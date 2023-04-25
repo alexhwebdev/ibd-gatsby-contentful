@@ -35,7 +35,6 @@ import './styles/index-overview.scss';
 import './styles/review-badge.scss';
 import './styles/ibd-footer.scss';
 
-
 // ==========  STYLES  ==========
 // const Main = styled.div``
 
@@ -51,10 +50,6 @@ import './styles/ibd-footer.scss';
 
 
 const FontTest = styled.div`
-  
-  h1 {
-
-  }
   color: red;
   font-family: 'Raleway', sans-serif;
 `
