@@ -53,13 +53,6 @@ const IBD_Overview = (props) => {
   console.log('IBD_Overview props', props)
 
 
-  const FontTest = styled.div`
-    color: pink !important;
-    font-family: 'Raleway', sans-serif;
-  `
-
-
-
 
   // const metaData = parseSiteMetadata(props.data);
   // ---------- PAGE : META DATA ----------
@@ -132,10 +125,7 @@ const IBD_Overview = (props) => {
             <div className="copy-container">
               {/* Get an edge in the stock market. */}
               {/*<h1 dangerouslySetInnerHTML={{__html: pageContent[0]}}></h1>*/}
-              <FontTest>
-                {pageContent[0]}
-                WWW
-              </FontTest>
+              <span>{pageContent[0]}</span>
 
               {/* With IBD® Digital ... Same as below */}
               <span>{pageContent[1]}</span>
