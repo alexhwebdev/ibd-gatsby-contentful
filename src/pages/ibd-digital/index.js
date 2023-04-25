@@ -49,14 +49,16 @@ import './styles/ibd-footer.scss';
 
 
 
-const FontTest = styled.div`
-  color: red;
-  font-family: 'Raleway', sans-serif;
-`
-
-
 const IBD_Overview = (props) => {
   console.log('IBD_Overview props', props)
+
+
+  const FontTest = styled.div`
+    color: pink !important;
+    font-family: 'Raleway', sans-serif;
+  `
+
+
 
 
   // const metaData = parseSiteMetadata(props.data);
