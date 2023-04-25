@@ -5,7 +5,7 @@ import React, {
 import { graphql } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Link } from 'gatsby';
-// import styled from 'styled-components';
+import styled from 'styled-components';
 // import { globalHistory } from '@reach/router'
 
 
@@ -48,6 +48,12 @@ import './styles/ibd-footer.scss';
 // ========== VIDEO - From 3rd Party ==========
 // const IBDVideo = "https://cdn.jwplayer.com/players/uZNcmMG4-z32DQ8pX.html";
 
+
+
+const FontTest = styled.div`
+  color: red;
+  font-family: 'Raleway', sans-serif;
+`
 
 
 const IBD_Overview = (props) => {
@@ -125,7 +131,7 @@ const IBD_Overview = (props) => {
             <div className="copy-container">
               {/* Get an edge in the stock market. */}
               {/*<h1 dangerouslySetInnerHTML={{__html: pageContent[0]}}></h1>*/}
-              <span>{pageContent[0]}</span>
+              <FontTest>{pageContent[0]}WW</FontTest>
 
               {/* With IBD® Digital ... Same as below */}
               <span>{pageContent[1]}</span>
