@@ -51,6 +51,10 @@ import './styles/ibd-footer.scss';
 
 
 const FontTest = styled.div`
+  
+  h1 {
+
+  }
   color: red;
   font-family: 'Raleway', sans-serif;
 `
@@ -131,7 +135,10 @@ const IBD_Overview = (props) => {
             <div className="copy-container">
               {/* Get an edge in the stock market. */}
               {/*<h1 dangerouslySetInnerHTML={{__html: pageContent[0]}}></h1>*/}
-              <FontTest>{pageContent[0]}WW</FontTest>
+              <FontTest>
+                {pageContent[0]}
+                WWW
+              </FontTest>
 
               {/* With IBD® Digital ... Same as below */}
               <span>{pageContent[1]}</span>
