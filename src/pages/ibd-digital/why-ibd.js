@@ -69,7 +69,10 @@ const IBD_Why_IBD = (props) => {
   const metaData = props.data.allSite.nodes[0].siteMetadata;
 
 
-  // ---------- PAGE : SEO SCHEMA ----------
+    // ---------- PAGE : SEO SCHEMA ----------
+  // GatsbyJS: How to Implement Schema Markup on Your Gatsby Site
+  // https://www.youtube.com/watch?v=BIQGBKXc6AI
+  // https://search.google.com/test/rich-results
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",

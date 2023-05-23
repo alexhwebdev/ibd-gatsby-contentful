@@ -62,6 +62,7 @@ const IBD_Overview = (props) => {
   // ---------- PAGE : SEO SCHEMA ----------
   // GatsbyJS: How to Implement Schema Markup on Your Gatsby Site
   // https://www.youtube.com/watch?v=BIQGBKXc6AI
+  // https://search.google.com/test/rich-results
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
