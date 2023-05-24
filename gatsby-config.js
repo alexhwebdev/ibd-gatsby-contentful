@@ -7,7 +7,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `IBD Gatsby Contentful`,
-    siteUrl: `https://ibdgatsbycontentfulmain.gatsbyjs.io`,
+    siteUrl: `https://alexhongdev.com/`,
     description: `IBD Gatsby Contentful`,
     author: `Alex Hong`,
     keywords: `Investor's, Business, Daily`,
@@ -22,8 +22,8 @@ module.exports = {
       // https://sjmitchblog.gatsbyjs.io/blog/gatsby-plugin-robots-txt/
       resolve: `gatsby-plugin-robots-txt`,
       options: {
-        host: 'https://ibdgatsbycontentfulmain.gatsbyjs.io/',
-        sitemap: 'https://ibdgatsbycontentfulmain.gatsbyjs.io/sitemap.xml',
+        host: 'https://alexhongdev.com//',
+        sitemap: 'https://alexhongdev.com//sitemap.xml',
         policy: [{ 
           userAgent: '*', 
           allow: '/', 
