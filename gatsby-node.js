@@ -32,8 +32,8 @@ exports.createPages = async ({ graphql, actions }) => {
     // fromPath: `/blog/recipes/mouthwatering-lasagna`,
     // toPath: `/recipes/mouthwatering-lasagna`,
 
-    fromPath: `http://localhost:8000/`,
-    toPath: `http://localhost:8000/ibd-digital/features/`,
+    fromPath: `/subdirectory/ibd-digital/features`,
+    toPath: `/subdirectory/ibd-digital/why-ibd`,
     isPermanent: true
   })
 
@@ -48,23 +48,23 @@ exports.createPages = async ({ graphql, actions }) => {
 
 
 
-// + Implement the Gatsby API "onCreatePage". This is
-//    called after every page is created.
-// + Keep in mind that in createPages is where you create 
-//    all dynamic pages hence you have all the slugs and paths 
-//    available to make your dynamic redirects.
-exports.onCreatePage = async ({ page, actions }) => {
+// // + Implement the Gatsby API "onCreatePage". This is
+// //    called after every page is created.
+// // + Keep in mind that in createPages is where you create 
+// //    all dynamic pages hence you have all the slugs and paths 
+// //    available to make your dynamic redirects.
+// exports.onCreatePage = async ({ page, actions }) => {
 
-  const { createRedirect } = actions
+//   const { createRedirect } = actions
 
-  createRedirect({
-    // fromPath: `/blog/recipes/mouthwatering-lasagna`,
-    // toPath: `/recipes/mouthwatering-lasagna`,
+//   createRedirect({
+//     // fromPath: `/blog/recipes/mouthwatering-lasagna`,
+//     // toPath: `/recipes/mouthwatering-lasagna`,
 
-    fromPath: `/subdirectory/ibd-digital/features`,
-    toPath: `/subdirectory/ibd-digital/why-ibd`,
-  })
-}
+//     fromPath: `/subdirectory/ibd-digital/features`,
+//     toPath: `/subdirectory/ibd-digital/why-ibd`, 
+//   })
+// }
 
 
 
