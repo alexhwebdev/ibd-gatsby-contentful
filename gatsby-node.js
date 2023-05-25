@@ -61,8 +61,8 @@ exports.onCreatePage = async ({ page, actions }) => {
     // fromPath: `/blog/recipes/mouthwatering-lasagna`,
     // toPath: `/recipes/mouthwatering-lasagna`,
 
-    fromPath: `/subdirectory/ibd-digital/features/`,
-    toPath: `/subdirectory/ibd-digital/why-ibd/`,
+    fromPath: `/subdirectory/ibd-digital/features`,
+    toPath: `/subdirectory/ibd-digital/why-ibd`,
   })
 }
 
