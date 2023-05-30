@@ -22,8 +22,8 @@ module.exports = {
       // https://sjmitchblog.gatsbyjs.io/blog/gatsby-plugin-robots-txt/
       resolve: `gatsby-plugin-robots-txt`,
       options: {
-        host: 'https://alexhongdev.com//',
-        sitemap: 'https://alexhongdev.com//sitemap.xml',
+        host: 'https://alexhongdev.com/',
+        sitemap: 'https://alexhongdev.com/sitemap.xml',
         policy: [{ 
           userAgent: '*', 
           allow: '/', 
