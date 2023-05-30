@@ -22,7 +22,7 @@ module.exports = {
         mergeSecurityHeaders: true,
         mergeLinkHeaders: true,
         mergeCachingHeaders: true,
-        transformHeaders: (headers, path) => headers
+        transformHeaders: (headers, path) => headers,
         generateMatchPathRewrites: true,
       },
     },
