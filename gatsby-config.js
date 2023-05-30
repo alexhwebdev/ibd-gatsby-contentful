@@ -13,19 +13,7 @@ module.exports = {
     keywords: `Investor's, Business, Daily`,
   },
   plugins: [
-    // `gatsby-plugin-gatsby-cloud`,
-    {
-      resolve: `gatsby-plugin-gatsby-cloud`,
-      options: {
-        headers: {},
-        allPageHeaders: [],
-        mergeSecurityHeaders: true,
-        mergeLinkHeaders: true,
-        mergeCachingHeaders: true,
-        transformHeaders: (headers, path) => headers,
-        generateMatchPathRewrites: true,
-      },
-    },
+    `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-sitemap`,
 
     // https://blog.nimbleways.com/step-by-step-seo-gatsby/
