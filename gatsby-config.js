@@ -95,7 +95,7 @@ module.exports = {
       },
     },
 
-    `gatsby-plugin-client-side-redirect` // keep it in last in list
+    // `gatsby-plugin-client-side-redirect` // keep it in last in list
   ],
 
   flags: {
