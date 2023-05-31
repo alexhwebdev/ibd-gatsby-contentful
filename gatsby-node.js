@@ -28,14 +28,12 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const { createRedirect } = actions; //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
 
-  console.log('createRedirect ', createRedirect)
-
   createRedirect({
     // fromPath: `/blog/recipes/mouthwatering-lasagna`,
     // toPath: `/recipes/mouthwatering-lasagna`,
 
-    fromPath: `/subdirectory/ibd-digital/features/`,
-    toPath: `/subdirectory/ibd-digital/why-ibd/`,
+    fromPath: `/ibd-digital/features/`,
+    toPath: `/ibd-digital/why-ibd/`,
     isPermanent: true
   })
 
