@@ -32,8 +32,8 @@ exports.createPages = async ({ graphql, actions }) => {
     // fromPath: `/blog/recipes/mouthwatering-lasagna`,
     // toPath: `/recipes/mouthwatering-lasagna`,
 
-    fromPath: `https://alexhongdev.com/`,
-    toPath: `https://alexhongdev.com/ibd-digital/why-ibd/`,
+    fromPath: `/`,
+    toPath: `/ibd-digital/why-ibd/`,
     isPermanent: true
   })
 
