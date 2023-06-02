@@ -39,7 +39,8 @@ exports.createPages = async ({ graphql, actions }) => {
 
     fromPath: `/`,
     toPath: `/ibd-digital/why-ibd/`,
-    isPermanent: true
+    // isPermanent: true,
+    statusCode: 200,
   })
 
 
