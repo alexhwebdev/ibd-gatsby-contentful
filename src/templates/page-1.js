@@ -2,7 +2,7 @@ import React from 'react';
 
 const TemplatePageOne = () => {
 	return (
-	  <div>
+	  <div style={{marginTop: '200px'}}>
 	    TemplatePageOne
 	  </div>
 	)
