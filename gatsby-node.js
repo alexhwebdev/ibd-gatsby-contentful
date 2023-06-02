@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 /* ORIGINAL GATSBY-NODE.JS
 exports.createPages = async ({ actions }) => {
   const { createPage } = actions
@@ -25,8 +27,11 @@ exports.createPages = async ({ graphql, actions }) => {
   // })
 
 
-
+  // -------------------- createRedirect
   const { createRedirect } = actions; //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
+
+  console.log('#######################')
+  console.log('createRedirect ', createRedirect)
 
   createRedirect({
     // fromPath: `/blog/recipes/mouthwatering-lasagna`,
@@ -38,8 +43,44 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
 
+  // -------------------- Create pages dynamically
+  const { createPage } = actions
+  const templatePageOne = path.resolve(`src/templates/page-1.js`)
+  const result = await graphql(`
+    query {
+      allContentfulIbddContentType {
+        edges {
+          node {
+            slug
+            pageTitle
+          }
+        }
+      }
+    }
+  `)
+  console.log('#######################')
+  console.log('createPage ', createPage)
+  console.log('result ', result)
+
+
+  result.data.allContentfulIbddContentType.edges.forEach(edge => {
+    console.log('#######################')
+    console.log('edge ', edge)
+
+    createPage({
+      path: `${edge.node.slug}`,
+      component: templatePageOne,
+      context: {
+        title: edge.node.pageTitle,
+      },
+    })
+  })
+
 
 };
+
+
+
 
 
 
@@ -103,5 +144,40 @@ exports.createPages = async ({ graphql, actions }) => {
 
 
 
+
+
+// // Create blog pages dynamically
+// exports.createPages = async ({ graphql, actions }) => {
+//   const { createPage } = actions
+
+//   const templatePageOne = path.resolve(`src/templates/page-1.js`)
+
+//   const result = await graphql(`
+//     query {
+//       allContentfulIbddContentType {
+//         edges {
+//           node {
+//             slug
+//             pageTitle
+//           }
+//         }
+//       }
+//     }
+//   `)
+//   console.log('#######################')
+//   console.log('createPage ', createPage)
+//   console.log('result ', result)
+
+
+//   // result.data.allContentfulIbddContentType.edges.forEach(edge => {
+//   //   createPage({
+//   //     path: `${edge.node.slug}`,
+//   //     component: templatePageOne,
+//   //     context: {
+//   //       title: edge.node.pageTitle,
+//   //     },
+//   //   })
+//   // })
+// }
 
 
