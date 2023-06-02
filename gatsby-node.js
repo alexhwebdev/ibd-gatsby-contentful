@@ -62,7 +62,6 @@ exports.createPages = async ({ graphql, actions }) => {
   console.log('createPage ', createPage)
   console.log('result ', result)
 
-
   result.data.allContentfulIbddContentType.edges.forEach(edge => {
     console.log('#######################')
     console.log('edge ', edge)
@@ -75,16 +74,7 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-
-
 };
-
-
-
-
-
-
-
 
 
 
@@ -111,21 +101,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
 
 
-
-// exports.createPages = ({ graphql, actions }) => {
-//   const {createRedirect} = actions //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
-//   // createRedirect({ fromPath: '/old-url', toPath: '/new-url', isPermanent: true });
-
-//   console.log('gatsby-node.js actions ---------------------------- ', actions)
-
-//   createRedirect({
-//     fromPath: `/ibd-digital/`,
-//     toPath: `https://www.yahoo.com/`,
-//     statusCode: 200,
-//   });
-// }
-
-
 // https://stackoverflow.com/questions/65749516/webpackerror-referenceerror-image-is-not-defined-during-gatsby-build-by-ga
 // exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 //   if (stage === "build-html" || stage === "develop-html") {
@@ -142,42 +117,5 @@ exports.createPages = async ({ graphql, actions }) => {
 //   }
 // }
 
-
-
-
-
-// // Create blog pages dynamically
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage } = actions
-
-//   const templatePageOne = path.resolve(`src/templates/page-1.js`)
-
-//   const result = await graphql(`
-//     query {
-//       allContentfulIbddContentType {
-//         edges {
-//           node {
-//             slug
-//             pageTitle
-//           }
-//         }
-//       }
-//     }
-//   `)
-//   console.log('#######################')
-//   console.log('createPage ', createPage)
-//   console.log('result ', result)
-
-
-//   // result.data.allContentfulIbddContentType.edges.forEach(edge => {
-//   //   createPage({
-//   //     path: `${edge.node.slug}`,
-//   //     component: templatePageOne,
-//   //     context: {
-//   //       title: edge.node.pageTitle,
-//   //     },
-//   //   })
-//   // })
-// }
 
 
