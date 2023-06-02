@@ -43,37 +43,37 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
 
-  // -------------------- Create pages dynamically
-  const { createPage } = actions
-  const templatePageOne = path.resolve(`src/templates/page-1.js`)
-  const result = await graphql(`
-    query {
-      allContentfulIbddContentType {
-        edges {
-          node {
-            slug
-            pageTitle
-          }
-        }
-      }
-    }
-  `)
-  console.log('#######################')
-  console.log('createPage ', createPage)
-  console.log('result ', result)
+  // // -------------------- Create pages dynamically
+  // const { createPage } = actions
+  // const templatePageOne = path.resolve(`src/templates/page-1.js`)
+  // const result = await graphql(`
+  //   query {
+  //     allContentfulIbddContentType {
+  //       edges {
+  //         node {
+  //           slug
+  //           pageTitle
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+  // console.log('#######################')
+  // console.log('createPage ', createPage)
+  // console.log('result ', result)
 
-  result.data.allContentfulIbddContentType.edges.forEach(edge => {
-    console.log('#######################')
-    console.log('edge ', edge)
+  // result.data.allContentfulIbddContentType.edges.forEach(edge => {
+  //   console.log('#######################')
+  //   console.log('edge ', edge)
 
-    createPage({
-      path: `${edge.node.slug}`,
-      component: templatePageOne,
-      context: {
-        title: edge.node.pageTitle,
-      },
-    })
-  })
+  //   createPage({
+  //     path: `${edge.node.slug}`,
+  //     component: templatePageOne,
+  //     context: {
+  //       title: edge.node.pageTitle,
+  //     },
+  //   })
+  // })
 };
 
 
