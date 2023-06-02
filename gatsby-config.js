@@ -102,7 +102,7 @@ module.exports = {
     DEV_SSR: true
   },
 
-  pathPrefix: `/subdirectory`,
+  // pathPrefix: `/subdirectory`,
 };
 
 
