@@ -31,6 +31,10 @@ import Layout from "../components/Layout";
 // }
 
 
+import LoginButton from "../components/LoginButton";
+import LogoutButton from "../components/LogoutButton";
+
+
 const IndexPage = () => (
   <Layout>
     {/*    
@@ -40,11 +44,19 @@ const IndexPage = () => (
     ></Seo>
     */}
 
-    <Link to="/page-2">Go to page 2</Link>
-
     <div style={{marginTop:'100px'}}>
-      Subdirectory home page
+      <Link to="/page-2">Go to page 2</Link><br/><br/>
+
+      <div>Subdirectory home page</div><br/><br/>
+
+      {/* Using LoginButton Component instead
+      <Link to="/account">Sign In</Link> 
+      */}
+      <LoginButton />
+      <LogoutButton />
+
     </div>
+
   </Layout>
 )
 
