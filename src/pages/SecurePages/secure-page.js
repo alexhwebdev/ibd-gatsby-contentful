@@ -3,20 +3,36 @@ import { Link } from "gatsby";
 import { useAuth0 } from "@auth0/auth0-react";
 import { withAuthenticationRequired } from '@auth0/auth0-react';
 
-import LogoutButton from "../components/LogoutButton";
+import LogoutButton from "../../components/LogoutButton";
 
 
-const Account = () => {
-  const { user } = useAuth0();
+const SecurePage = () => {
+  const { user, getAccessTokenSilently } = useAuth0();
+	/* Options
+		error
+		getAccessTokenSilently
+		getAccessTokenWithPopup
+		getIdTokenClaims
+		handleRedirectCallback
+		isAuthenticated
+		isLoading
+		loginWithPopup
+		loginWithRedirect
+		logout
+		user
+	*/
+
 
   console.log('user ', user)
+  console.log('getAccessTokenSilently ', getAccessTokenSilently())
+  console.log('useAuth0() ', useAuth0())
 
   return (
     <div style={{marginTop:'100px'}}>
       <nav>
         <Link to="/">Home</Link>
         <p>Email: {user.email}</p>
-        <p>Account.js > Signed In successful page</p>
+        <p>SecurePage.js > Signed In successful page</p>
 
         <LogoutButton />
       </nav>
@@ -24,7 +40,7 @@ const Account = () => {
   );
 };
 
-export default withAuthenticationRequired(Account);
+export default withAuthenticationRequired(SecurePage);
 
 
 

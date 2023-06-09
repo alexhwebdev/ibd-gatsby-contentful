@@ -103,6 +103,13 @@ exports.createPages = async ({ graphql, actions }) => {
 
 
 // https://stackoverflow.com/questions/65749516/webpackerror-referenceerror-image-is-not-defined-during-gatsby-build-by-ga
+// 
+// EXPLANATION 20min mark : 
+// https://www.youtube.com/watch?v=eMOnbgKRIYE
+// - This is updated and automated in recent versions. 
+// - Youtube tuts above is 2 years old.
+// - Code below addresses issues of Gatsby not being
+//   able to use 'document' or 'window'.
 // exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 //   if (stage === "build-html" || stage === "develop-html") {
 //     actions.setWebpackConfig({

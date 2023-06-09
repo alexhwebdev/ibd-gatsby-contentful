@@ -33,6 +33,7 @@ import Layout from "../components/Layout";
 
 import LoginButton from "../components/LoginButton";
 import LogoutButton from "../components/LogoutButton";
+import ContactForm from "../components/contact-form";
 
 
 const IndexPage = () => (
@@ -45,15 +46,19 @@ const IndexPage = () => (
     */}
 
     <div style={{marginTop:'100px'}}>
-      <Link to="/page-2">Go to page 2</Link><br/><br/>
-
-      <div>Subdirectory home page</div><br/><br/>
+      <div>
+        pages/index.js<br/><br/>
+        Subdirectory home page
+      </div><br/><br/>
 
       {/* Using LoginButton Component instead
       <Link to="/account">Sign In</Link> 
       */}
       <LoginButton />
       <LogoutButton />
+
+      <br/><br/><br/><br/>
+      <ContactForm />
 
     </div>
 
@@ -67,53 +72,3 @@ export default IndexPage
 
 
 
-
-
-
-
-
-
-// import React from 'react';
-// import FeaturedBlogs from '../components/homePage/FeaturedBlogs';
-// import HeroSection from '../components/homePage/HeroSection';
-// import TopCategories from '../components/homePage/TopCategories';
-// import SEO from '../components/seo';
-
-// const IndexPage = () => (
-//   <>
-//     <SEO />
-//     <HeroSection />
-//     <div className="container">
-//       <FeaturedBlogs />
-//       <TopCategories />
-//     </div>
-//   </>
-// );
-
-// export default IndexPage;
-
-
-
-
-
-
-
-// const IndexPage = () => (
-//   <>
-//     <h1>Welcome to "TechHub-Blog" Project</h1>
-//     <h2>
-//       - by{' '}
-//       <a
-//         href="https://youtube.com/webcifarOfficial"
-//         target="_blank"
-//         rel="noreferrer"
-//       >
-//         Web Cifar
-//       </a>
-//     </h2>
-//   </>
-// );
-
-// const IndexPage = () => null;
-
-// export default IndexPage;
