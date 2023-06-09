@@ -27,21 +27,21 @@ exports.createPages = async ({ graphql, actions }) => {
   // })
 
 
-  // -------------------- createRedirect
-  const { createRedirect } = actions; //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
+  // // -------------------- createRedirect
+  // const { createRedirect } = actions; //actions is collection of many actions - https://www.gatsbyjs.org/docs/actions
 
-  console.log('#######################')
-  console.log('createRedirect ', createRedirect)
+  // console.log('#######################')
+  // console.log('createRedirect ', createRedirect)
 
-  createRedirect({
-    // fromPath: `/blog/recipes/mouthwatering-lasagna`,
-    // toPath: `/recipes/mouthwatering-lasagna`,
+  // createRedirect({
+  //   // fromPath: `/blog/recipes/mouthwatering-lasagna`,
+  //   // toPath: `/recipes/mouthwatering-lasagna`,
 
-    fromPath: `/`,
-    toPath: `/ibd-digital/why-ibd/`,
-    // isPermanent: true,
-    statusCode: 200,
-  })
+  //   fromPath: `/`,
+  //   toPath: `/ibd-digital/why-ibd/`,
+  //   // isPermanent: true,
+  //   statusCode: 200,
+  // })
 
 
   // // -------------------- Create pages dynamically
