@@ -43,34 +43,34 @@ export const shouldUpdateScroll = ({
 
 
 
-// ------------------------------ Auth0
-// https://auth0.com/blog/securing-gatsby-with-auth0/
-const onRedirectCallback = (appState) => {
-  console.log('appState ', appState)
+// // ------------------------------ Auth0
+// // https://auth0.com/blog/securing-gatsby-with-auth0/
+// const onRedirectCallback = (appState) => {
+//   console.log('appState ', appState)
 
-  // Use Gatsby's navigate method to replace the url
-  navigate(appState?.returnTo || '/SecurePages/secure-page', { replace: true });
-};
+//   // Use Gatsby's navigate method to replace the url
+//   navigate(appState?.returnTo || '/SecurePages/secure-page', { replace: true });
+// };
 
-console.log('window ', window)
+// console.log('window ', window)
 
-// 'wrapRootElement' 
-export const wrapRootElement = ({ element }) => {
-  return (
-    <Auth0Provider
-      domain={process.env.AUTH0_DOMAIN}
-      clientId={process.env.AUTH0_CLIENTID}
+// // 'wrapRootElement' 
+// export const wrapRootElement = ({ element }) => {
+//   return (
+//     <Auth0Provider
+//       domain={process.env.AUTH0_DOMAIN}
+//       clientId={process.env.AUTH0_CLIENTID}
 
-      // URL Auth0 will redirect your browser to with the authentication result.
-      redirectUri={window.location.origin}
+//       // URL Auth0 will redirect your browser to with the authentication result.
+//       redirectUri={window.location.origin}
 
-      // onRedirectCallback removes the code and state parameters from the URL when you are redirected from the authorize page.
-      onRedirectCallback={onRedirectCallback}
-    >
-      {element}
-    </Auth0Provider>
-  );
-};
+//       // onRedirectCallback removes the code and state parameters from the URL when you are redirected from the authorize page.
+//       onRedirectCallback={onRedirectCallback}
+//     >
+//       {element}
+//     </Auth0Provider>
+//   );
+// };
 /* Here's what's happening in this code :
   - The 'wrapRootElement' hook from the Gatsby Browser 
     API sets up the use of Provider components.
