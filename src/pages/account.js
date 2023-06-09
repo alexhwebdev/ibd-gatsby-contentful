@@ -6,6 +6,7 @@ import { withAuthenticationRequired } from '@auth0/auth0-react';
 import LogoutButton from "../components/LogoutButton";
 
 
+
 const Account = () => {
   const { user } = useAuth0();
 
