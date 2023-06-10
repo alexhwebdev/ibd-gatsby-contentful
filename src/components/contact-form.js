@@ -98,7 +98,7 @@ export default function ContactForm() {
 
         <button 
           type="submit" 
-          value="Post" 
+          // value="Post" 
           disabled={state.submitting}
         >
           Submit
