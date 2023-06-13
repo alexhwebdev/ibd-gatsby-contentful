@@ -77,11 +77,6 @@ Livestream | Serverless Functions Forms with Gatsby and Hasura
 https://www.youtube.com/watch?v=XZsBc4Dy84c
 
 
-event.preventDefault(); :
-https://www.w3schools.com/jsref/event_preventdefault.asp#:~:text=The%20preventDefault()%20method%20cancels,link%20from%20following%20the%20URL
-
-  - Clicking on a "Submit" button, prevent it from 
-    submitting a form
 
 
 

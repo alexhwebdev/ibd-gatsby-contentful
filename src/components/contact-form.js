@@ -67,7 +67,7 @@ export default function ContactForm() {
 
 
 
-        {/* ---------- TYPE OF INVESTOR ---------- 
+        {/* ---------- TYPE OF INVESTOR ---------- */}
         <label htmlFor="select">
           What type of investor are you?
         </label>
@@ -97,7 +97,7 @@ export default function ContactForm() {
           </label>
         </div>
         <br/><br/>
-        */}
+
 
 
         <button 
