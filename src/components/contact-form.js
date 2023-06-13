@@ -1,11 +1,6 @@
 // Formspree : 
 // https://formspree.io/forms/myyaqvnw/submissions
-
-
-
 import React from "react";
-
-
 import { useForm, ValidationError } from "@formspree/react";
 import '../styles/contact-form-styles.scss';
 
