@@ -58,7 +58,7 @@ const IndexPage = () => (
       {/*<LogoutButton />*/}
 
       <br/><br/><br/><br/>
-      {/*<ContactForm />*/}
+      <ContactForm />
 
     </div>
 
