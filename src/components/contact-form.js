@@ -1,4 +1,6 @@
-import React from "react";
+// import React from "react";
+import * as React from "react"
+
 
 import { useForm, ValidationError } from "@formspree/react";
 import '../styles/contact-form-styles.scss';
@@ -8,7 +10,7 @@ import '../styles/contact-form-styles.scss';
 export default function ContactForm() {
   // const [state, handleSubmit] = useForm(process.env.GATSBY_CONTACT_FORM);
 
-  const [state, handleSubmit] = useForm("myyaqvnw");
+  const [state, handleSubmit] = useForm(process.env.GATSBY_CONTACT_FORM);
 
   if (state.succeeded) {
     return <p>Thanks for your submission!</p>;
