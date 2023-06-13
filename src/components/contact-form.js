@@ -1,5 +1,9 @@
-// import React from "react";
-import * as React from "react"
+// Formspree : 
+// https://formspree.io/forms/myyaqvnw/submissions
+
+
+
+import React from "react";
 
 
 import { useForm, ValidationError } from "@formspree/react";
@@ -34,9 +38,7 @@ export default function ContactForm() {
 
 
         {/* ---------- EMAIL ---------- */}
-        <label htmlFor="email">
-          <p>Email Address*</p>
-        </label>
+        <label htmlFor="email"><p>Email Address*</p></label>
         <input id="email" type="email" name="email" />
         <ValidationError 
           prefix="Email" 
@@ -45,18 +47,16 @@ export default function ContactForm() {
         />
         <br/><br/>
 
-        {/*
+
+        {/* ---------- PHONE ---------- */}
         <label for="phone">Enter your phone number:</label>
         <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
         <small>Format: 123-567-8910</small>
         <br/><br/>
-        */}
 
 
         {/* ---------- MESSAGE ---------- */}
-        <label htmlFor="message">
-          <p>Message</p>
-        </label>
+        <label htmlFor="message"><p>Message</p></label>
         <textarea id="message" name="message" />
         <ValidationError 
           prefix="Message" 
@@ -64,7 +64,6 @@ export default function ContactForm() {
           errors={state.errors} 
         />
         <br/><br/>
-
 
 
         {/* ---------- TYPE OF INVESTOR ---------- */}
@@ -99,17 +98,13 @@ export default function ContactForm() {
         <br/><br/>
 
 
-
         <button 
           type="submit" 
-          // value="Post" 
           disabled={state.submitting}
-        >
-          Submit
-        </button>
+          // value="Post" 
+        >Submit</button>
         <ValidationError errors={state.errors} />
       </form>
     </div>
-
   );
 }
