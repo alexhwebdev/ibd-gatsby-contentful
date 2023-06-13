@@ -7,8 +7,6 @@ import '../styles/contact-form-styles.scss';
 
 
 export default function ContactForm() {
-  // const [state, handleSubmit] = useForm(process.env.GATSBY_CONTACT_FORM);
-
   const [state, handleSubmit] = useForm(process.env.GATSBY_CONTACT_FORM);
 
   if (state.succeeded) {
