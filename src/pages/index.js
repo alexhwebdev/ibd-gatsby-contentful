@@ -54,8 +54,8 @@ const IndexPage = () => (
       {/* Using LoginButton Component instead
       <Link to="/account">Sign In</Link> 
       */}
-      {/*<LoginButton />*/}
-      {/*<LogoutButton />*/}
+      <LoginButton />
+      <LogoutButton />
 
       <br/><br/><br/><br/>
       <ContactForm />
