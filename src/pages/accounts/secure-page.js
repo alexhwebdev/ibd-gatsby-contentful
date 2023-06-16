@@ -43,6 +43,7 @@ export default withAuthenticationRequired(SecurePage);
 
 
 
+
 /*
 What's happening in this code?
   - You accessed the user object from the 
