@@ -51,8 +51,10 @@ const IndexPage = () => (
         Subdirectory home page
       </div><br/><br/>
 
-      {/* Using LoginButton Component instead
-      <Link to="/account">Sign In</Link> 
+      {/* ----- Using LoginButton Component instead
+        <Link to="/account">Sign In</Link> 
+
+        <Link to="https://myibd.investors.com/secure/signin.aspx?eurl=https%3A%2F%2Fwww.investors.com%2Fstore">Sign In</Link>       
       */}
       <LoginButton />
       <LogoutButton />

@@ -49,7 +49,7 @@ const onRedirectCallback = (appState) => {
   console.log('appState ', appState)
 
   // Use Gatsby's navigate method to replace the url
-  navigate(appState?.returnTo || '/SecurePages/secure-page', { replace: true });
+  navigate(appState?.returnTo || '/accounts/secure-page', { replace: true });
 };
 
 console.log('window ', window)

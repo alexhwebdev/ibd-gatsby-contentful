@@ -22,7 +22,6 @@ const SecurePage = () => {
 		user
 	*/
 
-
   console.log('user ', user)
   console.log('getAccessTokenSilently ', getAccessTokenSilently())
   console.log('useAuth0() ', useAuth0())
@@ -32,7 +31,7 @@ const SecurePage = () => {
       <nav>
         <Link to="/">Home</Link>
         <p>Email: {user.email}</p>
-        <p>SecurePage.js > Signed In successful page</p>
+        <p>secure-page.js > Signed In successful page</p>
 
         <LogoutButton />
       </nav>
