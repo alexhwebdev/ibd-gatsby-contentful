@@ -1,13 +1,23 @@
 import React from "react";
-import { Link } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { useAuth0 } from "@auth0/auth0-react";
 import { withAuthenticationRequired } from '@auth0/auth0-react';
 
 import LogoutButton from "../../components/LogoutButton";
+import ComponentPrivatePage from "../../components/ComponentPrivatePage";
+
+import { Router } from "@reach/router"
+
+const SecurePage = (props) => {
+  console.log('SecurePage props', props)
 
 
-const SecurePage = () => {
-  const { user, getAccessTokenSilently } = useAuth0();
+  const { 
+    user, 
+    getAccessTokenSilently,
+    getAccessTokenWithPopup,
+    getIdTokenClaims
+  } = useAuth0();
 	/* Options
 		error
 		getAccessTokenSilently
@@ -24,6 +34,7 @@ const SecurePage = () => {
 
   console.log('user ', user)
   console.log('getAccessTokenSilently ', getAccessTokenSilently())
+  console.log('getIdTokenClaims ', getIdTokenClaims())
   console.log('useAuth0() ', useAuth0())
 
   return (
@@ -34,10 +45,45 @@ const SecurePage = () => {
         <p>secure-page.js > Signed In successful page</p>
 
         <LogoutButton />
+        <br/><br/><br/><br/>
+
+
+        <a href="http://localhost:8000/accounts/account-test-page">
+          AccountTestPage
+        </a>
+        <br/><br/><br/><br/>
+
+
       </nav>
     </div>
   );
 };
+
+export const data = graphql`
+  {
+    allSite {
+      nodes {
+        siteMetadata {
+          description
+          siteUrl
+          title
+        }
+      }
+    },
+    allContentfulIbddContentType(filter: {pageTitle: {eq: "Secure Page"}}) {
+      edges {
+        node {
+          pageTitle
+          description
+          slug
+          pageContent {
+            raw
+          }
+        }
+      }
+    }
+  }
+`
 
 export default withAuthenticationRequired(SecurePage);
 

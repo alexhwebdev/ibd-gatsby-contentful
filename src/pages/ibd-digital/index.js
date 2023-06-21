@@ -2,9 +2,8 @@
 import React, {
   // useEffect
 } from "react";
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image";
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 // import { globalHistory } from '@reach/router'
 

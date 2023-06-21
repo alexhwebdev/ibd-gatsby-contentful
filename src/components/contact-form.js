@@ -42,10 +42,11 @@ export default function ContactForm() {
 
 
         {/* ---------- PHONE ---------- */}
-        <label for="phone">Enter your phone number:</label>
+        <label htmlFor="phone">Enter your phone number:</label>
         <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
         <small>Format: 123-456-7890</small>
         <br/><br/>
+
 
 
         {/* ---------- MESSAGE ---------- */}
@@ -67,24 +68,24 @@ export default function ContactForm() {
         <div className="financial-advisor customcb">
           <input type="checkbox" value="1" id="customcb1" 
             name="Type of investor" value="Financial Advisor"/>
-          <label class="inner" for="customcb1"></label>
-          <label class="outer" for="customcb1">
+          <label className="inner" htmlFor="customcb1"></label>
+          <label className="outer" htmlFor="customcb1">
             Financial Advisor
           </label>
         </div>
         <div className="institutional-investor customcb">
           <input type="checkbox" value="1" id="customcb2" 
             name="Type of investor" value="Institutional Investor"/>
-          <label class="inner" for="customcb2"></label>
-          <label class="outer" for="customcb2">
+          <label className="inner" htmlFor="customcb2"></label>
+          <label className="outer" htmlFor="customcb2">
             Institutional Investor
           </label>
         </div>
         <div className="individual-investor customcb">
           <input type="checkbox" value="1" id="customcb3" 
             name="Type of investor" value="Individual Investor"/>
-          <label class="inner" for="customcb3"></label>
-          <label class="outer" for="customcb3">
+          <label className="inner" htmlFor="customcb3"></label>
+          <label className="outer" htmlFor="customcb3">
             Individual Investor
           </label>
         </div>

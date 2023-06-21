@@ -13,24 +13,6 @@ import Layout from "../components/Layout";
 // import Image from "../components/image";
 // import Seo from "../components/seo";
 
-
-
-// function isClient() {
-//   return typeof window === 'object';
-// }
-
-
-// export default function EmptyPage({ pageContext }) {
-//   useEffect(() => {
-//     if (isClient() && pageContext?.redirectTo) {
-//       window.location.href = pageContext.redirectTo;
-//     }
-//   }, []);
-
-//   return <div>SSSSSubdirectory</div>;
-// }
-
-
 import LoginButton from "../components/LoginButton";
 import LogoutButton from "../components/LogoutButton";
 import ContactForm from "../components/contact-form";
@@ -61,6 +43,8 @@ const IndexPage = () => (
 
       <br/><br/><br/><br/>
       <ContactForm />
+
+
 
     </div>
 

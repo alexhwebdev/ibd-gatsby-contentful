@@ -49,7 +49,8 @@ const onRedirectCallback = (appState) => {
   console.log('appState ', appState)
 
   // Use Gatsby's navigate method to replace the url
-  navigate(appState?.returnTo || '/accounts/secure-page', { replace: true });
+  navigate(appState?.returnTo || '/accounts/', { replace: true });
+  // navigate(appState?.returnTo || '/accounts/authentication-guard', { replace: true });
 };
 
 console.log('window ', window)
@@ -99,6 +100,8 @@ export const wrapRootElement = ({ element }) => {
 - 'wrapRootElement' 
   - allows to add 'context' or add a 'provider' to
     Gatsby app
+  - Preserve State or Data between page navigation.
+  - Accessed through 'wrapRootElement'.
 
 */
 
