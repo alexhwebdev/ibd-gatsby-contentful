@@ -46,17 +46,17 @@ export const shouldUpdateScroll = ({
 // ------------------------------ Auth0
 // https://auth0.com/blog/securing-gatsby-with-auth0/
 const onRedirectCallback = (appState) => {
-  console.log('appState ', appState)
 
   // Use Gatsby's navigate method to replace the url
   navigate(appState?.returnTo || '/accounts/', { replace: true });
-  // navigate(appState?.returnTo || '/accounts/authentication-guard', { replace: true });
 };
 
 console.log('window ', window)
 
 // 'wrapRootElement' 
 export const wrapRootElement = ({ element }) => {
+  console.log('element ', element)
+  
   return (
     <Auth0Provider
       domain={process.env.AUTH0_DOMAIN}

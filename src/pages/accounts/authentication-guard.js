@@ -3,11 +3,11 @@ import { withAuthenticationRequired } from '@auth0/auth0-react';
 
 
 import { Link } from "gatsby";
-import ComponentPrivatePage from "../../components/ComponentPrivatePage";
+
 
 
 import { Router } from "@reach/router"
-import Layout from "../../components/Layout";
+
 
 
 const AuthenticationGuard = ({ component }) => {
