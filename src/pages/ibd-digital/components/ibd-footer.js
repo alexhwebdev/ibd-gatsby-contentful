@@ -1,10 +1,14 @@
 /* ==========  REACT  |  GATSBY  |  PLUGINS  ========== */
 import React from "react";
-import { Link, useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage } from "gatsby-plugin-image";
+import { 
+  Link, 
+  // useStaticQuery, 
+  // graphql 
+} from 'gatsby';
+// import { GatsbyImage } from "gatsby-plugin-image";
 // import styled from 'styled-components';
 
-import InvestorsBusinessDaily_SVG from '../../../images/logo-investors-white.svg';
+// import InvestorsBusinessDaily_SVG from '../../../images/logo-investors-white.svg';
 import '../styles/ibd-footer.scss';
 
 
@@ -54,6 +58,7 @@ const IBD_Footer = () => {
           className="ibd-logo"
           href="https://www.investors.com/"
           target="_blank"
+          rel="noreferrer"
           alt="IBD Logo"
           aria-label="IBD Logo"
         >

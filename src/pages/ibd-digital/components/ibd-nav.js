@@ -4,10 +4,14 @@ import React, {
   useState 
 } from "react";
 // import { AnchorLink } from "gatsby-plugin-anchor-links";
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { 
+  Link, 
+  // useStaticQuery, 
+  // graphql 
+} from 'gatsby';
 import styled from 'styled-components';
 // import { globalHistory } from '@reach/router'
-import { GatsbyImage } from "gatsby-plugin-image";
+// import { GatsbyImage } from "gatsby-plugin-image";
 
 
 

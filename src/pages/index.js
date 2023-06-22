@@ -2,11 +2,13 @@
 // export default function(){return null};
 
 
-import React, { useEffect } from "react";
+import React, { 
+  // useEffect 
+} from "react";
 import {
   // graphql, 
   // StaticQuery, 
-  Link
+  // Link
 } from 'gatsby';
 
 import Layout from "../components/Layout";

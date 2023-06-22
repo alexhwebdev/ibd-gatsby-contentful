@@ -4,7 +4,7 @@ import React, {
 } from "react";
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage } from "gatsby-plugin-image";
-import styled from 'styled-components';
+// import styled from 'styled-components';
 // import { globalHistory } from '@reach/router'
 
 
@@ -16,11 +16,11 @@ import IBDFooter from './components/ibd-footer';
 
 
 /* ==========  UTILS  ========== */
-import { parseSiteMetadata } from '../../utils/parseSiteMetadata';
+// import { parseSiteMetadata } from '../../utils/parseSiteMetadata';
 import { parsePageContent } from '../../utils/parsePageContent';
-import { sortedGatsbyImgData } from '../../utils/sortedGatsbyImgData';
+// import { sortedGatsbyImgData } from '../../utils/sortedGatsbyImgData';
 import { campaignShopPage } from '../../utils/campaignShopPage';
-import Video from '../../utils/Video';
+// import Video from '../../utils/Video';
 
 
 

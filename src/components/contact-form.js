@@ -67,23 +67,23 @@ export default function ContactForm() {
 
         <div className="financial-advisor customcb">
           <input type="checkbox" value="1" id="customcb1" 
-            name="Type of investor" value="Financial Advisor"/>
+            name="Financial Advisor" value="Financial Advisor"/>
           <label className="inner" htmlFor="customcb1"></label>
           <label className="outer" htmlFor="customcb1">
             Financial Advisor
           </label>
         </div>
         <div className="institutional-investor customcb">
-          <input type="checkbox" value="1" id="customcb2" 
-            name="Type of investor" value="Institutional Investor"/>
+          <input type="checkbox" value="2" id="customcb2" 
+            name="Institutional Investor" value="Institutional Investor"/>
           <label className="inner" htmlFor="customcb2"></label>
           <label className="outer" htmlFor="customcb2">
             Institutional Investor
           </label>
         </div>
         <div className="individual-investor customcb">
-          <input type="checkbox" value="1" id="customcb3" 
-            name="Type of investor" value="Individual Investor"/>
+          <input type="checkbox" value="3" id="customcb3" 
+            name="Individual Investor" value="Individual Investor"/>
           <label className="inner" htmlFor="customcb3"></label>
           <label className="outer" htmlFor="customcb3">
             Individual Investor

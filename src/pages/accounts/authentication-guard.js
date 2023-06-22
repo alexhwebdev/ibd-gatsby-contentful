@@ -1,12 +1,9 @@
 import * as React from "react"
 import { withAuthenticationRequired } from '@auth0/auth0-react';
 
+// import { Link } from "gatsby";
 
-import { Link } from "gatsby";
-
-
-
-import { Router } from "@reach/router"
+// import { Router } from "@reach/router"
 
 
 

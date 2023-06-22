@@ -2,17 +2,19 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import styled, { keyframes } from 'styled-components';
+import styled, { 
+  // keyframes 
+} from 'styled-components';
 
 
 /* ==========  COMPONENTS  ========== */
-import SEO from '../../components/seo';
+import Seo from '../../components/seo';
 import ReviewBadge from './components/review-badge';
 import IBDFooter from './components/ibd-footer';
 
 
 /* ==========  UTILS  ========== */
-import { parseSiteMetadata } from '../../utils/parseSiteMetadata';
+// import { parseSiteMetadata } from '../../utils/parseSiteMetadata';
 import { parsePageContent } from '../../utils/parsePageContent';
 import { sortedGatsbyImgData } from '../../utils/sortedGatsbyImgData';
 import { campaignShopPage } from '../../utils/campaignShopPage';
@@ -103,7 +105,7 @@ const IBD_Why_IBD = (props) => {
 
   return (
     <Main>
-      <SEO 
+      <Seo 
         // title={metaData[0].title}
         // description={metaData[1].excerpt}
         // // schemaMarkup={schema}

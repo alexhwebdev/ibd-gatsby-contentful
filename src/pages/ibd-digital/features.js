@@ -6,7 +6,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 
 /* ==========  COMPONENTS | COMPONENTs CSS  ========== */
-import SEO from '../../components/seo';
+import Seo from '../../components/seo';
 import ReviewBadge from './components/review-badge';
 import IBDFooter from './components/ibd-footer';
 import Slider from "react-slick";
@@ -97,7 +97,7 @@ const Features = (props) => {
 
   return (
     <div>
-      <SEO 
+      <Seo 
         title={metaData.title}
         // description={metaData.description}
         description={'Features page'}

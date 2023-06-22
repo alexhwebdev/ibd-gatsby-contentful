@@ -1,5 +1,9 @@
 import React from "react"
-import { useState, useEffect, useRef } from "react"
+import { 
+  // useState, 
+  useEffect, 
+  useRef 
+} from "react"
 import { graphql } from 'gatsby';
 
 // import TestImages from '../../images/frames/0002.jpg'

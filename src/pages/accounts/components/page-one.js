@@ -1,5 +1,5 @@
 import * as React from "react"
-import { StaticQuery, graphql, Link } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 import LogoutButton from "../../../components/LogoutButton";
 
 
@@ -36,7 +36,7 @@ const PageOne = (props) => {
       `}
 
       render={ data => (
-        console.log('PageOne data', data),
+        // console.log('PageOne data', data),
 
         <div>
           Secure PageOne

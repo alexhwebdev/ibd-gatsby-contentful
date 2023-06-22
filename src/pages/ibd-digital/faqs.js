@@ -8,7 +8,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 
 /* ==========  COMPONENTS  ========== */
-import SEO from '../../components/seo';
+import Seo from '../../components/seo';
 import ReviewBadge from './components/review-badge';
 import IBDFooter from './components/ibd-footer';
 import Accordion from '../../components/Accordion';
@@ -88,7 +88,7 @@ const IBD_Faqs = (props) => {
 
   return (
     <div>
-      <SEO 
+      <Seo 
         // title={metaData[0].title}
         // description={metaData[1].excerpt}
         // // schemaMarkup={schema}

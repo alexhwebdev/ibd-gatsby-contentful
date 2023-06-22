@@ -63,7 +63,7 @@ export const wrapRootElement = ({ element }) => {
       clientId={process.env.AUTH0_CLIENTID}
 
       // URL Auth0 will redirect your browser to with the authentication result.
-      redirectUri={window.location.origin}
+      redirect_uri={window.location.origin}
 
       // onRedirectCallback removes the code and state parameters from the URL when you are redirected from the authorize page.
       onRedirectCallback={onRedirectCallback}
