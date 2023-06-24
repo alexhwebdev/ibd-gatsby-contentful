@@ -43,29 +43,54 @@ export const shouldUpdateScroll = ({
 
 
 
+
+
+
+
+
+
+
 // ------------------------------ Auth0
 // https://auth0.com/blog/securing-gatsby-with-auth0/
 const onRedirectCallback = (appState) => {
 
+  console.log('----------> appState ', appState)
+  // console.log('----------> appState ', `/` + appState + `/`)
+
+  const targetUrl = appState?.targetUrl || '/';
+  console.log('----------> targetUrl ', targetUrl)
+
+  const accountId = appState?.accountId || 'default';
+  console.log('----------> accountId ', accountId)
+
+
+
   // Use Gatsby's navigate method to replace the url
-  navigate(appState?.returnTo || '/accounts/', { replace: true });
+  // navigate(appState?.returnTo || '/accounts/', { replace: true });
+  navigate(appState?.returnTo || appState, { replace: true });
+  // navigate(appState?.returnTo || `/` + appState + `/`, { replace: true });
 };
 
-console.log('window ', window)
+// console.log('window ', window)
+// console.log('onRedirectCallback() ', onRedirectCallback)
 
 // 'wrapRootElement' 
-export const wrapRootElement = ({ element }) => {
+export const wrapRootElement = ({ location, element }) => {
+  console.log('location ', location)
   console.log('element ', element)
-  
+
   return (
     <Auth0Provider
       domain={process.env.AUTH0_DOMAIN}
       clientId={process.env.AUTH0_CLIENTID}
 
       // URL Auth0 will redirect your browser to with the authentication result.
-      redirect_uri={window.location.origin}
+      redirectUri={window.location.origin}
+      // redirect_uri={window.location.origin} NOT WORKING
 
-      // onRedirectCallback removes the code and state parameters from the URL when you are redirected from the authorize page.
+      // onRedirectCallback removes the code and state 
+      // parameters from the URL when you are redirected 
+      // from the authorize page.
       onRedirectCallback={onRedirectCallback}
     >
       {element}

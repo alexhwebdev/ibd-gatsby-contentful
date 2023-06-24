@@ -40,7 +40,9 @@ const IndexPage = () => (
 
         <Link to="https://myibd.investors.com/secure/signin.aspx?eurl=https%3A%2F%2Fwww.investors.com%2Fstore">Sign In</Link>       
       */}
-      <LoginButton />
+      <LoginButton product="ibdd" route="/ibdd/" />
+      <LoginButton product="leaderboard" route="/leaderboard/" />
+      {/*<LoginButton route="/leaderboard/" />*/}
       <LogoutButton />
 
       <br/><br/><br/><br/>
