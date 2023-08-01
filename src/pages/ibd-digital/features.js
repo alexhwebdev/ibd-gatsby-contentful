@@ -36,7 +36,7 @@ import './styles/ibd-footer.scss';
 
 
 const Features = (props) => {
-  // console.log('Features props', props)
+  console.log('Features props', props)
 
   // ---------- PAGE : META DATA ----------
   const metaData = props.data.allSite.nodes[0].siteMetadata;
@@ -108,6 +108,15 @@ const Features = (props) => {
 
       <div id="features">
         {/* ==== SECTION 1 : Smart features that...  ==== */}
+
+          <GatsbyImage 
+            className="sharkweek"
+            // image={gatsbyImgArray[0][1]}
+            image={contentfulEdgesNode.pageImages[14].gatsbyImageData}
+            // src={gatsbyImgArray} 
+            alt=""
+          />
+
         <section className="section-1">
           <div className="section-inner-container">
             <div className="copy-container">

@@ -26,7 +26,7 @@ const LoginButton = (props) => {
   // user.sub = "auth0|6494d05df1ac1401362da096"
 
   const {
-    user,
+    // user,
     isAuthenticated,
     loginWithRedirect,
   } = useAuth0();
@@ -55,8 +55,8 @@ const LoginButton = (props) => {
 
   // const state = props.account.toString();
 
-  const loginFunc = () => {
-    loginWithRedirect({appState: props.route})
+  const loginToProduct = () => {
+    loginWithRedirect({appState: props.productRoute})
     // loginWithRedirect({appState: "/accounts/"})
   }
 
@@ -64,7 +64,7 @@ const LoginButton = (props) => {
 
 
   return !isAuthenticated && (
-    <button onClick={loginFunc}>
+    <button onClick={loginToProduct}>
       Log in to {props.product}
     </button>
   );

@@ -87,7 +87,7 @@ const App = (props) => {
       <LoginButton/>
       <LogoutButton />
 
-      <h1>Leaderboard Pages</h1>
+      <h1>Leaderboard Secure Pages</h1>
 
       <div className="nav-wrapper">
         <Link to="/leaderboard/">Home</Link>

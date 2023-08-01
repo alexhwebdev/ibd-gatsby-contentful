@@ -48,21 +48,10 @@ export const shouldUpdateScroll = ({
 
 
 
-
-
 // ------------------------------ Auth0
 // https://auth0.com/blog/securing-gatsby-with-auth0/
 const onRedirectCallback = (appState) => {
-
   console.log('----------> appState ', appState)
-  // console.log('----------> appState ', `/` + appState + `/`)
-
-  const targetUrl = appState?.targetUrl || '/';
-  console.log('----------> targetUrl ', targetUrl)
-
-  const accountId = appState?.accountId || 'default';
-  console.log('----------> accountId ', accountId)
-
 
 
   // Use Gatsby's navigate method to replace the url

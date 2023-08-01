@@ -89,7 +89,7 @@ const App = (props) => {
       <LoginButton />
       <LogoutButton />
 
-      <h1>IBDD Pages</h1>
+      <h1>IBDD Secure Pages</h1>
 
       <div className="nav-wrapper">
         <Link to="/ibdd/">Home</Link>
@@ -143,6 +143,14 @@ export const data = graphql`
 export default withAuthenticationRequired(App);
 
 
+
+{/* --------------------
+
+https://chat.openai.com/
+SEARCH : gatsbyjs what does this file mean [...].js
+
+
+*/}
 
 
 
