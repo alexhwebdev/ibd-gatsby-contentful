@@ -109,6 +109,7 @@ const Features = (props) => {
       <div id="features">
         {/* ==== SECTION 1 : Smart features that...  ==== */}
 
+        {/*  BROADCAST EXAMPLE
           <GatsbyImage 
             className="sharkweek"
             // image={gatsbyImgArray[0][1]}
@@ -116,6 +117,7 @@ const Features = (props) => {
             // src={gatsbyImgArray} 
             alt=""
           />
+        */}
 
         <section className="section-1">
           <div className="section-inner-container">
