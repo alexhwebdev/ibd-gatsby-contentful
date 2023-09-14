@@ -140,7 +140,7 @@ const IBD_Overview = (props) => {
               </button>
 
       <a href="http://localhost:8000/ibd-digital/">REDIRECT</a>
-      <a href="http://localhost:8000/ibd-digital/">REDIRECTs</a>
+      <a href="http://localhost:8000/ibd-digital/">REDIRECT</a>
 
               <span className="disclaimer">{pageContent[3]}</span>
             </div>
